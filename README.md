@@ -10,9 +10,9 @@
 
 A few projects that I have completed during the challenge:
 
-* [Project 1](#projects)
-* [Project 2](#projects)
-* [Project 3](#projects)
+* [...](#projects)
+* [...](#projects)
+* [...](#projects)
 * ...
 
 ## Journal
@@ -20,8 +20,6 @@ A few projects that I have completed during the challenge:
 You can follow my progress through the challenge: 
 
 * [Journal](journal)
-* [Blog](#journal)
-* [Twitter](#journal)
 * ...
 
 ## Resources
