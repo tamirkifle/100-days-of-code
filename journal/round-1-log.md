@@ -11,11 +11,14 @@
 * Goal 3
 * ...
 
-## Day 1
+## Day Template
 
 * Project you are working on (including link)
 * Progress today
 * Challenges you faced
 * Tasks for tomorrow
 
-...
+## Day 0
+
+* ...
+* 
