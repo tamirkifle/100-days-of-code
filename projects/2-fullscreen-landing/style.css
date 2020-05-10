@@ -1,6 +1,12 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    color: #926239;
+    background-color: whitesmoke;
+}
+article {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
 }
 
 .landing {
@@ -14,15 +20,44 @@ body {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    color: saddlebrown;
+    text-align: center;
 }
 
 .landing-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
 
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .landing-desc {
     margin-top: 0.7em;
+}
+
+.landing .btn {
+    border: 1px solid #926239;
+    text-decoration: none;
+    color: #926239;
+    padding: 0.8rem;
+    border-radius: 10px;
+    margin-top: 0.7rem;
+}
+
+.more .larger {
+    text-align: center;
+    padding: 1rem;
+}
+
+.more .reverse-color {
+    background-color: #926239;
+    color: white;
+}
+
+.more .columns {
+    display: flex;
+    flex-flow: row wrap;
+}
+.more .smaller {
+    margin: 0;
+    flex-basis: 31.33%;
+    padding: 1%;
 }
