@@ -104,6 +104,6 @@ Tasks for tomorrow :-
 
 [Pluralsight Login Page Clone - HTML & CSS](https://www.youtube.com/watch?v=wIx1O5Y5EB4): 🍒
 
-[Basic Parallax Website](https://www.youtube.com/watch?v=JttTcnidSdQ): 🍒
+[Basic Parallax Website](https://www.youtube.com/watch?v=JttTcnidSdQ): 🍅
 
-[CSS Text Background Animation](https://www.youtube.com/watch?v=lX5LZTWc4f8)
+[CSS Text Background Animation](https://www.youtube.com/watch?v=lX5LZTWc4f8): 🍅
