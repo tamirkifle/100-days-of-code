@@ -28,10 +28,13 @@ Start understanding:
 
 ## Day Template
 
-* Project you are working on (including link)
-* Progress today
-* Challenges you faced
-* Tasks for tomorrow
+Project :- 
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
 
 ## Day 0
 
@@ -76,3 +79,31 @@ Tasks for tomorrow :-
 [Easy Fullscreen Landing Page With HTML & CSS](https://www.youtube.com/watch?v=hVdTQWASliE): 🍒
 
 [Pluralsight Login Page Clone - HTML & CSS](https://www.youtube.com/watch?v=wIx1O5Y5EB4): 🍒
+
+## Day 2
+
+Project :- 
+
+[Easy Fullscreen Landing Page With HTML & CSS](https://www.youtube.com/watch?v=hVdTQWASliE): 🍒
+
+[Pluralsight Login Page Clone - HTML & CSS](https://www.youtube.com/watch?v=wIx1O5Y5EB4): 🍒
+
+Progress :-
+
+- Finished the Fullscreen landing page, got halfway through the pluralsight login page.
+
+Notes :-
+
+- [ ] What child elements inherit margin:auto? 
+- [ ] When anchor element, when button?
+- Had some practice with different types of element displays.
+- Understood that a button is more suitable than an anchor element in a form.
+
+
+Tasks for tomorrow :-
+
+[Pluralsight Login Page Clone - HTML & CSS](https://www.youtube.com/watch?v=wIx1O5Y5EB4): 🍒
+
+[Basic Parallax Website](https://www.youtube.com/watch?v=JttTcnidSdQ): 🍒
+
+[CSS Text Background Animation](https://www.youtube.com/watch?v=lX5LZTWc4f8)
