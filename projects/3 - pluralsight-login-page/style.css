@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    background: #181818;
+    color: white;
+    display: flex;
+}
+
+/* Login section  */
+
+.login {
+    flex-basis: 40%;
+    height: 100vh;
+    font-weight: 100;
+}
+.login input {
+    border-radius: 2px;
+    border: none;
+    height: 2rem;
+}
+.login img {
+    display: block;
+    width: 60%;
+    margin: 4rem auto 1rem;
+}
+
+.field {
+    text-align: left;
+    margin: 1.2rem auto 0;
+    width: 60%;
+}
+form input[type="button"] {
+    display: block;
+    margin: 1rem auto 0;
+    width: 60%;
+    background: #ff3c41;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.field input {
+    width: 100%;
+}
+
+/* Promo section */
+
+.promo {
+    flex-basis: 60%;
+    height: 100vh;
+    background: url(./img/login-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeats;
+}
