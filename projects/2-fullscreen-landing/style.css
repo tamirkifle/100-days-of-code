@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.landing {
+    background: url(./img/beachshowcase.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    color: saddlebrown;
+}
+
+.landing-title {
+    font-size: 3rem;
+
+    margin-bottom: 0;
+}
+
+.landing-desc {
+    margin-top: 0.7em;
+}
