@@ -25,7 +25,8 @@ a {
     flex-basis: 40%;
     font-weight: 300;
     font-size: 1rem;
-    height: 100%;
+    min-height: 100vh;
+    position: relative;
 }
 .login .wrapper {
     width: 60%;
@@ -89,6 +90,10 @@ a {
 footer {
     margin-top: 10vh;
     font-size: 0.89rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 20%;
+    right: 20%;
 }
 footer a {
     display: inline-block;
@@ -162,5 +167,11 @@ footer .privacy {
     }
     footer a {
         padding: 0 0.5rem;
+    }
+}
+
+@media (max-height: 790px) {
+    footer {
+        position: static;
     }
 }
