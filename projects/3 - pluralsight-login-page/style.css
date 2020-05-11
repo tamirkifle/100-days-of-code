@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Roboto, sans-serif;
     background: #181818;
     color: white;
     display: flex;
+    text-align: center;
+    font-size: 1rem;
 }
 
 a {
@@ -17,23 +23,26 @@ a {
 
 .login {
     flex-basis: 40%;
-    height: 100vh;
-    font-weight: 100;
+    font-weight: 300;
+    font-size: 1rem;
+    height: 100%;
 }
 .login .wrapper {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
 }
 .login input {
     border-radius: 2px;
-    border: none;
+    border: 1px solid rgb(83, 82, 82);
     height: 2rem;
     width: 100%;
+    margin-top: 0.6rem;
+    background-color: inherit;
 }
 .login img {
     display: block;
     max-width: 100%;
-    margin: 4rem auto 1rem;
+    margin: 20vh auto 5rem;
 }
 
 .login .field {
@@ -42,34 +51,116 @@ a {
 }
 .login input[type="button"] {
     display: block;
-    margin: 1rem auto 0;
-    background: #ff3c41;
+    height: 2.4rem;
+    margin: 1rem auto 3rem;
+    background: #f96816;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 .login .options {
+    font-size: 0.9rem;
+    width: 80%;
     margin: auto;
 }
-
-/* .login .options hr {
-    display: inline-block;
-    width: 40%;
-    margin: 0;
+.login .options a {
+    display: block;
+    margin-top: 0.8rem;
 }
-.login .options span {
+.login .or {
+    margin-top: 1rem;
+}
+.login .or hr {
+    display: inline-block;
+    border-top: none;
+    width: 39%;
+}
+.login .or span {
     display: inline-block;
     width: 16%;
-    margin: 0;
-} */
+    margin-bottom: 1rem;
+}
 
+.login .create {
+    padding: 0.7rem 2rem;
+    border: 1px solid white;
+}
+footer {
+    margin-top: 10vh;
+    font-size: 0.89rem;
+}
+footer a {
+    display: inline-block;
+    padding: 0 1rem;
+    color: #f96816;
+    text-decoration: underline;
+}
+footer .terms {
+    border-right: 1px solid white;
+}
+footer .privacy {
+    border-left: 1px solid white;
+}
 /* Promo section */
 
 .promo {
+    min-height: 100vh;
     flex-basis: 60%;
-    height: 100vh;
     background: url(./img/login-bg.jpg);
     background-size: cover;
-    background-repeat: no-repeats;
+    background-repeat: no-repeat;
+}
+
+.promo .info {
+    margin: 40vh 1rem;
+}
+
+.promo h1 {
+    font-size: 3rem;
+}
+.promo a {
+    border: 1px solid white;
+    padding: 1rem 4rem;
+}
+
+@media (max-width: 1000px) {
+    .login {
+        flex-basis: 50%;
+    }
+    .login .wrapper {
+        width: 70%;
+    }
+
+    .promo {
+        flex-basis: 50%;
+    }
+    .promo h1 {
+        font-size: 2.5rem;
+    }
+
+    .promo a {
+        font-size: 0.9rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .promo {
+        display: none;
+    }
+    .login {
+        flex-basis: 100%;
+    }
+    .login .wrapper {
+        width: 85%;
+    }
+    .login a.create {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    footer a {
+        padding: 0 0.5rem;
+    }
 }
