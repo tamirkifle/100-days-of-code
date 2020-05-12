@@ -27,7 +27,7 @@ h1 {
     text-align: center;
     background: url(./img/text-bg.png);
     background-repeat: repeat-x;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     -webkit-background-clip: text;
     animation-name: christmas;
     animation-duration: 140s;
