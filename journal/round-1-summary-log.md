@@ -136,3 +136,32 @@ Tasks for tomorrow :-
 -   [Basic Parallax Website](https://www.youtube.com/watch?v=JttTcnidSdQ): 🍒
 
 -   [CSS Text Background Animation](https://www.youtube.com/watch?v=lX5LZTWc4f8): 🍒
+
+## Day 4
+
+Project :-
+
+-   [Basic Parallax Website](https://www.youtube.com/watch?v=JttTcnidSdQ): 🍒🍒
+-   [CSS Text Background Animation](https://www.youtube.com/watch?v=lX5LZTWc4f8): 🍅
+
+Progress :-
+
+-   Finished the parallax website, with styling adn all effects working smoothly. Took some time.
+-   Finished the small css text background animation project... fun.
+
+Notes :-
+
+-   [ ] Shall I use flexbox to center my content or is there a less hacky way?
+-   Learned a lot about accessibility:
+    -   Understood that the article tag is for wrapping independent self-contained content. I might have been using it wrong.
+    -   Also understood that h1 through h6 are also important for accessibility, and a page should contain only one h1 tag which is the main header.
+    -   Understood how to use the label element properly.
+-   learned how "display:flex" makes the flex items positioned for the z-index to work.
+-   putting a background in the :before so that you can control them (eg.their opacity) separately.
+-   learned how to use "background-attachment:fixed" to create a parallax effect.
+-   had some practice with CSS animations.
+
+Tasks for tomorrow :-
+
+-   [freeCodeCamp Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page): 🍒
+-   [freeCodeCamp Build a Survey Form](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form): 🍒
