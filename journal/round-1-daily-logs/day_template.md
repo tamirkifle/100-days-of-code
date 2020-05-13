@@ -7,9 +7,6 @@
 ## Plan
 - 
 
-## Actual
--
-
 ## Distractions
 - 
 
