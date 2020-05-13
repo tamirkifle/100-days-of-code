@@ -1,10 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Survey Form</title>
-    </head>
-    <body></body>
-</html>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<h1 id="title">The Habits Survey</h1>
+<p id="description">Helps us discover ways to form habits that stick</p>
+<form action="#" id="survey-form">
+    <div class="field">
+        <label for="name" id="name-label">Full Name</label>
+        <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your full name"
+            required
+        />
+    </div>
+    <div class="field">
+        <label for="email" id="email-label">E-mail address</label>
+        <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            required
+        />
+    </div>
+    <div class="field">
+        <label for="age" id="number-label">Age</label>
+        <input
+            type="number"
+            name="age"
+            id="number"
+            min="1"
+            max="200"
+            placeholder="Don't lie we won't tell"
+        />
+    </div>
+    <div class="field">
+        <label for="wake-up-time" id="wake-up-time-label"
+            >What has been your average wake up time for the past month?</label
+        >
+        <select id="dropdown" name="wake-up-time">
+            <option value="5">Before 6am</option>
+            <option value="6">6am - 7am</option>
+            <option value="7">7am - 8am</option>
+            <option value="8">8am - 9am</option>
+            <option value="9">After 9am</option>
+        </select>
+    </div>
+    <div class="field">
+        <label for="person-type" id="person-type-label"
+            >In terms of how you feel throughout the day, what type of person do
+            you classify yourself as? Choose...</label
+        >
+        <label>
+            <input type="radio" name="person-type" value="morning" />
+            A Morning Person
+        </label>
+        <label>
+            <input type="radio" name="person-type" value="evening" />
+            An Evening Person
+        </label>
+        <label>
+            <input type="radio" name="person-type" value="neither" />
+            Neither
+        </label>
+        <label>
+            <input type="radio" name="person-type" value="do-not-know" />
+            I don't know
+        </label>
+    </div>
+    <div class="field">
+        <label id="workout-type-label"
+            >Which of these exercises do you do?</label
+        >
+
+        <input type="checkbox" name="jogging" value="jogging" />
+        <label for="jogging">Jogging</label>
+
+        <input type="checkbox" name="rope" value="rope" />
+        <label for="rope">Jumping Rope</label>
+
+        <input type="checkbox" name="weights" value="weights" />
+        <label for="weights">Weight-Lifting</label>
+
+        <input type="checkbox" name="stretch" value="stretch" />
+        <label>Stretching/Light Yoga</label>
+
+        <input type="checkbox" name="homew" value="homew" />
+        <label for="homew">Home Workout Programs</label>
+
+        <input type="checkbox" name="posture" value="posture" />
+        <label for="posture">Posture Exercises</label>
+
+        <input type="checkbox" name="other" value="other" />
+        <label for="other">Other</label>
+
+        <input type="checkbox" name="none" value="neither" />
+        <label for="none">I Don't Work Out</label>
+    </div>
+
+    <div class="field">
+        <label id="comments-label" for="comments"
+            >Additional weird habits you want to mention?</label
+        >
+        <textarea id="comments" name="comments" placeholder="Write here">
+        </textarea>
+        <br />
+        <button type="submit" id="submit">Submit Form</button>
+    </div>
+</form>
