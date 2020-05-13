@@ -146,8 +146,8 @@ Project :-
 
 Progress :-
 
--   Finished the parallax website, with styling adn all effects working smoothly. Took some time.
--   Finished the small css text background animation project... fun.
+-   Finished the parallax website, with styling and all effects working smoothly. Took some time.
+-   Finished the small css text background animation project...fun.
 
 Notes :-
 
@@ -165,3 +165,22 @@ Tasks for tomorrow :-
 
 -   [freeCodeCamp Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page): 🍒
 -   [freeCodeCamp Build a Survey Form](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form): 🍒
+
+## Day 5
+
+Project :-
+-   [freeCodeCamp Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page): 🍒
+-   [freeCodeCamp Build a Survey Form](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form): 🍒
+
+Progress :-
+- Finished the tribute page with all the styling, no media queries.
+- Finished the markup for the Survey Form page, passed the requirements for the projects, No styling yet.
+
+
+Notes :-
+- [ ] Learned that a good design is hard, but achievable by understanding why a look of a website creates the emotions it does. Need to understand typography and color pyschology.  
+
+Tasks for tomorrow :-
+-   [freeCodeCamp Build a Survey Form](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form): 🍅
+-   [Video Background Page](https://www.youtube.com/watch?v=Xy3GlrddZFI): 🍒
+-   [CSS Grid Responsive Site](https://www.youtube.com/watch?v=M3qBpPw77qo): 🍒
