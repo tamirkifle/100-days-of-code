@@ -169,18 +169,44 @@ Tasks for tomorrow :-
 ## Day 5
 
 Project :-
+
 -   [freeCodeCamp Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page): 🍒
 -   [freeCodeCamp Build a Survey Form](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form): 🍒
 
 Progress :-
-- Finished the tribute page with all the styling, no media queries.
-- Finished the markup for the Survey Form page, passed the requirements for the projects, No styling yet.
 
+-   Finished the tribute page with all the styling, no media queries.
+-   Finished the markup for the Survey Form page, passed the requirements for the projects, No styling yet.
 
 Notes :-
-- [ ] Learned that a good design is hard, but achievable by understanding why a look of a website creates the emotions it does. Need to understand typography and color pyschology.  
+
+-   [ ] Learned that a good design is hard, but achievable by understanding why a look of a website creates the emotions it does. Need to understand typography and color pyschology.
 
 Tasks for tomorrow :-
+
 -   [freeCodeCamp Build a Survey Form](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form): 🍅
 -   [Video Background Page](https://www.youtube.com/watch?v=Xy3GlrddZFI): 🍒
 -   [CSS Grid Responsive Site](https://www.youtube.com/watch?v=M3qBpPw77qo): 🍒
+
+## Day 6
+
+Project :-
+
+-   [Video Background Page](https://www.youtube.com/watch?v=Xy3GlrddZFI): 🍒
+-   [CSS Grid Responsive Site](https://www.youtube.com/watch?v=M3qBpPw77qo): 🍒🍒
+
+Progress :-
+
+-   Finished the video background page. It was simple so didn't require media queries. - Finished the grid responsive page, with styling and with media queries.
+
+Notes :-
+
+-   learned how to use the html5 video tag.
+-   Going one by one coding each section of a website helps keep an untangled mind as well us improves understanding of how the CSS works. Or maybe it was because the project was small.
+-   had my first experience doing mobile-first media queries. It was very positive.
+
+Tasks for tomorrow :-
+
+-   [Wes Bos Single Line Form](https://courses.wesbos.com/account/access/5ae5513242c2397eec320e27/view/195971710): 🍅
+-   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒
+-   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒
