@@ -1,7 +1,10 @@
 body {
     margin: 0;
     background-color: #333;
+    color: #f4f4f4;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 2rem;
+    text-align: center;
 }
 
 /* General */
@@ -11,12 +14,25 @@ body {
 
 h1,
 h2,
+h3,
 p {
     margin: 0;
 }
 a {
     color: inherit;
     text-decoration: none;
+}
+img {
+    width: 100%;
+}
+
+.light-bg {
+    color: #333;
+    background-color: #f4f4f4;
+}
+.blue-bg {
+    background-color: #2690d4;
+    color: #f4f4f4;
 }
 /* Landing Section */
 
@@ -39,7 +55,6 @@ a {
     color: #f4f4f4;
     z-index: 2;
     margin: auto;
-    text-align: center;
     padding: 20vh 2rem;
 }
 
@@ -60,4 +75,81 @@ a {
     padding: 1rem 2rem;
     font-size: 1rem;
     background-color: #333;
+}
+
+/* Content Section */
+
+/* our work */
+.content .our-work {
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+.content .our-work h2 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+.content .our-work p {
+    font-size: 1rem;
+}
+
+/* card list */
+.card-list {
+    margin: 0;
+    padding-left: 0;
+}
+.card-list li {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.card-list h3 {
+    margin: 1rem 0;
+}
+.card-list li figure {
+    padding: 1rem 0;
+}
+
+/* Company Details Section */
+
+.company-details div {
+    padding: 4rem 1.5rem;
+}
+.company-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.company-details p {
+    font-size: 1.1rem;
+}
+
+@media (min-width: 800px) {
+    .our-work-desc {
+        display: grid;
+        grid-template-areas: "a b";
+    }
+
+    .card-list {
+        display: grid;
+        grid-template-areas: "c d e";
+        grid-gap: 0;
+        padding: 1rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .card-list li {
+        height: 100%;
+        margin: 0;
+    }
+
+    .company-details {
+        display: grid;
+        grid-template-areas:
+            "f f"
+            "g h";
+    }
+    .company-details div:first-child {
+        grid-area: f;
+    }
 }
