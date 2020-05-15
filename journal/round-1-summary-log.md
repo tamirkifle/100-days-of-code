@@ -210,3 +210,25 @@ Tasks for tomorrow :-
 -   [Wes Bos Single Line Form](https://courses.wesbos.com/account/access/5ebd7be59edbdf3638123df9/view/195971710): 🍅
 -   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒
 -   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒
+
+## Day 7
+
+Project :-
+-   [Wes Bos Single Line Form](https://courses.wesbos.com/account/access/5ebd7be59edbdf3638123df9/view/195971710): 🍅
+-   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒🍒🍒
+
+Progress :-
+
+- Finished the single line form easily... was a warmup.
+- CSS Grid Image Gallery Project: Finished the logic for one row of items layed out. 
+
+Notes :-
+
+-  Worked with the DOM from Javascript... need more experience with this.
+- Had a tough grid image gallery project which took me the whole of today.
+- The importance of thinking through logic carefully before coding and figuring it out along the way is immense... will save you a lot of time.
+
+
+Tasks for tomorrow :-
+-   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒
+-   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒
