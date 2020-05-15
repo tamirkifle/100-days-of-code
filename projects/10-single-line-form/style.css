@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+}
+
+/* Form */
+form {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form label,
+form select,
+form button {
+    height: 3rem;
+}
+
+form input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+form label {
+    padding: 1rem;
+    background-color: gold;
+}
+
+form #where {
+    flex-basis: 30%;
+}
+
+form #search-btn {
+    background-color: orangered;
+    color: white;
+}

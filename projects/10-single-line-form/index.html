@@ -3,7 +3,32 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
         <title>Single Line Form</title>
     </head>
-    <body></body>
+    <body>
+        <form action="#">
+            <input
+                type="search"
+                name="where"
+                id="where"
+                placeholder="Where do you want to go?"
+            />
+
+            <label for="from">From</label>
+            <input type="date" name="from" id="from" />
+
+            <label for="to">To</label>
+            <input type="date" name="to" id="to" />
+
+            <select name="guests" id="guests">
+                <option value="1" selected>1 Guest</option>
+                <option value="2">2 Guest</option>
+                <option value="3">3 Guest</option>
+                <option value="4">4 Guest</option>
+                <option value="5">5+ Guest</option>
+            </select>
+            <button type="submit" id="search-btn">Search</button>
+        </form>
+    </body>
 </html>
