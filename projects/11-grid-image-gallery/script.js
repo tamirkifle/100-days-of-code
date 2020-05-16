@@ -5,7 +5,7 @@ const gallery = document.querySelector(".gallery");
 var item = document.createElement('h1');
 const tasks = [];
 let round = 1;
-
+let spanStart = 1;
 
 // const tasks = [];
 
@@ -16,11 +16,20 @@ function getRand(minNumber, maxNumber) {
 // Generate randX until randXSum is 10
 // let randXSum = 0, randYSum = 0, randX, randY, xdone = 0, ydone = 0;
 
-const maxBoxes = 4, minBoxes = 2;
+let maxBoxes, minBoxes;
 
 function imageRowGenerate(width) {
+    maxBoxes = 4; minBoxes = 2;
     let randXSum = 0, randYSum = 0, randX, randY;
     const randArray = [];
+    if (width === 1 || width === 2 || width === 3 || width === 4) {
+        randArray.push([width, getRand(minBoxes, maxBoxes)]);
+        return randArray;
+    }
+
+    // if (width < maxBoxes) {
+    //     minBoxes = 1; maxBoxes = width;
+    // }
     while (randXSum !== width) {
         if (randXSum >= (width - maxBoxes)) {
             randX = width - randXSum;
@@ -58,7 +67,7 @@ function imgElementsFromArray(randArray) {
         let imgElement = document.createElement('img');
         let imageContainer = document.createElement('div');
         imgElement.src = `./img/${Math.floor(Math.random() * imgNum + 1)}.jpg`;
-        imageContainer.setAttribute("style", `grid-column: span ${randArray[0][0]}; grid-row: span ${randArray[0][1]}`);
+        imageContainer.setAttribute("style", `grid-column: ${spanStart} / span ${randArray[0][0]}; grid-row: span ${randArray[0][1]}`);
         imageContainer.setAttribute("width", `${randArray[0][0] * 100}px`);
         imageContainer.setAttribute("height", `${randArray[0][1] * 100}px`);
 
