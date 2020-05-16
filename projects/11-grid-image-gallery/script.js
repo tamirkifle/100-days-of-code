@@ -67,7 +67,7 @@ function imgElementsFromArray(randArray) {
         let imgElement = document.createElement('img');
         let imageContainer = document.createElement('div');
         imgElement.src = `./img/${Math.floor(Math.random() * imgNum + 1)}.jpg`;
-        imageContainer.setAttribute("style", `grid-column: ${spanStart} / span ${randArray[0][0]}; grid-row: span ${randArray[0][1]}`);
+        imageContainer.setAttribute("style", `grid-column:  span ${randArray[0][0]}; grid-row: span ${randArray[0][1]}`);
         imageContainer.setAttribute("width", `${randArray[0][0] * 100}px`);
         imageContainer.setAttribute("height", `${randArray[0][1] * 100}px`);
 
