@@ -6,6 +6,7 @@ var item = document.createElement('h1');
 const tasks = [];
 let round = 1;
 let spanStart = 1;
+const galleryWidth = 40;
 
 // const tasks = [];
 
@@ -67,7 +68,10 @@ function imgElementsFromArray(randArray) {
         let imgElement = document.createElement('img');
         let imageContainer = document.createElement('div');
         imgElement.src = `./img/${Math.floor(Math.random() * imgNum + 1)}.jpg`;
-        imageContainer.setAttribute("style", `grid-column:  span ${randArray[0][0]}; grid-row: span ${randArray[0][1]}`);
+        if (spanStart > galleryWidth) { spanStart = 1; }
+        imageContainer.setAttribute("style", `grid-column: ${spanStart} / span ${randArray[0][0]}; grid-row: span ${randArray[0][1]}`);
+        spanStart += randArray[0][0];
+
         imageContainer.setAttribute("width", `${randArray[0][0] * 100}px`);
         imageContainer.setAttribute("height", `${randArray[0][1] * 100}px`);
 
@@ -88,7 +92,7 @@ function imgElementsFromArray(randArray) {
 }
 
 function imgArrayToPage(imgElementsArray) {
-    imgElementsArray.forEach(function (e) { gallery.appendChild(e) });
+    imgElementsArray.forEach(function (e) { gallery.appendChild(e); });
 
 }
 
@@ -161,9 +165,11 @@ function fillGallery(galleryWidth) {
     //rowsDatas contain arrays of rowDatas, and rowData is also an array of one row of calculations
     // rowsDatas = {numbers:[], isMinHeight:[]}
     const rowsDatas = [];
+    spanStart = 1;
 
     tasks.push(galleryWidth);
     while (round <= 16 && tasks.length > 0) {
+        // spanStart = 0;
         let rowDataArray = [], tasksCounter = 0;
         while (tasks.length > 0) {
             rowDataArray = imageRowGenerate(tasks.shift());
@@ -174,10 +180,12 @@ function fillGallery(galleryWidth) {
         round++;
         if (round <= 16)
             addNewTasks(rowsDatas, tasksCounter);
+        while (rowsDatas.length > 0) {
+            imgArrayToPage(imgElementsFromArray(rowsDatas.shift()));
+        }
     }
-    while (rowsDatas.length > 0) {
-        imgArrayToPage(imgElementsFromArray(rowsDatas.shift()));
-    }
+    // while (rowsDatas.length > 0) {
+    // }
 }
 // let currentArray = imageRowGenerate(10);
 // console.log(currentArray);
@@ -186,4 +194,4 @@ function fillGallery(galleryWidth) {
 
 
 // imgArrayToPage(imgElementsFromArray(currentArray));
-fillGallery(10);
+fillGallery(galleryWidth);
