@@ -17,7 +17,8 @@ body {
     display: grid;
     grid-template-columns: repeat(10, 100px);
     grid-template-rows: repeat(10, 100px);
-    /* grid-auto-flow: column; */
+    grid-auto-flow: row dense;
+    grid-column-start: 1;
     padding: 0;
     background: green;
     width: 100%;

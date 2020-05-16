@@ -5,9 +5,8 @@ const gallery = document.querySelector(".gallery");
 var item = document.createElement('h1');
 const tasks = [];
 let round = 1;
-let spanStartColumn = 1;
-let spanStartRow = 1;
-const galleryWidth = 40;
+let spanStart = 1;
+const galleryWidth = 10;
 
 // const tasks = [];
 
@@ -69,12 +68,9 @@ function imgElementsFromArray(randArray) {
         let imgElement = document.createElement('img');
         let imageContainer = document.createElement('div');
         imgElement.src = `./img/${Math.floor(Math.random() * imgNum + 1)}.jpg`;
-        if (spanStartColumn > galleryWidth) { spanStartColumn = 1; spanStartRow++; }
-        if (spanStartRow > galleryWidth) { //END THE PROGRAM 
-        }
-
-        imageContainer.setAttribute("style", `grid-column: ${spanStartColumn} / span ${randArray[0][0]}; grid-row: ${spanStartRow} / span ${randArray[0][1]}`);
-        spanStartColumn += randArray[0][0];
+        if (spanStart > galleryWidth) { spanStart = 1; }
+        imageContainer.setAttribute("style", `grid-column: ${spanStart} / span ${randArray[0][0]}; grid-row: span ${randArray[0][1]}`);
+        spanStart += randArray[0][0];
 
         imageContainer.setAttribute("width", `${randArray[0][0] * 100}px`);
         imageContainer.setAttribute("height", `${randArray[0][1] * 100}px`);
@@ -172,7 +168,7 @@ function fillGallery(galleryWidth) {
     spanStart = 1;
 
     tasks.push(galleryWidth);
-    while (spanStartRow < galleryWidth && tasks.length > 0) {
+    while (round <= 16 && tasks.length > 0) {
         // spanStart = 0;
         let rowDataArray = [], tasksCounter = 0;
         while (tasks.length > 0) {
@@ -182,7 +178,7 @@ function fillGallery(galleryWidth) {
             tasksCounter++;
         }
         round++;
-        if (spanStartRow < galleryWidth)
+        if (round <= 16)
             addNewTasks(rowsDatas, tasksCounter);
         while (rowsDatas.length > 0) {
             imgArrayToPage(imgElementsFromArray(rowsDatas.shift()));
