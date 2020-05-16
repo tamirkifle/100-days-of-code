@@ -3,6 +3,9 @@
 const imgNum = 12;
 const gallery = document.querySelector(".gallery");
 var item = document.createElement('h1');
+const tasks = [];
+let round = 1;
+
 
 // const tasks = [];
 
@@ -11,11 +14,12 @@ function getRand(minNumber, maxNumber) {
 }
 
 // Generate randX until randXSum is 10
-let randXSum = 0, randYSum = 0, randX, randY, xdone = 0, ydone = 0;
+// let randXSum = 0, randYSum = 0, randX, randY, xdone = 0, ydone = 0;
 
 const maxBoxes = 4, minBoxes = 2;
 
 function imageRowGenerate(width) {
+    let randXSum = 0, randYSum = 0, randX, randY;
     const randArray = [];
     while (randXSum !== width) {
         if (randXSum >= (width - maxBoxes)) {
@@ -106,21 +110,61 @@ function imgArrayToPage(imgElementsArray) {
 //     imageCounter += 1;
 
 // }
-
-function addNewTasks() {
+function generateTasksFromRow(rowArray) {
+    let generatedTasks = [], sum = 0, resetSum = 0;
+    for (let index = 0; index < rowArray.length; index++) {
+        if (resetSum) sum = 0;
+        if (index != rowArray.length - 1 && rowArray[index][1] === rowArray[index + 1][1]) {
+            resetSum = 0;
+            sum += rowArray[index][0];
+        }
+        else {
+            resetSum = 1;
+            generatedTasks.push(sum + rowArray[index][0]);
+        }
+    }
+    return generatedTasks;
 }
+console.log("hello", generateTasksFromRow([[3, 4], [3, 2], [4, 2]]));
 
+function addNewTasks(rowsDatas, tasksCounter) {
+    let oneRow = [], tasksArray;
+    for (let index = rowsDatas.length - tasksCounter; index < rowsDatas.length; index++) {
+        oneRow = rowsDatas[index];
+        tasksArray = generateTasksFromRow(oneRow);
+        tasksArray.forEach(task => tasks.push(task));
+        console.log("addNewTasks", tasksArray);
+
+    }
+    // let tasksArray = generateTasksFromRow(oneRow);
+    // tasksArray.forEach(task => tasks.push(task));
+    // console.log("addNewTasks", tasksArray);
+}
+// addNewTasks([[[2, 3], [2, 3], [4, 3], [2, 4]]], 1);
+
+// function updateHeightLeft(rowDataArray) {
+//     let minY = 16;
+//     rowDataArray.forEach(coordinate => { if (coordinate[1] < minY) minY = coordinate[1] });
+//     heightLeft -= minY;
+
+// }
 function fillGallery(galleryWidth) {
     //rowsDatas contain arrays of rowDatas, and rowData is also an array of one row of calculations
+    // rowsDatas = {numbers:[], isMinHeight:[]}
     const rowsDatas = [];
-    const tasks = [];
+
     tasks.push(galleryWidth);
-    while (tasks.length > 0) {
+    while (round <= 16 && tasks.length > 0) {
+        let rowDataArray = [], tasksCounter = 0;
         while (tasks.length > 0) {
-            let rowDataArray = imageRowGenerate(tasks.pop());
+            rowDataArray = imageRowGenerate(tasks.shift());
+            // updateHeightLeft(rowDataArray);
             rowsDatas.push(rowDataArray);
+            tasksCounter++;
         }
-        // addNewTasks();
+        round++;
+        if (round <= 16)
+            addNewTasks(rowsDatas, tasksCounter);
     }
     while (rowsDatas.length > 0) {
         imgArrayToPage(imgElementsFromArray(rowsDatas.shift()));
