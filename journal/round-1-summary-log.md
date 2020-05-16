@@ -214,21 +214,44 @@ Tasks for tomorrow :-
 ## Day 7
 
 Project :-
+
 -   [Wes Bos Single Line Form](https://courses.wesbos.com/account/access/5ebd7be59edbdf3638123df9/view/195971710): 🍅
 -   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒🍒🍒
 
 Progress :-
 
-- Finished the single line form easily... was a warmup.
-- CSS Grid Image Gallery Project: Finished the logic for one row of items layed out. 
+-   Finished the single line form easily... was a warmup.
+-   CSS Grid Image Gallery Project: Finished the logic for one row of items layed out.
 
 Notes :-
 
--  Worked with the DOM from Javascript... need more experience with this.
-- Had a tough grid image gallery project which took me the whole of today.
-- The importance of thinking through logic carefully before coding and figuring it out along the way is immense... will save you a lot of time.
-
+-   Worked with the DOM from Javascript... need more experience with this.
+-   Had a tough grid image gallery project which took me the whole of today.
+-   The importance of thinking through logic carefully before coding and figuring it out along the way is immense... will save you a lot of time.
 
 Tasks for tomorrow :-
+
+-   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒
+-   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒
+
+## Day 8
+
+Project :-
+
+-   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒🍒🍒🍒
+
+Progress :-
+
+-   [ ] Got it working with minimal problems, need to make it flow as I want it one element after another from left to right and then row by row.
+
+Notes :-
+
+-   [ ] Had some exercise with CSS grid, need to get clear on how css grid lays elements out.
+-   Got clear on the box-sizing property.
+-   Got very clear on passing array, and how the variable names are array pointers.
+-   I realized when you are trying to solve a complex problem, sometimes your mind gets super tense trying to make everything makes sense, and when it become too much, much like a computer you get stuck and functioning really slowly, and I felt it was even hard to just let go of that train of though, it's like it's tangled up. I found taking a couple of minutes trying to get your mind to get off that thinking train helps, and after you're restarted, the problem seems much manageable.
+
+Tasks for tomorrow :-
+
 -   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒
 -   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒
