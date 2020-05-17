@@ -255,3 +255,21 @@ Tasks for tomorrow :-
 
 -   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒
 -   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒
+
+
+## Day Template
+
+Project :-
+-   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒🍒🍒
+    
+Progress :-
+- Finished the CSS Grid Gallery... it's working good without any holes in the final output.
+    - [ ] TO UPGRADE: Task generating should figure out continuous rows to combine, currently only does it when generating for the top.
+
+
+Notes :-
+- Learned about how tables in html work and how we can deconstruct them for mobile view.
+- Learned more how css grid layouts work. 
+
+Tasks for tomorrow :-
+-   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒🍒
