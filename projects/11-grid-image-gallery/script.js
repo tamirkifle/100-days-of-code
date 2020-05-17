@@ -1,17 +1,17 @@
 
-
+//TO UPGRADE: Task generating should figure out continuous rows to combine, currently only does it when generating for the top.
 const imgNum = 12;
 const gallery = document.querySelector(".gallery");
 var item = document.createElement('h1');
 const tasks = [];
 let round = 1;
 let spanStart = 1;
-const galleryWidth = 10;
-
+const galleryWidth = 40;
+const roundsToGo = galleryWidth/2;
 // const tasks = [];
 
 function getRand(minNumber, maxNumber) {
-    return Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber);
+    return (Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber);
 }
 
 // Generate randX until randXSum is 10
@@ -23,57 +23,86 @@ function imageRowGenerate(width) {
     maxBoxes = 4; minBoxes = 2;
     let randXSum = 0, randYSum = 0, randX, randY;
     const randArray = [];
-    if (width === 1 || width === 2 || width === 3 || width === 4) {
-        randArray.push([width, getRand(minBoxes, maxBoxes)]);
-        return randArray;
-    }
-
-    // if (width < maxBoxes) {
-    //     minBoxes = 1; maxBoxes = width;
+    // if (width === 1 || width === 2) {
+    //     randArray.push([width, getRand(1, maxBoxes)]);
+    //     imgArrayToPage(imgElementsFromArray(randArray));
+    //     return randArray;
+    // }
+    // else if (width === 3 || width === 4){
+    //     maxBoxes = width; minBoxes = 2;
+        
     // }
     while (randXSum !== width) {
-        if (randXSum >= (width - maxBoxes)) {
-            randX = width - randXSum;
-            randXSum += randX;
-            randY = getRand(minBoxes, maxBoxes);
-            randArray.push([randX, randY]);
-        }
-
         if (randXSum > width) {
             randXSum -= randX;
             randX = getRand(minBoxes, maxBoxes);
             randArray[randArray.length - 1][0] = randX;
-            randY = getRand(minBoxes, maxBoxes);
-            randArray[randArray.length - 1][1] = randY;
             randXSum += randX;
 
         }
-        if (randXSum < width) {
+        else if((width-randXSum)<minBoxes) {
+            randX = getRand(1, width-randXSum);
+            randXSum += randX;
+            randY = getRand(minBoxes, maxBoxes);
+            randArray.push([randX, randY]);
+        }
+        else if((width-randXSum)>=minBoxes && (width-randXSum) < maxBoxes) {
+            randX = getRand(minBoxes, (width-randXSum));
+            randXSum += randX;
+            randY = getRand(minBoxes, maxBoxes);
+            randArray.push([randX, randY]);
+        }
+        else if (randXSum < width) {
             randX = getRand(minBoxes, maxBoxes);
             randXSum += randX;
             randY = getRand(minBoxes, maxBoxes);
             randArray.push([randX, randY]);
         }
+        // if((width-randXSum) === 1 || (width-randXSum) === 2){
+        //     randXSum += (width-randXSum);
+        //     randY = getRand(2, 4);
+        //     randArray.push([width-randXSum, randY]);
+        // }
+        // if (randXSum > width) {
+        //     randXSum -= randX;
+        //     randX = getRand(minBoxes, maxBoxes);
+        //     randArray[randArray.length - 1][0] = randX;
+        //     randY = getRand(minBoxes, maxBoxes);
+        //     randArray[randArray.length - 1][1] = randY;
+        //     randXSum += randX;
+
+        // }
+        // if (randXSum < width) {
+        //     randX = getRand(minBoxes, maxBoxes);
+        //     randXSum += randX;
+        //     randY = getRand(minBoxes, maxBoxes);
+        //     randArray.push([randX, randY]);
+        // }
 
     }
+    
+    // if (width < maxBoxes) {
+    //     minBoxes = 1; maxBoxes = width;
+    // }
+    imgArrayToPage(imgElementsFromArray(randArray));
     return randArray;
 }
 
 
 function imgElementsFromArray(randArray) {
     const imgElements = [];
-    let imageCounter = 0;
+    let index = 0;
 
-    while (randArray.length > 0) {
+    while (index < randArray.length) {
         let imgElement = document.createElement('img');
         let imageContainer = document.createElement('div');
         imgElement.src = `./img/${Math.floor(Math.random() * imgNum + 1)}.jpg`;
         if (spanStart > galleryWidth) { spanStart = 1; }
-        imageContainer.setAttribute("style", `grid-column: ${spanStart} / span ${randArray[0][0]}; grid-row: span ${randArray[0][1]}`);
-        spanStart += randArray[0][0];
+        imageContainer.setAttribute("style", `grid-column: ${spanStart} / span ${randArray[index][0]}; grid-row: span ${randArray[index][1]}`);
+        spanStart += randArray[index][0];
 
-        imageContainer.setAttribute("width", `${randArray[0][0] * 100}px`);
-        imageContainer.setAttribute("height", `${randArray[0][1] * 100}px`);
+        imageContainer.setAttribute("width", `${randArray[index][0] * 100}px`);
+        imageContainer.setAttribute("height", `${randArray[index][1] * 100}px`);
 
         imgElement.setAttribute("width", "100%");
         imgElement.setAttribute("height", "100%");
@@ -82,8 +111,8 @@ function imgElementsFromArray(randArray) {
 
         imageContainer.appendChild(imgElement);
         imgElements.push(imageContainer);
-        console.log(`One image element created with dimensions ${randArray.shift()}; Total elements created is: ${imageCounter + 1}`);
-        imageCounter += 1;
+        // console.log(`One image element created with dimensions ${randArray.shift()}; Total elements created is: ${imageCounter + 1}`);
+        index += 1;
 
 
     }
@@ -168,7 +197,7 @@ function fillGallery(galleryWidth) {
     spanStart = 1;
 
     tasks.push(galleryWidth);
-    while (round <= 16 && tasks.length > 0) {
+    while (round <= roundsToGo && tasks.length > 0) {
         // spanStart = 0;
         let rowDataArray = [], tasksCounter = 0;
         while (tasks.length > 0) {
@@ -178,11 +207,11 @@ function fillGallery(galleryWidth) {
             tasksCounter++;
         }
         round++;
-        if (round <= 16)
+        if (round <= roundsToGo)
             addNewTasks(rowsDatas, tasksCounter);
-        while (rowsDatas.length > 0) {
-            imgArrayToPage(imgElementsFromArray(rowsDatas.shift()));
-        }
+        // while (rowsDatas.length > 0) {
+        //     imgArrayToPage(imgElementsFromArray(rowsDatas.shift()));
+        // }
     }
     // while (rowsDatas.length > 0) {
     // }
