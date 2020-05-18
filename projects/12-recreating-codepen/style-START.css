@@ -28,3 +28,32 @@ h6 {
   font-size: 1.5em;
 }
 
+header.pen {
+  background-color: lawngreen;
+  display: grid;
+  grid-template-columns: 5fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0.5rem;
+  justify-self: end;
+  align-items: center;
+
+}
+header.pen .pen__details{
+  margin: 1rem 0 0;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+}
+
+header.pen > button, header.pen > img {
+  grid-row: 1/2;
+  height: 44px;
+  border-radius: 0.4rem;
+}
+
+.button--dirty{
+  border-top: 4px solid yellow;
+}
+
+
