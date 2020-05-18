@@ -257,7 +257,7 @@ Tasks for tomorrow :-
 -   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒
 
 
-## Day Template
+## Day 9
 
 Project :-
 -   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒🍒🍒
