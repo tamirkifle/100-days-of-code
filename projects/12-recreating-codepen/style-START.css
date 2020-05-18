@@ -28,8 +28,9 @@ h6 {
   font-size: 1.5em;
 }
 
-.button--dirty{
+header.pen > .button--dirty{
   border-top: 4px solid yellow;
+
 }
 
 /* Container (codepen DIV) */
@@ -40,17 +41,19 @@ h6 {
 }
 /* Pen Header */
 header.pen {
-  background-color: lawngreen;
+  background-color: black;
+  color: white;
   display: grid;
-  grid-template-columns: 5fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-gap: 0.5rem;
   /* justify-items: end; */
   align-items: center;
+  border-bottom: 8px solid #525254;
 
 }
 header.pen .pen__details{
-  margin: 1rem 0 0;
+  margin: 1rem;
   /* justify-self: start; */
 
   grid-column: 1 / 2;
@@ -62,8 +65,20 @@ header.pen > button, header.pen > img {
   grid-row: 1/2;
   height: 44px;
   border-radius: 0.4rem;
-}
 
+}
+header.pen > button {
+  display: inline-block;
+font-family: inherit; 
+font-weight: initial;
+font-size: inherit;
+background-color: rgb(52, 52, 54);
+color: white;
+border: none; /* padding: 0 1rem; */
+  text-align: center;
+  /* line-height: 50px; */
+
+}
 
 
 /* Coding windows */
@@ -87,7 +102,7 @@ grid-template-columns: 1fr 1fr 1fr;
   grid-row: 1 / 2;
   display: grid; 
   grid-template-columns: 2rem 1fr 2rem;
-  grid-gap: 1rem;
+  /* grid-gap: 1rem; */
   align-items: center;
   justify-items: center;
 } 
@@ -95,9 +110,24 @@ grid-template-columns: 1fr 1fr 1fr;
   grid-row: 2 / 3;
   display: grid; 
   grid-template-columns: 2rem 1fr;
+  /* grid-gap: 1rem; */
   justify-items: center;
 
 
+}
+.editor > *, .editor .editor__input{
+  background-color: #1c2b34;
+  color: white;
+  font-size: 1rem;;
+
+}
+.editor .editor__header {
+  background-color: #18262e;
+  padding: 0.3rem;
+
+}
+.editor .editor__input {
+  color: #7a7a7c;
 }
 
 .editor__header > *, .editor__code > *{
@@ -105,6 +135,10 @@ grid-template-columns: 1fr 1fr 1fr;
 }
 .editor button {
   width: 1.5rem;
+  border: none;
+  background-color:#18262e ;
+  color: white;
+  font-size: 0.8rem;
 }
 .editor__header .editor__heading, .editor__code .editor__input {
   justify-self: start;
@@ -123,9 +157,13 @@ grid-template-columns: 1fr 1fr 1fr;
   height:100%;
 }
 footer {
-  margin: 0.4rem;
+  padding: 0.4rem;
+  background-color: black;
 }
 footer > button {
   padding: 0.3rem;
   border-radius: 0.5rem;;
+  border: none;
+  background-color: black;
+  color: white;
 }
