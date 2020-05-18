@@ -273,3 +273,18 @@ Notes :-
 
 Tasks for tomorrow :-
 -   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒🍒
+
+## Day 10
+
+Project :-
+-   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒🍒
+
+Progress :-
+- Finished the Codepen Clone
+
+Notes :-
+- [ ] Had some problems with button text alignment, need to look into that.
+- Learned a lot about how to align items in CSS Grid.
+
+Tasks for tomorrow :-
+- [Responsive Restaurant Website](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249566909): 🍒🍒
