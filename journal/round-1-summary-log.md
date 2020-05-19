@@ -288,3 +288,20 @@ Notes :-
 
 Tasks for tomorrow :-
 - [Responsive Restaurant Website](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249566909): 🍒🍒
+
+
+## Day 11
+
+Project :-
+- [Responsive Restaurant Website](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249566909): 🍒🍒
+
+Progress :-
+- [ ] Finished the responsive restaurant website, came  missing basic styling that I need to finish up.
+
+Notes :-
+- [ ] Need to refactor the long term plans for this 100DaysChallenge, feeling like it's getting too repetitive.
+- Need to find better ways to approach problems, I just jump in and start coding and I feel like that has diminishing returns.
+
+Tasks for tomorrow :-
+- [Responsive Side Menu From Scratch](https://www.youtube.com/watch?v=wpGNFGqNfdU): 🍒
+- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒
