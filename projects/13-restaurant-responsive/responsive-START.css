@@ -1,5 +1,11 @@
 body {
   font-size: 15px;
+  
+}
+
+*{
+  box-sizing: border-box;
+
 }
 
 button {
@@ -12,3 +18,178 @@ img {
   max-width: 100%;
 }
 
+div.wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+.wrapper .top{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.wrapper .hero{
+  background: url(./images/taco.jpg);
+  background-size: cover;
+  background-position: right;
+  height: 90vh;
+  color: white;
+  text-align: center;
+  /* padding-top: 100%; */
+}
+.wrapper .cta {
+  text-align: center;
+}
+
+.wrapper .cta  .price{
+  display: block;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+.wrapper .cta p {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+nav.menu {
+  order: -1;
+  height:10vh;
+}
+nav.menu ul{
+  display: none;
+}
+
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  text-align: center;  
+  font-size: 1.5rem;
+  margin-top: 4rem;
+
+}
+.features .icon {
+  font-size: 5rem;
+}
+.features .feature {
+}
+.features p {
+  color: grey;
+  font-size: 1.3rem;
+}
+.about {
+  display:grid;
+  grid-template-columns: 1fr;
+
+  width: 80%;
+  margin: 5rem auto;
+}
+.about h2{
+  font-size: 2rem;
+}
+.about p {
+  font-size: 1.5rem;
+}
+.about button{
+  font-size: 1rem;;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+
+}
+.gallery h2{
+  /* /* font-size: 2rem; */
+text-align: center;
+}
+.gallery img{
+  width: 100%;
+  object-fit: cover;
+}
+
+
+@media (min-width: 560px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery h2{
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: 620px) {
+  .wrapper .top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .wrapper .hero {
+    grid-column: 1/ 3;
+  }
+}
+
+@media (min-width: 835px) {
+  .features {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .gallery h2{
+    grid-column: 1 / 4;
+  }
+}
+
+@media (min-width: 875px) {
+  .wrapper .top {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+  }
+  .wrapper .hero {
+    grid-column: 1/2;
+    grid-row: 1 / 3;
+  }
+}
+
+@media (min-width: 1120px) {
+  .features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .gallery h2{
+    grid-column: 1 / 5;
+  }
+}
+
+@media (min-width: 1000px) {
+  nav.menu {
+    order: initial;
+  }
+  nav.menu button {
+    display: none;
+  }
+  nav.menu ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 2rem;
+    list-style-type: none;
+  }  
+  nav.menu ul a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    /* border: 1px solid black; */
+    font-size: 1.7rem;
+    padding: 1rem;
+
+  }
+}
