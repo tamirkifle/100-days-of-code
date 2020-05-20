@@ -20,7 +20,7 @@
   
 ### Progress
 - [Responsive Side Menu From Scratch](https://www.youtube.com/watch?v=wpGNFGqNfdU): 🍒🍒
-  - Finished this project... but my CSS is a bit unorganized, would like to clean it up and turn it my media queries mobile-first.
+  - [ ] Finished this project... but my CSS is a bit unorganized, would like to clean it up and turn it my media queries mobile-first.
 
 ### Other Tracker Data
 - CodeTime Coding Time: 1.8 hrs

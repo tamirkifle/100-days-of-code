@@ -305,3 +305,18 @@ Notes :-
 Tasks for tomorrow :-
 - [Responsive Side Menu From Scratch](https://www.youtube.com/watch?v=wpGNFGqNfdU): 🍒
 - [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒
+
+## Day 12
+
+Project :-
+- [Responsive Side Menu From Scratch](https://www.youtube.com/watch?v=wpGNFGqNfdU): 🍒🍒
+
+Progress :-
+- [ ] Finished this project... but my CSS is a bit unorganized, would like to clean it up and turn it my media queries mobile-first.
+
+Notes :-
+- Learned how to create a menu that is activated by a hamburger button. 
+- Learned about the target CSS pseudo-class.
+
+Tasks for tomorrow :-
+- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒
