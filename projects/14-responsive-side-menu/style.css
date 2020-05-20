@@ -28,7 +28,6 @@ nav li {
 nav ul {
     padding: 0;
     margin: 0;
-    width: 50%;
 }
 nav .menu-item, nav .hamburger {
     display: inline-block;
@@ -39,21 +38,69 @@ nav .menu-item, nav .hamburger {
 }
 
 nav .hamburger {
+    display: none;
     width: 3rem;
 }
 
+nav .menu-close {
+    display: none;
+}
+
+nav ul {
+    display: inline-block;
+}
 
 
 @media (max-width: 600px) {
-    nav ul {
+    nav ul{
         position: absolute;
+        top: 0;
+        left:-999px;
+        width:auto;
+
 
     }
     nav .menu-item {
-        display: block;
         background-color: rgba(0,0,0,0.8);
         top:0;
         left:0;
+    }
+    nav .menu-close {
+        display: block;
+    }
+    nav .hamburger{
+        display: inline-block;
+    }
+    nav .menu-item{
+        display: block;
+    }
+    nav ul:target{
+        left:0;
+        
+    }
+    nav ul .menu-close{
+        display: block;
+        position: absolute;
+        top:0;
+        right:0;
+        z-index: 1001;
+
+    }
+    nav ul li{
+        position: relative;
+        z-index: 1001;
+
+    }
+    nav ul:target .click-cover {
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100vw;
+        height:100vh;
+        background: rgba(0,0,0,0.4);
+        z-index:1000;
+        cursor: default;
     }
     
 }
