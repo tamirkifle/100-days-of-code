@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+nav {
+    display: inline-block;
+    width: 100%;
+    height: 3rem;
+    background-color: lightseagreen;
+}
+ 
+nav li {
+    list-style-type: none;
+    
+}
+/* nav::after{
+    clear: both;
+} */
+nav ul {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+}
+nav .menu-item, nav .hamburger {
+    display: inline-block;
+    width: 6rem;
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 1rem;
+}
+
+nav .hamburger {
+    width: 3rem;
+}
+
+
+
+@media (max-width: 600px) {
+    nav ul {
+        position: absolute;
+
+    }
+    nav .menu-item {
+        display: block;
+        background-color: rgba(0,0,0,0.8);
+        top:0;
+        left:0;
+    }
+    
+}
