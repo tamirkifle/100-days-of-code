@@ -11,22 +11,32 @@ body,html {
     width: 100%;
     height:100%;
     position: relative;
+    overflow: hidden;
 
 }
 .container img {
-    display: none;
-}
-.container img.previous {
-    position:absolute;
-    left:-100%;
-
-}
-.container img.current, .container img.previous{
     display:inline-block;
     width:100%;
     height:100%;
     object-fit: cover;
     object-position: center;
+    position:absolute;
+    left:0%;
+    transition: left 1s ease-in;
+    z-index: 1
+
+}
+.container img.on-top {
+    z-index:2;
+}
+.container img.on-top.to-left {
+    left: -100%;
+}
+.container img.on-top.to-right {
+    left: 100%;
+}
+.container img.on-top.current {
+    left:0;
 }
 
 .container .arrow {
@@ -42,6 +52,7 @@ body,html {
     color: white;
     border: none;
     background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
 }
 
 .container .left {
