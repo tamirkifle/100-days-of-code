@@ -26,7 +26,7 @@ function slideImage(direction){
                         return previousIndex;
                     }
         }})();
-        // images[i].classList.add("on-top");
+        images[i].classList.add("on-top");
         images[i].classList.add("to-left");
 
     }
