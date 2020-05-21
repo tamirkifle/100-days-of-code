@@ -320,3 +320,31 @@ Notes :-
 
 Tasks for tomorrow :-
 - [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒
+
+## Day 13
+
+Project :- 
+- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒🍒
+
+Progress :-
+- Finished with small animation problems
+
+
+Notes :-
+  - Learned a little about CSS transitions.
+  - [ ] Had some problems with the transition animation. Need to learn more about transitions and fix it tomorrow.
+
+Tasks for tomorrow :-
+- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒
+- [100 Days CSS Challenge](https://100dayscss.com/): 🍒
+
+
+## Day 14
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
