@@ -22,12 +22,13 @@ body,html {
     object-position: center;
     position:absolute;
     left:0%;
-    transition: left 1s ease-in;
     visibility: hidden;
 
 }
 .container img.on-top {
     visibility: visible;
+    transition: left 1s ease-in;
+
 }
 .container img.to-left {
     left: -100%;
