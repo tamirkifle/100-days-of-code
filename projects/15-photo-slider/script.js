@@ -1,7 +1,7 @@
 const leftArrow = document.querySelector(".arrow.left");
 const rightArrow = document.querySelector(".arrow.right");
 
-const images = document.getElementsByTagName("img");
+const images = document.getElementsByTagName("figure");
 
 
 
@@ -15,8 +15,8 @@ function startSlideShow(images){
             }
             else{
                 images[0].classList.add("on-top","current");
-                images[images.length-1].classList.add("on-top","to-left");
-                images[1].classList.add("on-top","to-right");
+                images[images.length-1].classList.add("to-left");
+                images[1].classList.add("to-right");
                 return true;
             }
         });
