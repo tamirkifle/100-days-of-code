@@ -23,16 +23,16 @@ body,html {
     position:absolute;
     left:0%;
     transition: left 1s ease-in;
-    z-index: 1
+    visibility: hidden;
 
 }
 .container img.on-top {
-    z-index:2;
+    visibility: visible;
 }
-.container img.on-top.to-left {
+.container img.to-left {
     left: -100%;
 }
-.container img.on-top.to-right {
+.container img.to-right {
     left: 100%;
 }
 .container img.on-top.current {
