@@ -342,9 +342,14 @@ Tasks for tomorrow :-
 ## Day 14
 
 Project :-
+- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒🍅
 
 Progress :-
+- Fixed the transition animations, added the captions and also did their animations. 
 
 Notes :-
+- Learned that transitions work when we add a class or remove a class. You can apply a transition when that specific class gets added.
+- [ ] Saw that whenever I solve issues or get a problem done, I feel good, and until then I feel tense and not happy. I want to fix that and feel like all progress is good, take it slow and concentrate more on the progress and the process rather than the destination.
 
 Tasks for tomorrow :-
+- Udemy - Javascript In Action, Project 1: 🍒🍒
