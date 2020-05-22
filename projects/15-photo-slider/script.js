@@ -15,6 +15,7 @@ function startSlideShow(images){
             }
             else{
                 images[0].classList.add("on-top","current");
+                images[0].getElementsByTagName("figcaption")[0].classList.add("on-top", "first");
                 images[images.length-1].classList.add("to-left");
                 images[1].classList.add("to-right");
                 return true;
@@ -41,9 +42,11 @@ function left(){
     Array.from(images).some((image,index) =>  
         {
             if(image.classList.contains("current")){
+                image.getElementsByTagName("figcaption")[0].classList= "";
                 clearClasses(images);
                 images[index].classList.add("on-top","to-right");
                 images[indexStep(-1,index,images)].classList.add("on-top","current");
+                images[indexStep(-1,index,images)].getElementsByTagName("figcaption")[0].classList.add("on-top");
                 images[indexStep(-2, index,images)].classList.add("to-left");
                 return true;
             }
@@ -57,9 +60,13 @@ function right(){
     Array.from(images).some((image,index) =>  
         {
             if(image.classList.contains("current")){
+                image.getElementsByTagName("figcaption")[0].classList="";
                 clearClasses(images);
+        
                 images[index].classList.add("on-top","to-left");
                 images[indexStep(1,index,images)].classList.add("on-top","current");
+                images[indexStep(1,index,images)].getElementsByTagName("figcaption")[0].classList.add("on-top");
+
                 images[indexStep(2, index,images)].classList.add("to-right");
                 return true;
             }
