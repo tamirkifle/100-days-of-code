@@ -256,100 +256,138 @@ Tasks for tomorrow :-
 -   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒
 -   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒
 
-
 ## Day 9
 
 Project :-
--   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒🍒🍒
-    
-Progress :-
-- Finished the CSS Grid Gallery... it's working good without any holes in the final output.
-    - [ ] TO UPGRADE: Task generating should figure out continuous rows to combine, currently only does it when generating for the top.
 
+-   [CSS Grid Image Gallery](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249560994): 🍒🍒🍒
+
+Progress :-
+
+-   Finished the CSS Grid Gallery... it's working good without any holes in the final output.
+    -   [ ] TO UPGRADE: Task generating should figure out continuous rows to combine, currently only does it when generating for the top.
 
 Notes :-
-- Learned about how tables in html work and how we can deconstruct them for mobile view.
-- Learned more how css grid layouts work. 
+
+-   Learned about how tables in html work and how we can deconstruct them for mobile view.
+-   Learned more how css grid layouts work.
 
 Tasks for tomorrow :-
+
 -   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒🍒
 
 ## Day 10
 
 Project :-
+
 -   [Codepen Clone](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249565560): 🍒🍒
 
 Progress :-
-- Finished the Codepen Clone
+
+-   Finished the Codepen Clone
 
 Notes :-
-- [ ] Had some problems with button text alignment, need to look into that.
-- Learned a lot about how to align items in CSS Grid.
+
+-   [ ] Had some problems with button text alignment, need to look into that.
+-   Learned a lot about how to align items in CSS Grid.
 
 Tasks for tomorrow :-
-- [Responsive Restaurant Website](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249566909): 🍒🍒
 
+-   [Responsive Restaurant Website](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249566909): 🍒🍒
 
 ## Day 11
 
 Project :-
-- [Responsive Restaurant Website](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249566909): 🍒🍒
+
+-   [Responsive Restaurant Website](https://courses.wesbos.com/account/access/5ebd7c8a9edbdf3638123dfa/view/249566909): 🍒🍒
 
 Progress :-
-- [ ] Finished the responsive restaurant website, came  missing basic styling that I need to finish up.
+
+-   [ ] Finished the responsive restaurant website, came missing basic styling that I need to finish up.
 
 Notes :-
-- [ ] Need to refactor the long term plans for this 100DaysChallenge, feeling like it's getting too repetitive.
-- Need to find better ways to approach problems, I just jump in and start coding and I feel like that has diminishing returns.
+
+-   [ ] Need to refactor the long term plans for this 100DaysChallenge, feeling like it's getting too repetitive.
+-   Need to find better ways to approach problems, I just jump in and start coding and I feel like that has diminishing returns.
 
 Tasks for tomorrow :-
-- [Responsive Side Menu From Scratch](https://www.youtube.com/watch?v=wpGNFGqNfdU): 🍒
-- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒
+
+-   [Responsive Side Menu From Scratch](https://www.youtube.com/watch?v=wpGNFGqNfdU): 🍒
+-   [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒
 
 ## Day 12
 
 Project :-
-- [Responsive Side Menu From Scratch](https://www.youtube.com/watch?v=wpGNFGqNfdU): 🍒🍒
+
+-   [Responsive Side Menu From Scratch](https://www.youtube.com/watch?v=wpGNFGqNfdU): 🍒🍒
 
 Progress :-
-- [ ] Finished this project... but my CSS is a bit unorganized, would like to clean it up and turn it my media queries mobile-first.
+
+-   [ ] Finished this project... but my CSS is a bit unorganized, would like to clean it up and turn it my media queries mobile-first.
 
 Notes :-
-- Learned how to create a menu that is activated by a hamburger button. 
-- Learned about the target CSS pseudo-class.
+
+-   Learned how to create a menu that is activated by a hamburger button.
+-   Learned about the target CSS pseudo-class.
 
 Tasks for tomorrow :-
-- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒
+
+-   [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒
 
 ## Day 13
 
-Project :- 
-- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒🍒
+Project :-
+
+-   [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒🍒
 
 Progress :-
-- Finished with small animation problems
 
+-   Finished with small animation problems
 
 Notes :-
-  - Learned a little about CSS transitions.
-  - [ ] Had some problems with the transition animation. Need to learn more about transitions and fix it tomorrow.
+
+-   Learned a little about CSS transitions.
+-   [ ] Had some problems with the transition animation. Need to learn more about transitions and fix it tomorrow.
 
 Tasks for tomorrow :-
-- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒
-- [100 Days CSS Challenge](https://100dayscss.com/): 🍒
 
+-   [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒
+-   [100 Days CSS Challenge](https://100dayscss.com/): 🍒
 
 ## Day 14
 
 Project :-
-- [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒🍅
+
+-   [Full Screen Responsive Image Slider](https://www.youtube.com/watch?v=wWWNrANNO1k): 🍒🍒🍅
 
 Progress :-
-- Fixed the transition animations, added the captions and also did their animations. 
+
+-   Fixed the transition animations, added the captions and also did their animations.
 
 Notes :-
-- Learned that transitions work when we add a class or remove a class. You can apply a transition when that specific class gets added.
-- [ ] Saw that whenever I solve issues or get a problem done, I feel good, and until then I feel tense and not happy. I want to fix that and feel like all progress is good, take it slow and concentrate more on the progress and the process rather than the destination.
+
+-   Learned that transitions work when we add a class or remove a class. You can apply a transition when that specific class gets added.
+-   [ ] Saw that whenever I solve issues or get a problem done, I feel good, and until then I feel tense and not happy. I want to fix that and feel like all progress is good, take it slow and concentrate more on the progress and the process rather than the destination.
 
 Tasks for tomorrow :-
-- Udemy - Javascript In Action Projects: 🍒🍒
+
+-   Udemy - Javascript In Action Projects: 🍒🍒
+
+## Day 15
+
+Project :-
+
+-   Udemy - Javascript In Action Projects: 🍒🍅
+
+Progress :-
+
+-   Finished the Click Counter and the Image Pop Up projects.
+
+Notes :-
+
+-   [ ] I was very repetitive whe nhandling the DOM from JS, need a better option.
+-   [ ] Need to really go through the process before coding. Still just jumping in.
+
+Tasks for tomorrow :-
+
+-   Udemy - Javascript In Action - Remianing Project: 🍒
