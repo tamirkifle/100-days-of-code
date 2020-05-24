@@ -385,9 +385,24 @@ Progress :-
 
 Notes :-
 
--   [ ] I was very repetitive whe nhandling the DOM from JS, need a better option.
+-   [ ] I was very repetitive when handling the DOM from JS, need a better option.
 -   [ ] Need to really go through the process before coding. Still just jumping in.
 
 Tasks for tomorrow :-
 
 -   Udemy - Javascript In Action - Remianing Project: 🍒
+
+## Day 16
+
+Project :-
+-   Udemy - Javascript In Action - Remianing Project: 🍒
+
+Progress :-
+- [ ] Finished the word guessing part of the hangman game, needs scoring.
+
+Notes :-
+- Learned that nodes in javascript are the pointers to the actual html node and will match the html.
+
+Tasks for tomorrow :-
+- Udemy - Javascript In Action - Do the Hangman Scoring System: 🍒
+- Make a Game Menu to choose one of the three games: 🍒
