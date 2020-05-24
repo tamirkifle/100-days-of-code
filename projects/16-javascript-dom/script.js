@@ -102,5 +102,39 @@ function buildImagePopUp(){
         element.addEventListener("click", () => createPopUp(element))
     });
 }
-document.addEventListener("DOMContentLoaded", buildImagePopUp);
+
+function checkKeyPressed(event){
+    
+
+}
+function startHangman() {
+    const letters = [];
+    const wordSpace = document.createElement("p"); 
+    console.log(wordSpace);
+
+    wordSpace.style.fontSize = "5rem";
+
+    const words = ["javascript", "html", "cascading", "vscode", "document", "electron", "angular", "react", "node"];
+    //chooseRandomWord
+    let randomIndex = Math.floor(Math.random()*words.length);
+    let theWord = words[randomIndex];
+    for (let index = 0; index < theWord.length; index++) {
+       let emptySpace = document.createElement("span");
+       emptySpace.innerText="_";
+       emptySpace.style.display = "inline-block";
+       emptySpace.style.margin = "0.5rem";
+       wordSpace.appendChild(emptySpace);
+
+    }
+
+    document.body.appendChild(wordSpace);
+    document.addEventListener("keyup", function(event){
+
+        [...theWord].forEach((letter,index) => {            
+            if(event.code == `Key${letter.toUpperCase()}`){
+                wordSpace.getElementsByTagName("span")[index].innerText = letter;}
+    });
+   });
+}
+document.addEventListener("DOMContentLoaded", startHangman);
 
