@@ -103,45 +103,70 @@ function buildImagePopUp(){
     });
 }
 
-function checkKeyPressed(event){
-    
-
-}
 function startHangman() {
     const triesAllowed = 6;
     const words = ["javascript", "html", "cascading", "vscode", "document", "electron", "angular", "react", "node"];
-
-    let triesRemaining = triesAllowed;     
-
+    const processedLetters = [];
+    let triesRemaining = triesAllowed; 
+    let lettersRemaining = -1;    
+    let theWord = "";
     const wordSpace = document.createElement("p"); 
+    const lettersGuessed = document.createElement("p");
     const score = document.createElement("p");
+    const resetBtn = document.createElement("button");
 
     wordSpace.style.fontSize = "5rem";
     score.style.fontSize = "2rem";
-    //chooseRandomWord
-    let randomIndex = Math.floor(Math.random()*words.length);
-    let theWord = words[randomIndex];
-    let lettersRemaining = theWord.length;
-    score.innerText = `Tries Remaining: ${triesRemaining} out of ${triesAllowed}\nLetters Remaining: ${lettersRemaining}`;
+    resetBtn.innerText = "Reset";
+    styleButton(resetBtn);
 
-    for (let index = 0; index < theWord.length; index++) {
-       let emptySpace = document.createElement("span");
-       emptySpace.innerText="_";
-       emptySpace.style.display = "inline-block";
-       emptySpace.style.margin = "0.5rem";
-       wordSpace.appendChild(emptySpace);
-    
+    function getNewWordfrom(array){
+        return array[Math.floor(Math.random()*words.length)];
     }
 
-    document.body.appendChild(wordSpace);
-    document.body.appendChild(score);
+    function renderGame() {
+        document.body.innerHTML = "";
+        wordSpace.innerHTML = "";
+        lettersGuessed.innerHTML = "";
+        theWord = getNewWordfrom(words);
+        lettersRemaining = theWord.length;
+        triesRemaining = triesAllowed;
+        score.innerText = `Tries Remaining: ${triesRemaining} out of ${triesAllowed}\nLetters Remaining: ${lettersRemaining}`;
+        for (let index = 0; index < theWord.length; index++) {
+            wordSpace.appendChild(generateSpanWith("_", "5rem"));
+        
+        }
+        document.body.appendChild(wordSpace);
+        document.body.appendChild(lettersGuessed);
+        document.body.appendChild(score);
+        document.body.appendChild(resetBtn);
+    }
+    renderGame();
+    resetBtn.addEventListener("click", renderGame);
+    document.addEventListener("keyup", (event) => {
+        if(triesRemaining!==0 && lettersRemaining!==0)
+            checkAndUpdate(event);
+        });
+
+
     function updateScore() {
         score.innerText = `Tries Remaining: ${triesRemaining} out of ${triesAllowed}\nLetters Remaining: ${lettersRemaining}`;
     }
     
+    function generateSpanWith(str, fontSize = "", border = ""){
+        let element = document.createElement("span");
+        element.innerText = str;
+        element.style.fontSize = fontSize;
+        element.style.display = "inline-block";
+        element.style.padding = "0.5rem";
+        element.style.border = border;
+
+        return element;
+    }
     function checkAndUpdate(event){
         let correct = 0;
-        if(/[a-zA-Z]/.test(String.fromCharCode(event.keyCode))){
+        let character = String.fromCharCode(event.keyCode);
+        if(/[a-zA-Z]/.test(character) && !processedLetters.includes(character)){
             [...theWord].forEach((letter,index) => {     //check if letter is in word       
                 if(event.code == `Key${letter.toUpperCase()}`){
                     wordSpace.getElementsByTagName("span")[index].innerText = letter;
@@ -150,25 +175,33 @@ function startHangman() {
                     correct = 1;
                 }
             });
-        }
-        if(!correct){
-            --triesRemaining;
-        }
-        updateScore();
-        if(triesRemaining === 0){
-            wordSpace.innerHTML = "";
-            score.innerText = "";
-            wordSpace.innerText = "Game Over";
-        }
-        else if(lettersRemaining === 0){
-            wordSpace.innerText = "You Win";
+        
+            if(!correct){
+                lettersGuessed.appendChild(generateSpanWith(character, "2rem", "2px solid orange")); 
+                --triesRemaining;
+            }
+            processedLetters.push(character);
+            updateScore();
+            if(triesRemaining === 0){
+                wordSpace.innerHTML = "";
+                score.innerText = "";
+                wordSpace.innerText = "Game Over";
+                let lose = document.createElement("p");
+                lose.style.fontSize = "2rem";
+                lose.innerText = `The word was ${theWord}`;
+                wordSpace.appendChild(lose);
+            }
+            else if(lettersRemaining === 0){
+                let win = document.createElement("p");
+                win.style.fontSize = "2rem";
 
+                win.innerText = "You Win";
+                wordSpace.appendChild(win);
+
+            }
         }
-   }
-        document.addEventListener("keyup", (event) => {
-            if(triesRemaining!==0 && lettersRemaining!==0)
-                checkAndUpdate(event);
-            });
+    }
+    
 
 }
 document.addEventListener("DOMContentLoaded", startHangman);
