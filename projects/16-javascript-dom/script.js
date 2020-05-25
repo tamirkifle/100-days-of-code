@@ -1,3 +1,11 @@
+function styleButton(btn){
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+        btn.style.border = "none";
+        btn.style.padding = "1rem";
+        btn.style.fontSize = "1.5rem";
+        btn.style.marginRight = "1rem";
+}
 function buildClickMe(){
     const text = document.createElement("p");
     text.style = "font-size: 2rem;";
@@ -12,15 +20,7 @@ function buildClickMe(){
     document.body.appendChild(clickMeBtn);
     document.body.appendChild(resetBtn);
 
-    Array.from(document.getElementsByTagName("button")).forEach(element => { 
-        element.style.backgroundColor = "red";
-        element.style.color = "white";
-        element.style.border = "none";
-        element.style.padding = "1rem";
-        element.style.fontSize = "1.5rem";
-        element.style.marginRight = "1rem";
-
-    });
+    Array.from(document.getElementsByTagName("button")).forEach(styleButton);
 
     let counter = 0;
     function btnAction(){
@@ -115,6 +115,7 @@ function startHangman() {
 
     const wordSpace = document.createElement("p"); 
     const score = document.createElement("p");
+
     wordSpace.style.fontSize = "5rem";
     score.style.fontSize = "2rem";
     //chooseRandomWord
