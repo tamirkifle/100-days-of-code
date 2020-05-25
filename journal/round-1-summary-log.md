@@ -406,3 +406,47 @@ Notes :-
 Tasks for tomorrow :-
 - Udemy - Javascript In Action - Do the Hangman Scoring System: 🍒
 - Make a Game Menu to choose one of the three games: 🍒
+
+## Day 17
+
+Project :-
+- Udemy - Javascript In Action - Do the Hangman Scoring System: 🍒🍒
+
+Progress :-
+- Finished the hangman game, without the hangman figure but just with text scoring.
+
+Notes :-
+- Learned the delineations of how to insert elements to the DOM with Javascript... innerText, innerHTML, textContent.
+- Learned about the cssText property of the style object and how to get computed styles with window.getComputedStyles().
+
+Tasks for tomorrow :-
+
+## Day 18
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 19
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 20
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
