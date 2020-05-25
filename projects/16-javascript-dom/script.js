@@ -108,33 +108,67 @@ function checkKeyPressed(event){
 
 }
 function startHangman() {
-    const letters = [];
-    const wordSpace = document.createElement("p"); 
-    console.log(wordSpace);
-
-    wordSpace.style.fontSize = "5rem";
-
+    const triesAllowed = 6;
     const words = ["javascript", "html", "cascading", "vscode", "document", "electron", "angular", "react", "node"];
+
+    let triesRemaining = triesAllowed;     
+
+    const wordSpace = document.createElement("p"); 
+    const score = document.createElement("p");
+    wordSpace.style.fontSize = "5rem";
+    score.style.fontSize = "2rem";
     //chooseRandomWord
     let randomIndex = Math.floor(Math.random()*words.length);
     let theWord = words[randomIndex];
+    let lettersRemaining = theWord.length;
+    score.innerText = `Tries Remaining: ${triesRemaining} out of ${triesAllowed}\nLetters Remaining: ${lettersRemaining}`;
+
     for (let index = 0; index < theWord.length; index++) {
        let emptySpace = document.createElement("span");
        emptySpace.innerText="_";
        emptySpace.style.display = "inline-block";
        emptySpace.style.margin = "0.5rem";
        wordSpace.appendChild(emptySpace);
-
+    
     }
 
     document.body.appendChild(wordSpace);
-    document.addEventListener("keyup", function(event){
+    document.body.appendChild(score);
+    function updateScore() {
+        score.innerText = `Tries Remaining: ${triesRemaining} out of ${triesAllowed}\nLetters Remaining: ${lettersRemaining}`;
+    }
+    
+    function checkAndUpdate(event){
+        let correct = 0;
+        if(/[a-zA-Z]/.test(String.fromCharCode(event.keyCode))){
+            [...theWord].forEach((letter,index) => {     //check if letter is in word       
+                if(event.code == `Key${letter.toUpperCase()}`){
+                    wordSpace.getElementsByTagName("span")[index].innerText = letter;
+                    lettersRemaining--;
+                    updateScore();
+                    correct = 1;
+                }
+            });
+        }
+        if(!correct){
+            --triesRemaining;
+        }
+        updateScore();
+        if(triesRemaining === 0){
+            wordSpace.innerHTML = "";
+            score.innerText = "";
+            wordSpace.innerText = "Game Over";
+        }
+        else if(lettersRemaining === 0){
+            wordSpace.innerText = "You Win";
 
-        [...theWord].forEach((letter,index) => {            
-            if(event.code == `Key${letter.toUpperCase()}`){
-                wordSpace.getElementsByTagName("span")[index].innerText = letter;}
-    });
-   });
+        }
+   }
+        document.addEventListener("keyup", (event) => {
+            if(triesRemaining!==0 && lettersRemaining!==0)
+                checkAndUpdate(event);
+            });
+
 }
 document.addEventListener("DOMContentLoaded", startHangman);
 
