@@ -426,12 +426,18 @@ Tasks for tomorrow :-
 ## Day 18
 
 Project :-
-
+- [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒🍒
 Progress :-
+- Did the mobile screen size, started the Desktop version, layout is complete, needs a bit of cleaning up and adjusting for more screen sizes.
 
 Notes :-
+- Found out svgs can be added as the source of img tags, easy!
+- The mobile version is where I started, trying to get it perfectly equal to the design image, but as soon as I resized it a bit, it was not good anymore. SO designing responsively is very important.
 
 Tasks for tomorrow :-
+- [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒
+- [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
+
 
 ## Day 19
 
