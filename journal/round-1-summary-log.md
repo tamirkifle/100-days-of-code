@@ -442,8 +442,10 @@ Tasks for tomorrow :-
 ## Day 19
 
 Project :-
+- [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒
 
 Progress :-
+- Finished the base apparel project, with two media queries, tried to make it look good on most screen sizes.
 
 Notes :-
 
