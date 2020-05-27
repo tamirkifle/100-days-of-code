@@ -26,6 +26,8 @@ article:nth-child(1){
     position: absolute;
     bottom:-18px;
     left: calc(50% - 41px);
+    font-size:0;
+
 }
 .left-btn, .right-btn {
     width: 50%;
