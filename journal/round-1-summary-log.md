@@ -443,13 +443,17 @@ Tasks for tomorrow :-
 
 Project :-
 - [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒
+- [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
 
 Progress :-
 - Finished the base apparel project, with two media queries, tried to make it look good on most screen sizes.
+- On the Coding bootcamp testimonials project, finished styling the image with the slider, on mobile dimensions. The quote section is still unstyled.
 
 Notes :-
+- Found out that the small space the browser puts when displaying inline elements can be removed by setting the font-size to 0 on the parent container. 
 
 Tasks for tomorrow :-
+- [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
 
 ## Day 20
 
