@@ -454,8 +454,39 @@ Notes :-
 
 Tasks for tomorrow :-
 - [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
+- [Four card feature section](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK): 🍒
 
 ## Day 20
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 21
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 22
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 23
 
 Project :-
 
