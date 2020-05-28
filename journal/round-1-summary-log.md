@@ -395,74 +395,92 @@ Tasks for tomorrow :-
 ## Day 16
 
 Project :-
+
 -   Udemy - Javascript In Action - Remianing Project: 🍒
 
 Progress :-
-- [ ] Finished the word guessing part of the hangman game, needs scoring.
+
+-   [ ] Finished the word guessing part of the hangman game, needs scoring.
 
 Notes :-
-- Learned that nodes in javascript are the pointers to the actual html node and will match the html.
+
+-   Learned that nodes in javascript are the pointers to the actual html node and will match the html.
 
 Tasks for tomorrow :-
-- Udemy - Javascript In Action - Do the Hangman Scoring System: 🍒
-- Make a Game Menu to choose one of the three games: 🍒
+
+-   Udemy - Javascript In Action - Do the Hangman Scoring System: 🍒
+-   Make a Game Menu to choose one of the three games: 🍒
 
 ## Day 17
 
 Project :-
-- Udemy - Javascript In Action - Do the Hangman Scoring System: 🍒🍒
+
+-   Udemy - Javascript In Action - Do the Hangman Scoring System: 🍒🍒
 
 Progress :-
-- Finished the hangman game, without the hangman figure but just with text scoring.
+
+-   Finished the hangman game, without the hangman figure but just with text scoring.
 
 Notes :-
-- Learned the delineations of how to insert elements to the DOM with Javascript... innerText, innerHTML, textContent.
-- Learned about the cssText property of the style object and how to get computed styles with window.getComputedStyles().
+
+-   Learned the delineations of how to insert elements to the DOM with Javascript... innerText, innerHTML, textContent.
+-   Learned about the cssText property of the style object and how to get computed styles with window.getComputedStyles().
 
 Tasks for tomorrow :-
 [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒🍒
 
-
 ## Day 18
 
 Project :-
-- [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒🍒
-Progress :-
-- Did the mobile screen size, started the Desktop version, layout is complete, needs a bit of cleaning up and adjusting for more screen sizes.
+
+-   [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒🍒
+    Progress :-
+-   Did the mobile screen size, started the Desktop version, layout is complete, needs a bit of cleaning up and adjusting for more screen sizes.
 
 Notes :-
-- Found out svgs can be added as the source of img tags, easy!
-- The mobile version is where I started, trying to get it perfectly equal to the design image, but as soon as I resized it a bit, it was not good anymore. SO designing responsively is very important.
+
+-   Found out svgs can be added as the source of img tags, easy!
+-   The mobile version is where I started, trying to get it perfectly equal to the design image, but as soon as I resized it a bit, it was not good anymore. SO designing responsively is very important.
 
 Tasks for tomorrow :-
-- [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒
-- [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
 
+-   [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒
+-   [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
 
 ## Day 19
 
 Project :-
-- [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒
-- [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
+
+-   [Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0): 🍒
+-   [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
 
 Progress :-
-- Finished the base apparel project, with two media queries, tried to make it look good on most screen sizes.
-- On the Coding bootcamp testimonials project, finished styling the image with the slider, on mobile dimensions. The quote section is still unstyled.
+
+-   Finished the base apparel project, with two media queries, tried to make it look good on most screen sizes.
+-   On the Coding bootcamp testimonials project, finished styling the image with the slider, on mobile dimensions. The quote section is still unstyled.
 
 Notes :-
-- Found out that the small space the browser puts when displaying inline elements can be removed by setting the font-size to 0 on the parent container. 
+
+-   Found out that the small space the browser puts when displaying inline elements can be removed by setting the font-size to 0 on the parent container.
 
 Tasks for tomorrow :-
-- [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
-- [Four card feature section](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK): 🍒
+
+-   [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒
+-   [Four card feature section](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK): 🍒
 
 ## Day 20
 
 Project :-
 
+-   [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒🍒
+
 Progress :-
 
+-   Finished the mobile layout, looking good. Started the desktop layout.
+
 Notes :-
+
+-   Got tangled with some positioning troubles, managed to understand more on the way.
 
 Tasks for tomorrow :-
 
