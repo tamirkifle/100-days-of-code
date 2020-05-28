@@ -21,7 +21,7 @@ article {
     height: 100%;
 }
 article:nth-child(1) {
-    display: initial;
+    display: block;
 }
 /* Container */
 .container {
@@ -119,4 +119,28 @@ blockquote p:after {
 .author {
     color: var(--dark-blue);
     font-weight: 700;
+}
+
+@media (min-width: 900px) {
+    article:nth-child(1) {
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+    }
+
+    section.picture {
+        flex-basis: 60%;
+        width: 80%;
+        order: 2;
+    }
+    section.quote {
+        flex-basis: 40%;
+        order: 1;
+        /* position: absolute; */
+        /* width: 40%; */
+    }
+    section.quote blockquote {
+        position: absolute;
+        width: 55%;
+    }
 }
