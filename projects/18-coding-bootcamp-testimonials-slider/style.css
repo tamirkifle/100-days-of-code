@@ -50,24 +50,28 @@ article:nth-child(1){
 
 /* Picture */
 section.picture{
-    width: 80%;
-    height: 500px;
+    max-width: 800px;
+    max-height: 800px;
     background: url(./images/pattern-bg.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: contain;    
-    padding: 5%;
-    margin: auto;
+    padding: 10%;
+    margin: 3%;
+    overflow: hidden;
+
 }
 
 section.picture .img-div{
     position: relative;
-    width:90%;
-    margin: 15% auto;
+    width: 100%;
+    height:100%;
+
 
 }
 section.picture img {
     width: 100%;
+    height:100%;
     object-fit: contain;
     border-radius: 0.8rem;
 }
