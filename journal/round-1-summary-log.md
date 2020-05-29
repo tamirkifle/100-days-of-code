@@ -491,11 +491,20 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Coding bootcamp testimonials slider](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL): 🍒🍒
+
 Progress :-
+
+-   Finished the webpage, Desktop and Mobile looking good, slider with small JS code working well.
 
 Notes :-
 
+-   [ ] Position: absolute parent's relation with position: relative or other position childern.
+-   Found that tweaking things until they work is not as satisfying as having a system in your mind, implementing that and it just works... but that rarely happens. Maybe in time.
+
 Tasks for tomorrow :-
+
+-   [Four card feature section](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK): 🍒🍒
 
 ## Day 22
 
