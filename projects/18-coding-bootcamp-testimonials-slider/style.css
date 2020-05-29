@@ -31,7 +31,7 @@ article:nth-child(1) {
     background: url(./images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-position: left 0 bottom -30px;
-    background-size: contain;
+    background-size: auto 13%;
 }
 
 /* Buttons */
@@ -68,7 +68,7 @@ article:nth-child(1) {
 /* Picture */
 section.picture {
     max-width: 800px;
-    max-height: 800px;
+    max-height: 100%;
     background: url(./images/pattern-bg.svg);
     background-repeat: no-repeat;
     background-position: left;
@@ -97,7 +97,7 @@ section.picture img {
     background-repeat: no-repeat;
     background-position-x: center;
     margin: 2rem 0;
-    padding-top: 1.5rem;
+    padding-top: 3.5rem;
     font-size: 1rem;
     text-align: center;
 }
@@ -106,10 +106,10 @@ blockquote {
     margin: 0;
 }
 blockquote p:before {
-    content: "\201C\0000a0";
+    content: "\201C"; /*\0000a0*/
 }
 blockquote p:after {
-    content: "\0000a0\201D";
+    content: "\201D";
 }
 .profession {
     color: var(--gray-blue);
@@ -120,8 +120,15 @@ blockquote p:after {
     color: var(--dark-blue);
     font-weight: 700;
 }
+.author:after {
+    content: "";
+    display: block;
+}
 
 @media (min-width: 900px) {
+    .container {
+        background-size: auto 25%;
+    }
     article:nth-child(1) {
         display: flex;
         flex-flow: row wrap;
@@ -129,18 +136,39 @@ blockquote p:after {
     }
 
     section.picture {
-        flex-basis: 60%;
-        width: 80%;
+        flex-basis: 42%;
+        /* width: 80%; */
         order: 2;
+        margin: 4%;
+        padding: 5%;
     }
     section.quote {
-        flex-basis: 40%;
+        flex-basis: 50%;
         order: 1;
-        /* position: absolute; */
+        position: relative;
+        margin-top: 12%;
+        left: 5%;
         /* width: 40%; */
     }
     section.quote blockquote {
         position: absolute;
-        width: 55%;
+        width: 100%;
+        left: 15%;
+        text-align: left;
+    }
+    section.quote blockquote p {
+        line-height: 2rem;
+        font-size: 1.7rem;
+    }
+
+    .author {
+        font-size: 1.2rem;
+    }
+    .profession {
+        font-size: 1.2rem;
+    }
+    .author:after {
+        content: "\0000a0\0000a0";
+        display: inline;
     }
 }
