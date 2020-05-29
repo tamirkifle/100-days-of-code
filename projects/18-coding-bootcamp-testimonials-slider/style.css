@@ -20,7 +20,7 @@ article {
     display: none;
     height: 100%;
 }
-article:nth-child(1) {
+article.visible {
     display: block;
 }
 /* Container */
@@ -129,7 +129,8 @@ blockquote p:after {
     .container {
         background-size: auto 25%;
     }
-    article:nth-child(1) {
+
+    article.visible {
         display: flex;
         flex-flow: row wrap;
         position: relative;
