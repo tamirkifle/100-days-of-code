@@ -62,6 +62,8 @@ form {
     -webkit-box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.22);
     box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.22);
+    max-width: 750px;
+    margin: auto;
 }
 
 form input {
@@ -127,7 +129,7 @@ form footer span {
     }
 
     .banner {
-        max-width: 100%;
+        max-width: 750px;
     }
     form {
         padding: 2.5rem;
