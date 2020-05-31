@@ -510,11 +510,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Four card feature section](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK): 🍒🍒
+
 Progress :-
+
+-   Getting more efficient at placing elements and layout.
+-   Perfectly responsive is fulfilling.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Intro component with sign-up form](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1): 🍒
+-   [Single price grid component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc): 🍒
 
 ## Day 23
 
