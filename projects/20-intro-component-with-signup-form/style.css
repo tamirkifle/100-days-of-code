@@ -42,7 +42,6 @@ header {
     max-width: 350px;
     margin: 1.5rem auto;
     background-color: var(--accent-blue);
-    height: 5rem;
     border-radius: 0.5rem;
     padding: 1rem 4rem;
     -webkit-box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.32);
@@ -67,7 +66,7 @@ form {
 
 form input {
     display: block;
-    border: 1px solid var(--neutral-grayish-blue);
+    border: 1px solid hsl(246, 100%, 93%);
     width: 100%;
     padding: 1.5rem;
     margin-bottom: 1rem;
@@ -80,15 +79,15 @@ form input {
 form button {
     width: 100%;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: none;
-    border-bottom: hsl(155, 56%, 43%) 6px solid;
+    border-bottom: hsl(155, 56%, 43%) 3px solid;
     background-color: var(--primary-green);
     font: inherit;
     color: white;
     text-transform: uppercase;
     font-size: 1.35rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
 }
@@ -99,4 +98,46 @@ form footer {
 form footer span {
     color: var(--primary-red);
     font-weight: 700;
+}
+
+@media (min-width: 800px) {
+    .container {
+        width: 80%;
+        /* margin: 6rem auto; */
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    header {
+        flex-basis: 45%;
+        margin-right: 5%;
+        text-align: left;
+    }
+    .header-title {
+        margin: 0 0 2rem;
+        line-height: 3.5rem;
+        font-size: 3rem;
+    }
+    .header-desc {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    .register {
+        flex-basis: 50%;
+    }
+
+    .banner {
+        max-width: 100%;
+    }
+    form {
+        padding: 2.5rem;
+    }
+    form input {
+        font-size: 0.9rem;
+        padding: 1rem 1.5rem 1rem;
+    }
+    form button {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
 }
