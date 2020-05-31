@@ -519,12 +519,62 @@ Progress :-
 
 Notes :-
 
+-   ...
+
 Tasks for tomorrow :-
 
 -   [Intro component with sign-up form](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1): 🍒
 -   [Single price grid component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc): 🍒
 
 ## Day 23
+
+Project :-
+
+-   [Intro component with sign-up form](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1): 🍒🍒
+
+Progress :-
+
+-   Finished both mobile and desktop layouts
+
+Notes :-
+
+-   Learned how we can use transparency in png to create a dynamic background.
+
+Tasks for tomorrow :-
+
+-   [Single price grid component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc): 🍒🍒
+
+## Day 24
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 24
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 25
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 26
 
 Project :-
 
