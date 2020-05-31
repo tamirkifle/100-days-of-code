@@ -1,0 +1,103 @@
+:root {
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --neutral-dark-blue: hsl(249, 10%, 26%);
+    --neutral-grayish-blue: hsl(246, 25%, 77%);
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    background: url(./images/bg-intro-mobile.png);
+    background-color: var(--primary-red);
+}
+
+/* Container */
+
+.container {
+    width: 90%;
+    text-align: center;
+    margin: 4rem auto;
+}
+
+/* Header */
+
+.header-title {
+    margin: 1.5rem 3rem;
+    font-weight: 600;
+}
+header {
+    margin-bottom: 4rem;
+}
+/* Banner */
+
+.banner {
+    max-width: 350px;
+    margin: 1.5rem auto;
+    background-color: var(--accent-blue);
+    height: 5rem;
+    border-radius: 0.5rem;
+    padding: 1rem 4rem;
+    -webkit-box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.32);
+    box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.32);
+}
+
+.banner span {
+    font-weight: 600;
+}
+
+/* Form */
+
+form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 8px 2px 0px rgba(0, 0, 0, 0.22);
+}
+
+form input {
+    display: block;
+    border: 1px solid var(--neutral-grayish-blue);
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+form input::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+form button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    border-bottom: hsl(155, 56%, 43%) 6px solid;
+    background-color: var(--primary-green);
+    font: inherit;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
+form footer {
+    color: var(--neutral-grayish-blue);
+    font-size: 0.8rem;
+}
+form footer span {
+    color: var(--primary-red);
+    font-weight: 700;
+}
