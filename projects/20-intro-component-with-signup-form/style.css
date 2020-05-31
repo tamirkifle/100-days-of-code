@@ -72,12 +72,11 @@ form input {
     padding: 1.5rem;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
-}
-form input::placeholder {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
     font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
 }
+
 form button {
     width: 100%;
     padding: 1rem;
