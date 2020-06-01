@@ -19,6 +19,7 @@ body {
 .container {
     width: 85%;
     margin: 15% auto;
+    max-width: 700px;
 }
 
 /* Divs */
@@ -109,4 +110,23 @@ body {
     margin-bottom: 0.5rem;
     /* font-size: 0.9rem; */
     color: hsl(181, 50%, 88%);
+}
+
+@media (min-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "join join"
+            "subs why-us";
+        max-width: 800px;
+    }
+    .join {
+        grid-area: join;
+    }
+    .subs {
+        grid-area: subs;
+    }
+    .why-us {
+        grid-area: why-us;
+    }
 }
