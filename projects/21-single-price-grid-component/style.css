@@ -1,3 +1,9 @@
+:root {
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-bright-yellow: hsl(71, 73%, 54%);
+    --neutral-light-gray: hsl(204, 43%, 93%);
+    --neutral-grayish-blue: hsl(218, 22%, 67%);
+}
 * {
     box-sizing: border-box;
 }
@@ -6,4 +12,101 @@ body {
     margin: 0;
     font-family: "Karla", sans-serif;
     font-weight: 400;
+    background-color: var(--neutral-light-gray);
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: 15% auto;
+}
+
+/* Divs */
+
+.join,
+.subs,
+.why-us {
+    padding: 2rem;
+    /* border: 1px solid black; */
+}
+.join-title,
+.subs-title,
+.why-us-title {
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Join Div */
+.join {
+    background-color: white;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+.join-title {
+    color: var(--primary-cyan);
+    font-size: 1.4rem;
+}
+
+.join-sub-title {
+    color: var(--primary-bright-yellow);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.join-desc {
+    color: var(--neutral-grayish-blue);
+    line-height: 2rem;
+}
+
+/* Subs Div */
+
+.subs {
+    background-color: var(--primary-cyan);
+    color: white;
+}
+.subs-title {
+    font-size: 1.3rem;
+}
+.subs .price span.amt {
+    font-size: 2.5rem;
+}
+.subs .price span.per {
+    color: hsl(181, 50%, 78%);
+    vertical-align: 0.5rem;
+}
+.subs button {
+    display: block;
+    width: 100%;
+    /* max-width: 300px; */
+    margin: 0 auto;
+    padding: 1rem;
+    border: none;
+    color: white;
+    background-color: var(--primary-bright-yellow);
+    font: inherit;
+    border-radius: 0.5rem;
+    margin-top: 2.5rem;
+    -webkit-box-shadow: 0px 8px 17px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 8px 17px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 8px 17px -6px rgba(0, 0, 0, 0.75);
+}
+
+/* Why-Us Div */
+
+.why-us {
+    background-color: hsl(179, 65%, 45%);
+    color: white;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.why-us-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+.why-us-item {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    /* font-size: 0.9rem; */
+    color: hsl(181, 50%, 88%);
 }
