@@ -33,14 +33,21 @@
     /* --white */
 
     /* (Top BG Pattern) */
-    --very-pale-blue: hsl(225, 100%, 98%);
+    --light-top-bg: hsl(225, 100%, 98%);
 
     /* (Card BG) */
-    --light-grayish-blue: hsl(227, 47%, 96%);
+    --light-card-bg: hsl(227, 47%, 96%);
 
     /* Text */
-    --dark-grayish-blue: hsl(228, 12%, 44%);
-    --very-dark-blue: hsl(230, 17%, 14%);
+    --light-text-1: hsl(228, 12%, 44%);
+    --light-text-2: hsl(230, 17%, 14%);
+
+    /* ACTUAL */
+    --bg: var(--white);
+    --top-bg: var(--light-top-bg);
+    --text-1: var(--light-text-1);
+    --text-2: var(--light-text-2);
+    --card-bg: var(--light-card-bg);
 }
 * {
     box-sizing: border-box;
@@ -49,4 +56,109 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
+    background-color: var(--top-bg);
+    color: var(--text-1);
+    font-size: 14px;
+}
+
+body.dark {
+    /* --top-bg-pattern: var(--very-dark-blue); */
+}
+
+/* Container */
+
+.container {
+    width: 90%;
+    margin: 2rem auto 4rem;
+}
+
+/* Main Header */
+
+.main-title,
+.followers {
+    margin: 0;
+}
+
+.main-title {
+    color: var(--text-2);
+    font-size: 1.7rem;
+    /* letter-spacing: 1px; */
+    margin-bottom: 0.4rem;
+}
+
+.followers {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* Theme Switcher */
+.switcher {
+    width: 100%;
+    font-size: 0;
+    font-weight: 700;
+}
+.switcher-title,
+.toggle {
+    display: inline-block;
+    width: 50%;
+}
+
+.switcher-title {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.toggle {
+    text-align: right;
+}
+
+/* Main Items */
+.main-item {
+    width: 100%;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.main-item.facebook {
+    border-top: 4px solid var(--facebook);
+}
+.main-item.twitter {
+    border-top: 4px solid var(--twitter);
+}
+.main-item.instagram {
+    border-top: 4px solid var(--facebook);
+}
+.main-item.youtube {
+    border-top: 4px solid var(--youtube);
+}
+.social,
+.count,
+.unit {
+    text-align: center;
+}
+.social-icon,
+.social-account {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.social-account {
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+
+.count {
+    color: var(--text-2);
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem 0 0;
+}
+
+.unit {
+    margin: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
