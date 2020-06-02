@@ -560,27 +560,36 @@ Tasks for tomorrow :-
 
 -   [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H): 🍒🍒
 
-## Day 24
-
-Project :-
-
-Progress :-
-
-Notes :-
-
-Tasks for tomorrow :-
-
 ## Day 25
 
 Project :-
 
+-   [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H): 🍒🍒
+
+Progress :-
+
+-   Finished the markup, styled general items, started the styling of the main cards.
+
+Notes :-
+
+-   [ ] There is no built-in API for CSS Gradients
+-   [ ] Need to figure out how to turn a checkbox to a toggle, important stuff.
+
+Tasks for tomorrow :-
+
+-   [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H): 🍒🍒
+
+## Day 26
+
+Project :-
+
 Progress :-
 
 Notes :-
 
 Tasks for tomorrow :-
 
-## Day 26
+## Day 27
 
 Project :-
 
