@@ -583,13 +583,52 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H): 🍒🍒
+
+Progress :-
+
+-   Finished the mobile layout, designed the toggle
+
+Notes :-
+
+-   Learned how to create a toggle from a checkbox.
+-   Used a 'before' pseudoelement to create a border with a gradient.
+
+Tasks for tomorrow :-
+
+-   [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H): 🍒🍒
+
+## Day 27
+
+Project :-
+
 Progress :-
 
 Notes :-
 
 Tasks for tomorrow :-
 
-## Day 27
+## Day 28
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 29
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 30
 
 Project :-
 
