@@ -9,46 +9,51 @@
 
     /* DARK THEME */
 
-    /* - Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%) */
+    /* - Toggle */
+    --dark-toggle: linear-gradient(
+        to right,
+        hsl(210, 78%, 56%),
+        hsl(146, 68%, 55%)
+    );
 
     /* BG */
-    --very-dark-blue: hsl(230, 17%, 14%);
-
+    --dark-bg: hsl(230, 17%, 14%);
     /* (Top BG Pattern) */
-    --very-dark-blue: hsl(232, 19%, 15%);
-
+    --dark-top-bg: hsl(232, 19%, 15%);
     /* (Card BG) */
-    --dark-desaturated-blue: hsl(228, 28%, 20%);
+    --dark-card-bg: hsl(228, 28%, 20%);
+    /* Card Hover BG */
+    --dark-hover-bg: hsl(228, 28%, 22%);
 
     /* (Text) */
-    --desaturated-blue: hsl(228, 34%, 66%);
-    --white: hsl(0, 0%, 100%);
+    --dark-text-1: hsl(228, 34%, 66%);
+    --dark-text-2: hsl(0, 0%, 100%);
 
     /* LIGHT THEME */
 
     /* Toggle */
     --light-toggle: hsl(230, 22%, 74%);
-
     /* (BG) */
-    /* --white */
-
+    --light-bg: var(--white);
     /* (Top BG Pattern) */
     --light-top-bg: hsl(225, 100%, 98%);
-
     /* (Card BG) */
     --light-card-bg: hsl(227, 47%, 96%);
-
+    /* Card Hover BG */
+    --light-hover-bg: hsl(227, 47%, 94%);
     /* Text */
     --light-text-1: hsl(228, 12%, 44%);
     --light-text-2: hsl(230, 17%, 14%);
 
-    /* ACTUAL */
-    --bg: var(--white);
+    /* DEFAULT - ON LIGHT MODE */
+    --bg: var(--light-bg);
     --top-bg: var(--light-top-bg);
     --text-1: var(--light-text-1);
     --text-2: var(--light-text-2);
     --card-bg: var(--light-card-bg);
+    --hover-bg: var(--light-hover-bg);
 }
+
 * {
     box-sizing: border-box;
 }
@@ -99,6 +104,10 @@ body.dark {
     margin-bottom: 4rem;
     border-radius: 0.3rem;
     position: relative;
+    cursor: pointer;
+}
+.main-item:hover {
+    background-color: var(--hover-bg);
 }
 
 .main-item.facebook {
@@ -193,6 +202,11 @@ body.dark {
     font-size: 0;
     margin-bottom: 2rem;
     border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.overview-item:hover {
+    background-color: var(--hover-bg);
 }
 .overview-item header {
     margin-bottom: 2rem;
@@ -263,7 +277,6 @@ body.dark {
     display: inline-block;
     width: calc(var(--slider-size) * 2 + var(--toggle-padding) * 2);
     height: calc(var(--slider-size) + var(--toggle-padding) * 2);
-    background-color: var(--light-toggle);
     position: relative;
     border-radius: 14px;
     cursor: pointer;
@@ -277,19 +290,22 @@ body.dark {
     width: var(--slider-size);
     top: var(--toggle-padding);
     left: var(--toggle-padding);
-    background-color: var(--white);
+    background-color: hsl(228, 28%, 40%);
     border-radius: 50%;
     transition: transform 0.3s;
 }
+.toggle .slider {
+    background: var(--dark-toggle);
+}
+.toggle input:checked + .slider:hover {
+    background: var(--dark-toggle);
+}
 .toggle input:checked + .slider {
-    background: linear-gradient(
-        to right,
-        hsl(210, 78%, 56%),
-        hsl(146, 68%, 55%)
-    );
+    background: var(--light-toggle);
 }
 .toggle input:checked + .slider:before {
     transform: translateX(var(--slider-size));
+    background-color: white;
 }
 .toggle input:focus + .slider {
     box-shadow: 0 0 2px hsl(146, 68%, 55%);
