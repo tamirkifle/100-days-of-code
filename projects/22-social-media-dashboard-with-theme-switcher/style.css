@@ -257,22 +257,29 @@ body.dark {
 .switcher-title,
 .toggle {
     display: inline-block;
-    width: 50%;
 }
 
 .switcher-title {
     font-size: 1rem;
     text-align: left;
     margin: 0;
-    vertical-align: 4px;
+    vertical-align: 6px;
 }
 
 .toggle {
-    text-align: right;
+    text-align: left;
     vertical-align: sub;
     --slider-size: 18px;
     --toggle-padding: 3px;
     --space: 0px;
+    width: 100%;
+    font-size: 0;
+}
+.switcher-title {
+    width: calc(
+        100% -
+            (var(--slider-size) * 2 + var(--toggle-padding) * 2 + var(--space))
+    );
 }
 .toggle .slider {
     display: inline-block;
@@ -300,22 +307,26 @@ body.dark {
 .toggle .slider {
     background: var(--dark-toggle);
 }
-.toggle input:checked + .slider:hover {
+.toggle input:checked ~ .slider:hover {
     background: var(--dark-toggle);
 }
-.toggle input:checked + .slider {
+.toggle input:checked ~ .slider {
     background: var(--light-toggle);
 }
-.toggle input:checked + .slider:before {
+.toggle input:checked ~ .slider:before {
     transform: translateX(calc(var(--slider-size) + var(--space)));
     background-color: white;
 }
 .toggle input:focus + .slider {
     box-shadow: 0 0 2px hsl(146, 68%, 55%);
 }
+.toggle input:checked ~ .switcher-title {
+    color: var(--light-toggle);
+}
 .toggle input {
     width: 0;
     height: 0;
+    position: absolute;
 }
 
 @media (min-width: 750px) {
@@ -372,8 +383,10 @@ body.dark {
         width: auto;
     }
     .toggle {
-        margin-left: 0.8rem;
         --space: 3px;
+    }
+    .toggle .slider {
+        margin-left: 0.8rem;
     }
 }
 
