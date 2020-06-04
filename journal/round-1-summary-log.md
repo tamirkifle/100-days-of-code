@@ -602,11 +602,20 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H): 🍒🍒
+
 Progress :-
+
+-   Finished the desktop version for the light version... class for dark mode and interactivity remaning.
 
 Notes :-
 
+-   Learned more about the '+' and the '~' selectors, and actually used them
+
 Tasks for tomorrow :-
+
+-   [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H): 🍒
+-   [Fylo data storage component](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n): 🍒
 
 ## Day 28
 
