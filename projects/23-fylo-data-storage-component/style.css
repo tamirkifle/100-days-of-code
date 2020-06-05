@@ -1,4 +1,8 @@
 :root {
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
 }
 
 * {
@@ -8,4 +12,47 @@
 body {
     margin: 0;
     font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    background: url(./images/bg-mobile.svg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+/* Control Center section */
+
+.control-center {
+    padding: 2rem;
+    background-color: var(--dark-blue);
+    border-top-right-radius: 5rem;
+}
+.logo {
+    margin-bottom: 2rem;
+}
+.actions {
+    font-size: 0;
+    vertical-align: top;
+    /* width: px; */
+    height: 50px;
+}
+.actions .action-btn {
+    display: inline-block;
+    /* padding: 0.8rem; */
+    text-align: center;
+    background-color: var(--very-dark-blue);
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    height: 50px;
+    width: 50px;
+    vertical-align: top;
+    line-height: 50px;
+}
+.action-btn img {
+    display: inline-block;
+    vertical-align: middle;
 }
