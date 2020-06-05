@@ -52,6 +52,7 @@
     --text-2: var(--light-text-2);
     --card-bg: var(--light-card-bg);
     --hover-bg: var(--light-hover-bg);
+    --toggle: var(--light-toggle);
 }
 
 * {
@@ -67,7 +68,24 @@ body {
 }
 
 body.dark {
-    /* --top-bg-pattern: var(--very-dark-blue); */
+    --bg: var(--dark-bg);
+    --top-bg: var(--dark-top-bg);
+    --text-1: var(--dark-text-1);
+    --text-2: var(--dark-text-2);
+    --card-bg: var(--dark-card-bg);
+    --hover-bg: var(--dark-hover-bg);
+    --toggle: var(--dark-toggle);
+}
+
+body.dark .overview-title {
+    color: var(--text-2);
+}
+.main-title,
+.main-item,
+.count,
+.overview-item,
+.numbers .value {
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 /* Container */
@@ -289,6 +307,8 @@ body.dark {
     height: calc(var(--slider-size) + var(--toggle-padding) * 2);
     position: relative;
     border-radius: 14px;
+}
+.toggle label {
     cursor: pointer;
 }
 
@@ -321,11 +341,12 @@ body.dark {
     box-shadow: 0 0 2px hsl(146, 68%, 55%);
 }
 .toggle input:checked ~ .switcher-title {
-    color: var(--light-toggle);
+    color: var(--toggle);
 }
 .toggle input {
     width: 0;
     height: 0;
+    opacity: 0;
     position: absolute;
 }
 
