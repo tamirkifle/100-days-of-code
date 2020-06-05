@@ -621,11 +621,21 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Social media dashboard with theme switcher](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H): 🍒
+-   [Fylo data storage component](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n): 🍒
+
 Progress :-
 
-Notes :-
+-   Finished the social media dashboard, desktop and mobile versions with the dark mode switcher working.
+-   Finsihed the control center look for mobile
+    Notes :-
+-   Learned about the "change" event in using a checkbox for some other behavior.
+-   Learned how to use line-height in combination with vertical-align to center inline elements(in this case an img) within a container
 
 Tasks for tomorrow :-
+
+-   [Fylo data storage component](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n): 🍒
+-   [Huddle landing page with alternating feature blocks](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100): 🍒
 
 ## Day 29
 
