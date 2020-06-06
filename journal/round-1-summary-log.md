@@ -641,11 +641,18 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Fylo data storage component](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n): 🍒🍒
+
 Progress :-
+
+-   Finished desktop and mobile versions.
+-   [ ] to understand how to manipulate SVG backgrounds.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Huddle landing page with alternating feature blocks](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100): 🍒🍒
 
 ## Day 30
 
