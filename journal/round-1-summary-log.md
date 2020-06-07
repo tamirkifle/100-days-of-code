@@ -658,6 +658,112 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Huddle landing page with alternating feature blocks](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100): 🍒
+
+Progress :-
+
+-   Finished markup, started css for the first section
+
+Notes :-
+
+Tasks for tomorrow :-
+
+-   [Huddle landing page with alternating feature blocks](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100): 🍒🍒
+
+## Day 31
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 32
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 33
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 34
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 35
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 36
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 37
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 38
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 39
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 40
+
+Project :-
+
 Progress :-
 
 Notes :-
