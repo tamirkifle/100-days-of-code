@@ -1,0 +1,57 @@
+:root {
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Landing */
+
+.landing {
+    background: url(../images/bg-hero-mobile.svg);
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+}
+.landing header {
+    font-size: 0;
+}
+.landing .logo,
+.landing a {
+    display: inline-block;
+    width: 50%;
+}
+.landing .logo {
+    height: 40px;
+}
+.landing .logo img {
+    height: 100%;
+}
+.landing a {
+    height: 40px;
+    vertical-align: top;
+    font-size: 18px;
+    text-align: right;
+}
+.landing a span {
+    padding: 10px;
+    width: 130px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 2rem;
+    display: inline-block;
+    background-color: white;
+}
