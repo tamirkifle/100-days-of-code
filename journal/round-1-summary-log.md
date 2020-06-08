@@ -674,11 +674,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Huddle landing page with alternating feature blocks](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100): 🍒🍒
+
 Progress :-
+
+-   Finished mobile design
 
 Notes :-
 
+-   [ ] Need to learn more about SVGs and how to use them for web
+
 Tasks for tomorrow :-
+
+-   [Huddle landing page with alternating feature blocks](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100): 🍒
 
 ## Day 32
 
