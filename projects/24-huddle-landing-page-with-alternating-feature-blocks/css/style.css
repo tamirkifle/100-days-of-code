@@ -162,10 +162,10 @@ footer {
     background-color: var(--very-dark-cyan);
 }
 .business-info {
+    margin-top: 5rem;
     margin-bottom: 3rem;
 }
 svg {
-    margin-top: 5rem;
     margin-bottom: 2rem;
 }
 
@@ -220,6 +220,17 @@ nav ul li {
 }
 
 @media (min-width: 900px) {
+    .landing .logo {
+        height: 30px;
+    }
+    .landing .right {
+        vertical-align: top;
+        height: 40px;
+    }
+    .landing .right a {
+        padding: 11px;
+        width: 150px;
+    }
     .landing {
         display: flex;
         flex-flow: row wrap;
@@ -257,5 +268,74 @@ nav ul li {
     .landing-desc,
     .landing-title {
         width: 100%;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card:nth-child(2n + 1) .card-text {
+        order: -1;
+        margin-left: 0;
+        margin-right: 4%;
+    }
+    .card img {
+        flex-basis: 48%;
+        overflow: hidden;
+    }
+    .card .card-text {
+        flex-basis: 48%;
+        text-align: left;
+        margin-left: 4%;
+        margin-right: 0;
+    }
+
+    .floating {
+        /* width: 60%; */
+        left: 0;
+        right: 0;
+        width: 60%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        /* left: 20%; */
+    }
+
+    .footer-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        max-width: 1500px;
+        margin: 0 auto;
+        /* padding: 2rem 8rem; */
+    }
+    .business-info,
+    nav {
+        flex-basis: 30%;
+        margin-left: 8%;
+        margin-top: 5rem;
+    }
+    .social-icons {
+        margin: 0 4%;
+        flex-basis: 15%;
+        text-align: left;
+    }
+    nav ul {
+        display: flex;
+        flex-flow: column wrap;
+        height: 150px;
+    }
+    svg {
+        margin-bottom: 0rem;
+    }
+    .info-item:nth-child(2) {
+        margin-top: 2rem;
+    }
+    .legal {
+        flex-basis: 100%;
     }
 }
