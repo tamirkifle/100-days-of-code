@@ -218,3 +218,44 @@ nav ul li {
 .legal {
     font-size: 12px;
 }
+
+@media (min-width: 900px) {
+    .landing {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 3rem;
+    }
+    .landing header {
+        margin-bottom: 2rem;
+        flex-basis: 100%;
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .left {
+        /* margin-top: 5rem; */
+        padding: 6rem 0 2rem;
+        text-align: left;
+        flex-basis: 38%;
+        margin-left: auto;
+        margin-right: 2%;
+    }
+    .get-started-btn {
+        text-align: center;
+        width: 200px;
+    }
+    .mockups-container {
+        flex-basis: 58%;
+        margin-top: 1rem;
+        max-width: 700px;
+        width: 100%;
+        margin: 0;
+        margin-left: 2%;
+        margin-right: auto;
+    }
+    .landing-desc,
+    .landing-title {
+        width: 100%;
+    }
+}
