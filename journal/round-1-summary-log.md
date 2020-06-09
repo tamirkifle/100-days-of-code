@@ -692,11 +692,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Huddle landing page with alternating feature blocks](https://www.frontendmentor.io/challenges/huddle-landing-page-with-alternating-feature-blocks-5ca5f5981e82137ec91a5100): 🍒🍅
+
 Progress :-
+
+-   Finished the desktop design, done.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Insure landing page](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8): 🍒🍒
 
 ## Day 33
 
