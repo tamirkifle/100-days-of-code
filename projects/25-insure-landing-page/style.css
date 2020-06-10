@@ -9,6 +9,31 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-size: 1rem;
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "DM Serif Display", serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 1rem;
+}
+
+nav.top ul {
+    position: absolute;
+    right: 9999px;
+}
+
+img.landing-img {
+    display: block;
+    margin: 0 auto;
 }
