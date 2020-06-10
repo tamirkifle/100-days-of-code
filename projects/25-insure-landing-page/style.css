@@ -35,5 +35,31 @@ nav.top ul {
 
 img.landing-img {
     display: block;
+    width: 100%;
+    max-width: 451px;
     margin: 0 auto;
+}
+
+.landing-text {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: var(--p-dark-violet);
+    color: white;
+}
+.landing-title {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 3rem;
+}
+.landing-desc {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 3rem;
+}
+.landing-btn {
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
 }
