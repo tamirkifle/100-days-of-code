@@ -14,12 +14,24 @@ body {
     font-size: 1rem;
     font-family: "Karla", sans-serif;
     font-weight: 400;
+    margin: 0;
+    color: var(--p-grayish-blue);
 }
 
 h1,
 h2,
 h3 {
     font-family: "DM Serif Display", serif;
+    color: var(--p-dark-violet);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid var(--n-very-light-gray);
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    display: inline-block;
 }
 
 header {
@@ -41,15 +53,16 @@ img.landing-img {
 }
 
 .landing-text {
-    padding: 4rem 1rem;
+    padding: 7rem 1rem;
     text-align: center;
     background-color: var(--p-dark-violet);
-    color: white;
+    color: var(--n-very-light-gray);
 }
 .landing-title {
     font-size: 3rem;
     margin: 0;
     line-height: 3rem;
+    color: var(--n-very-light-gray);
 }
 .landing-desc {
     font-size: 1.2rem;
@@ -57,9 +70,50 @@ img.landing-img {
     margin-bottom: 3rem;
 }
 .landing-btn {
+}
+
+.different {
+    margin: 0 1.5rem;
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.different hr {
+    width: 30%;
+}
+
+.different-title {
+    font-size: 3rem;
+    margin-bottom: 4.5rem;
+}
+
+.card {
+    margin-bottom: 3rem;
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.card-desc {
+    line-height: 1.8rem;
+}
+
+.more {
+    margin: 1rem;
+    background-color: var(--p-dark-violet);
+    color: var(--n-very-light-gray);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.more-title {
     color: inherit;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 0.5rem 2rem;
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    max-width: 300px;
+    margin: 0 auto 2rem;
+    line-height: 3rem;
+}
+
+.more-btn {
 }
