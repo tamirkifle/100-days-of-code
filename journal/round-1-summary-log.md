@@ -708,21 +708,33 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Insure landing page](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8): 🍒
+
 Progress :-
+
+-   Did the markup started laying out.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Insure landing page](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8): 🍒🍒
 
 ## Day 34
 
 Project :-
 
+-   [Insure landing page](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8): 🍒
+
 Progress :-
+
+-   Finished the mobile look.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Insure landing page](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8): 🍒🍒
 
 ## Day 35
 
