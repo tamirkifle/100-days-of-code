@@ -45,7 +45,9 @@ nav ul {
     padding: 0;
     list-style-type: none;
 }
-
+nav li {
+    cursor: pointer;
+}
 nav.top ul {
     position: absolute;
     right: 9999px;
@@ -54,7 +56,7 @@ nav.top ul {
 img.landing-img {
     display: block;
     width: 100%;
-    max-width: 451px;
+    max-width: 540px;
     margin: 0 auto;
 }
 
@@ -166,4 +168,150 @@ nav.bottom section {
     margin-bottom: 1rem;
     font-size: 0.9rem;
     font-weight: 700;
+}
+
+@media (min-width: 700px) {
+    body {
+        text-align: left;
+    }
+    nav.top ul {
+        position: static;
+        margin: 0;
+    }
+    nav.top li {
+        display: inline-block;
+        text-transform: uppercase;
+        color: var(--n-dark-grayish-violet);
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        margin-right: 1.5rem;
+    }
+    nav.top li:last-child {
+        color: var(--n-very-dark-violet);
+        text-decoration: none;
+        border: 2px solid var(--n-very-dark-violet);
+        padding: 0.5rem 2rem;
+        margin: 0;
+    }
+    .hamburger {
+        position: absolute;
+        right: 9999px;
+    }
+    header {
+        margin: 2rem auto;
+        width: 85%;
+    }
+
+    .landing {
+        display: flex;
+        background-color: var(--p-dark-violet);
+        padding-left: 10%;
+        padding-right: 10%;
+        position: relative;
+    }
+    .landing-img,
+    .landing-text {
+        flex-basis: 50%;
+        background-color: unset;
+        position: relative;
+        top: 90px;
+    }
+    .landing-text {
+        order: -1;
+        padding: 0;
+    }
+    .landing-text:before {
+        content: "";
+        display: block;
+        width: 25%;
+        height: 2px;
+        border-top: 1px solid var(--n-very-light-gray);
+        position: relative;
+        top: 0;
+    }
+    .landing-title {
+        font-size: 4rem;
+        line-height: 3.5rem;
+        margin-bottom: 1.5rem;
+        margin-top: 7rem;
+        letter-spacing: 1px;
+    }
+    .landing-desc {
+        font-size: 1rem;
+        color: var(--n-very-light-gray);
+        margin-bottom: 2rem;
+    }
+    img.landing-img {
+        position: relative;
+        width: 500px;
+        top: 15%;
+    }
+
+    .different {
+        margin: 120px 10% 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .different hr {
+        margin-left: 0;
+        width: 13%;
+    }
+
+    .different-title {
+        margin-top: 2rem;
+        font-size: 3.8rem;
+        flex-basis: 100%;
+    }
+    .card {
+        flex-basis: 32%;
+    }
+    .card-title {
+        font-size: 1.5rem;
+    }
+    .card-desc {
+        font-size: 0.9rem;
+    }
+
+    .more {
+        width: 80%;
+        margin: 4rem auto 6rem;
+        display: flex;
+        align-items: center;
+        padding: 4rem;
+    }
+    .more-title {
+        font-size: 3.5rem;
+        max-width: 500px;
+        margin: 0;
+        margin-right: auto;
+        font-weight: 400;
+    }
+    .more-btn {
+        text-align: right;
+    }
+
+    .social {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+    }
+    .social hr {
+        width: 100%;
+    }
+
+    nav.bottom {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+    nav.bottom section {
+        flex-basis: 25%;
+    }
 }
