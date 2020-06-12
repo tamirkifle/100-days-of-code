@@ -740,11 +740,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Insure landing page](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8): 🍒🍒
+
 Progress :-
+
+-   Finished the desktop look, started workingon the menu-btn on mobile.
 
 Notes :-
 
+-   [ ] Got stuck with the hamburger button, need to really understand it this time.
+
 Tasks for tomorrow :-
+
+-   [Insure landing page](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8): 🍒🍒
 
 ## Day 36
 
