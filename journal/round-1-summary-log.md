@@ -758,9 +758,16 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Insure landing page](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8): 🍒🍒
+
 Progress :-
 
+-   Finished the menu and the svgs, project complete.
+
 Notes :-
+
+-   Learned a little bit about SVGs, they're not so scary anymore
+-   [ ] Need to really learn more about SVGs, how to manipulate them, and how viewBox works etc...
 
 Tasks for tomorrow :-
 
