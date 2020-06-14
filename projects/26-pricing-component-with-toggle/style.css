@@ -53,7 +53,7 @@ body {
     background-color: white;
     padding: 2rem;
     margin-bottom: 2.5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 .card.standout {
     color: var(--n-very-light-grayish-blue);
@@ -99,4 +99,19 @@ body {
     border-radius: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+@media (min-width: 700px) {
+    .cards {
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        --difference: 1.5rem;
+        margin: var(--difference) 0;
+    }
+    .card.standout {
+        margin: 0;
+        padding: calc(var(--difference)+2rem) 2rem;
+    }
 }
