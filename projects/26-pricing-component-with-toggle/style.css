@@ -15,7 +15,88 @@
 }
 
 body {
+    margin: 0;
     font-size: 15px;
     font-family: "Montserrat", sans-serif;
     background-color: var(--n-very-light-grayish-blue);
+    text-align: center;
+    color: var(--n-grayish-blue);
+}
+
+/* Container */
+
+.container {
+    width: 90%;
+    margin: 4rem auto;
+}
+
+/* Main Header */
+.main-header {
+    margin-bottom: 4rem;
+}
+.main-title {
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+.choice {
+    color: var(--n-light-grayish-blue);
+    display: inline-block;
+}
+.toggle-label {
+    display: inline-block;
+}
+
+/* Cards */
+
+.card {
+    --price-color: var(--n-dark-grayish-blue);
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 1rem;
+}
+.card.standout {
+    color: var(--n-very-light-grayish-blue);
+    background: var(--primary);
+    --price-color: white;
+}
+.card.standout .learn-more-btn {
+    color: hsl(237, 63%, 64%);
+    background: var(--n-very-light-grayish-blue);
+}
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.monthly {
+    display: none;
+}
+.price {
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    color: var(--price-color);
+    border-bottom: 1px solid hsl(234, 14%, 84%);
+}
+.storage,
+.users,
+.limit {
+    font-size: 1rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid hsl(234, 14%, 84%);
+}
+
+.limit {
+    margin-bottom: 2rem;
+}
+
+.learn-more-btn {
+    display: block;
+    text-decoration: none;
+    color: var(--n-very-light-grayish-blue);
+    background: var(--primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
