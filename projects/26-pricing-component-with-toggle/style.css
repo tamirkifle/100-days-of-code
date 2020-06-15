@@ -41,9 +41,37 @@ body {
 .choice {
     color: var(--n-light-grayish-blue);
     display: inline-block;
+    letter-spacing: 1px;
+    vertical-align: 50%;
 }
 .toggle-label {
     display: inline-block;
+    cursor: pointer;
+}
+.toggle-label input {
+    width: 0;
+    height: 0;
+    opacity: 0%;
+    position: absolute;
+}
+.slider {
+    --slider-radius: 22px;
+    --slider-padding: 4px;
+    width: calc(2 * var(--slider-padding) + 2 * var(--slider-radius));
+    height: calc(2 * var(--slider-padding) + var(--slider-radius));
+    background: var(--primary);
+    vertical-align: baseline;
+    margin: 0 1rem;
+    padding: var(--slider-padding);
+    border-radius: 2rem;
+}
+.slider::before {
+    content: "";
+    display: block;
+    width: var(--slider-radius);
+    height: var(--slider-radius);
+    background-color: var(--n-very-light-grayish-blue);
+    border-radius: 50%;
 }
 
 /* Cards */
