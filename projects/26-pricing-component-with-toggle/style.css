@@ -21,6 +21,21 @@ body {
     background-color: var(--n-very-light-grayish-blue);
     text-align: center;
     color: var(--n-grayish-blue);
+    overflow-x: hidden;
+}
+.pattern {
+    position: absolute;
+    z-index: -1;
+}
+
+.pattern.top {
+    width: 38%;
+    top: 0;
+    right: 0;
+}
+
+.pattern.bottom {
+    display: none;
 }
 
 /* Container */
@@ -86,8 +101,9 @@ body {
     --price-color: var(--n-dark-grayish-blue);
     background-color: white;
     padding: 2rem;
-    margin-bottom: 2.5rem;
     border-radius: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
 }
 .card.standout {
     color: var(--n-very-light-grayish-blue);
@@ -134,10 +150,23 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-@media (min-width: 700px) {
+@media (min-width: 955px) {
+    .container {
+        width: 100%;
+    }
+    .pattern.top {
+        width: auto;
+        top: 0;
+        right: 0;
+    }
+    .pattern.bottom {
+        display: block;
+        bottom: -4rem;
+        left: -6%;
+    }
     .cards {
         display: flex;
+        flex-flow: row wrap;
         justify-content: center;
     }
     .card {
