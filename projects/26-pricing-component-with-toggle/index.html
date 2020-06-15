@@ -74,6 +74,38 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+  <script>
+    const slider = document.querySelector(".slider");
+    const monthly = document.querySelectorAll(".monthly");
+    const yearly = document.querySelectorAll(".yearly");
+    const checkbox = document.querySelector("input#period");
+
+    function changePeriod() {
+      function moveSlider(direction) {
+        if (checkbox.checked) {
+          checkbox.checked = false;
+        }
+        else
+          checkbox.checked = true;
+      }
+      moveSlider();
+      for (let index = 0; index < monthly.length; index++) {
+        if (getComputedStyle(monthly[index]).display == "none") {
+          monthly[index].style.display = "block";
+          yearly[index].style.display = "none";
+          moveSlider();
+        }
+        else {
+          yearly[index].style.display = "block";
+          monthly[index].style.display = "none";
+          moveSlider();
+        }
+
+      }
+
+    }
+    slider.addEventListener("click", changePeriod);
+  </script>
 </body>
 
 </html>
