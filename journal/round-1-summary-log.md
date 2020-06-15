@@ -771,15 +771,25 @@ Notes :-
 
 Tasks for tomorrow :-
 
+-   [Pricing component with toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC): 🍒🍒
+
 ## Day 37
 
 Project :-
 
+-   [Pricing component with toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC): 🍒
+
 Progress :-
+
+-   Finished styling both mobile and desktop versions, looks good.
 
 Notes :-
 
+-   Slow and deliberate thinking while working feels good and saves you much time since you're thinking forward.
+
 Tasks for tomorrow :-
+
+-   [Pricing component with toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC): 🍒🍒
 
 ## Day 38
 
