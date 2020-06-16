@@ -795,11 +795,21 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Pricing component with toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC): 🍒🍒
+
 Progress :-
+
+-   Finished! Did the toggle, added interactivity. Added the bg patterns. Fixed responsiveness issues.
 
 Notes :-
 
+-   Learned how SVGs can be manipulated through CSS, placed some bg patterns.
+-   It is not easy to style pseudoelements through JS.
+-   Making a toggle is easy now.
+
 Tasks for tomorrow :-
+
+-   [Project tracking intro component](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e): 🍒🍒
 
 ## Day 39
 
