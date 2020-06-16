@@ -815,11 +815,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Project tracking intro component](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e): 🍒
+
 Progress :-
+
+-   Finished th emarkup and styled amost half of the page
 
 Notes :-
 
+-   Learned about SVG viewBoxes, width and heights, and how to manipulate them.
+
 Tasks for tomorrow :-
+
+-   [Project tracking intro component](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e): 🍒🍒
 
 ## Day 40
 
