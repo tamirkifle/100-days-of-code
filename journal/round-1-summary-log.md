@@ -819,7 +819,7 @@ Project :-
 
 Progress :-
 
--   Finished th emarkup and styled amost half of the page
+-   Finished the markup and styled amost half of the page
 
 Notes :-
 
@@ -833,8 +833,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Project tracking intro component](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e): 🍒🍒
+
 Progress :-
+
+-   Finished the mobile version with the mobile menu.
 
 Notes :-
 
+-   [ ] Need to prevent scrolling to the top when the menu button is clicked with JS.
+
 Tasks for tomorrow :-
+
+-   [Project tracking intro component](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e): 🍒
+-   Build your own custom logo with SVG: 🍒
