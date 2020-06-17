@@ -67,7 +67,7 @@ header {
 .mockup svg {
     width: 100%;
     scale: 50%;
-    margin-bottom: 3rem;
+    height: 420px;
 }
 
 /* Feature */
@@ -100,15 +100,16 @@ header {
 
 .feature-title {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 1rem 0;
-    line-height: 3rem;
+    line-height: 2.6rem;
 }
 
 .feature-desc {
-    line-height: 1.6rem;
+    line-height: 1.8rem;
     font-size: 20px;
     color: var(--n-dark-grayish-blue);
+    margin-top: 0;
 }
 
 .preview-btn,
@@ -132,7 +133,21 @@ header {
     text-transform: uppercase;
     font-weight: 400;
     color: var(--n-grayish-blue);
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     font-size: 14px;
     margin-left: 11px;
+}
+
+/* Overlay */
+
+.overlay {
+    background-color: var(--n-grayish-blue);
+    opacity: 30%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 4rem;
+    width: 52%;
+    height: calc(4rem + 420px);
 }
