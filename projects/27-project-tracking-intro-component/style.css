@@ -92,11 +92,27 @@ ul.nav-items:target .nav-item:last-child {
     padding-top: 1rem;
     border-top: 1px solid var(--n-grayish-blue);
 }
+ul.nav-items:target + .hamburger {
+    display: none;
+}
+ul.nav-items:target ~ .close-btn {
+    right: 2rem;
+}
 
 .nav-item a {
     text-decoration: none;
     color: inherit;
 }
+.close-btn {
+    position: absolute;
+    top: 38px;
+    right: 9999px;
+}
+.close-btn img {
+    height: 26px;
+}
+
+/* Mockup */
 .mockup svg {
     width: 100%;
     margin-left: 6px;
