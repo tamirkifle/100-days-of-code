@@ -31,6 +31,7 @@ nav li,
 
 nav ul {
     padding: 0;
+    margin: 0;
     list-style-type: none;
 }
 
@@ -64,9 +65,41 @@ header {
     vertical-align: 4px;
 }
 
+/* Mobile Navigation */
+ul.nav-items:target {
+    right: 2rem;
+    left: 2rem;
+    top: 6rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    height: 280px;
+    padding: 0 2rem;
+    text-align: center;
+    background-color: white;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+ul.nav-items:target .nav-item {
+    display: inline-block;
+    /* flex-basis: 24%; */
+    /* line-height: 67px; */
+}
+
+ul.nav-items:target .nav-item:last-child {
+    line-height: 50px;
+    padding-top: 1rem;
+    border-top: 1px solid var(--n-grayish-blue);
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
 .mockup svg {
     width: 100%;
-    scale: 50%;
+    margin-left: 6px;
     height: 420px;
 }
 
