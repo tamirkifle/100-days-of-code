@@ -847,3 +847,110 @@ Tasks for tomorrow :-
 
 -   [Project tracking intro component](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e): 🍒
 -   Build your own custom logo with SVG: 🍒
+
+## Day 41
+
+Project :-
+
+-   [Project tracking intro component](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e): 🍒🍅
+
+Progress :-
+
+-   Finished everything, desktop look, menu, active states
+
+Notes :-
+
+-   [ ] Not easy to prevent default scrolling behavior of anchors to IDs they link to.
+
+Tasks for tomorrow :-
+[Clipboard landing page](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9): 🍒🍒
+
+## Day 42
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 43
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 44
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 45
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 46
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 47
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 48
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 49
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 50
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
