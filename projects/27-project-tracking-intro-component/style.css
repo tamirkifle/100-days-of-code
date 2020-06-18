@@ -75,6 +75,7 @@ ul.nav-items {
     text-transform: uppercase;
 }
 ul.nav-items:target {
+    position: fixed;
     right: 2rem;
     left: 2rem;
     top: 6rem;
@@ -100,6 +101,8 @@ ul.nav-items:target + .hamburger {
     display: none;
 }
 ul.nav-items:target ~ .close-btn {
+    position: fixed;
+
     right: 2rem;
 }
 
@@ -261,6 +264,7 @@ ul.nav-items:target ~ .close-btn {
 
     /* Deconstruct Menu */
     ul.nav-items:target {
+        position: static;
         display: block;
         height: auto;
         background-color: initial;
