@@ -59,7 +59,9 @@ ul.nav-items {
 .main-nav {
     text-align: right;
 }
-
+.nav-item:hover {
+    text-decoration: underline;
+}
 .hamburger img {
     height: 22px;
     vertical-align: 4px;
@@ -180,7 +182,9 @@ ul.nav-items:target ~ .close-btn {
     border-radius: 5px;
     margin-right: 5px;
 }
-
+.preview-btn:hover {
+    background-color: hsl(0, 100%, 76%);
+}
 .preview-text {
     text-transform: uppercase;
     font-weight: 400;
