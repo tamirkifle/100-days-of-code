@@ -1,0 +1,27 @@
+:root {
+    --p-strong-cyan: hsl(171, 66%, 44%);
+    --p-light-blue: hsl(233, 100%, 69%);
+    --n-dark-grayish-blue: hsl(210, 10%, 33%);
+    --n-grayish-blue: hsl(201, 11%, 66%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
