@@ -863,17 +863,24 @@ Notes :-
 -   [ ] Not easy to prevent default scrolling behavior of anchors to IDs they link to.
 
 Tasks for tomorrow :-
-[Clipboard landing page](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9): 🍒🍒
+
+-   [Clipboard landing page](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9): 🍒🍒
 
 ## Day 42
 
 Project :-
 
+-   [Clipboard landing page](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9): 🍒
+
 Progress :-
+
+-   Finished markup, started the styling, styled the first intro div for mobile.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Clipboard landing page](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9): 🍒🍒
 
 ## Day 43
 
