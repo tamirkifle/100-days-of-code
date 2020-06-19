@@ -14,6 +14,15 @@ body {
     font-family: "Bai Jamjuree", sans-serif;
     font-size: 18px;
     text-align: center;
+    padding: 2rem;
+    color: var(--n-grayish-blue);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--n-dark-grayish-blue);
 }
 
 nav ul {
@@ -24,4 +33,31 @@ nav ul {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Download Buttons */
+
+.downios-btn,
+.downmac-btn {
+    display: block;
+    padding: 1rem;
+    border-radius: 2rem;
+    color: white;
+}
+.downios-btn {
+    background-color: var(--p-strong-cyan);
+    margin-bottom: 1.5rem;
+}
+.downmac-btn {
+    background-color: var(--p-light-blue);
+}
+
+/* Intro Div */
+
+.intro .logo {
+    margin: 4rem;
+}
+
+.intro {
+    margin: 10rem 0;
 }
