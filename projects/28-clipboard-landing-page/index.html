@@ -27,6 +27,10 @@
 </head>
 
 <body>
+  <picture class="bg-header">
+    <source srcset="./images/bg-header-desktop.png" media="(min-width: 900px)">
+    <img src="./images/bg-header-mobile.png" alt="">
+  </picture>
   <div class="intro">
     <div class="logo"><img src="./images/logo.svg" alt="Clipboard Logo"></div>
     <h2 class="intro-title">A history of everything you copy</h2>
@@ -54,12 +58,6 @@
       <div class="mini-feature">
         <h3 class="mini-feature-title">iCloud Sync</h3>
         <p class="mini-feature-desc"> Instantly saves and syncs snippets across all your devices.
-        </p>
-      </div>
-      <div class="mini-feature">
-        <h3 class="mini-feature-title">Complete History
-        </h3>
-        <p class="mini-feature-desc">Retrieve any snippets from the first moment you started using the app.
         </p>
       </div>
       <div class="mini-feature">
@@ -117,7 +115,7 @@
   </div>
   <footer class="main-footer">
     <nav class="bottom">
-      <div class="logo"></div>
+      <div class="logo"><img src="./images/logo.svg" alt="Clipboard Logo"></div>
       <ul class="nav-items">
         <li class="nav-item"><a href="#">FAQs</a></li>
         <li class="nav-item"><a href="#">Contact Us</a></li>
