@@ -886,11 +886,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Clipboard landing page](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9): 🍒
+
 Progress :-
+
+-   Finished the mobile page, will do desktop and try to finish up tomorrow.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Clipboard landing page](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9): 🍒
 
 ## Day 44
 
