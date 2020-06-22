@@ -14,6 +14,9 @@
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
+    text-align: center;
+    background-color: var(--p-dark-blue-2);
+    color: white;
 }
 
 h1,
@@ -31,4 +34,19 @@ a {
 ul {
     padding: 0;
     list-style-type: none;
+}
+
+/* Header */
+.main-header {
+    font-size: 0;
+}
+.main-header nav,
+.main-header .logo {
+    display: inline-block;
+    width: 50%;
+}
+.main-header nav li {
+    font-size: 14px;
+    margin-right: 1rem;
+    display: inline-block;
 }
