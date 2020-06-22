@@ -918,11 +918,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Fylo dark theme landing page](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd): 🍒
+
 Progress :-
+
+-   Finished the markup, started styling the page header for mobile.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Fylo dark theme landing page](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd): 🍒🍒
 
 ## Day 46
 
