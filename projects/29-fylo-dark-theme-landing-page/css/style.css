@@ -12,11 +12,12 @@
 }
 
 body {
+    margin: 2rem 1.7rem;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     text-align: center;
     background-color: var(--p-dark-blue-2);
-    color: white;
+    color: #c0bebe;
 }
 
 h1,
@@ -24,6 +25,7 @@ h2,
 h3,
 h4 {
     font-family: "Raleway", sans-serif;
+    color: white;
 }
 
 a {
@@ -36,17 +38,106 @@ ul {
     list-style-type: none;
 }
 
+img {
+    width: 100%;
+}
+
+.intro-btn {
+    display: block;
+    background: linear-gradient(to right, var(--a-cyan), var(--a-blue));
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
 /* Header */
 .main-header {
     font-size: 0;
+    margin-bottom: 2rem;
 }
-.main-header nav,
+.top-nav,
 .main-header .logo {
     display: inline-block;
-    width: 50%;
 }
-.main-header nav li {
-    font-size: 14px;
-    margin-right: 1rem;
+.top-nav {
+    width: 70%;
+    text-align: right;
+    font-size: 12px;
+    vertical-align: 50%;
+}
+.main-header .logo {
+    width: 30%;
+    text-align: left;
+}
+.main-header .logo img {
+    width: 80px;
+}
+
+.top-nav .nav-items {
+    margin: 0;
+}
+.top-nav .nav-item {
     display: inline-block;
+    margin-right: 18px;
+}
+.top-nav .nav-item:last-child {
+    margin: 0;
+}
+
+/* Intro */
+.intro {
+    margin: 0 0 10rem;
+}
+
+.intro-img {
+    margin-bottom: 2rem;
+}
+
+.intro-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.intro-desc {
+    margin: 0 1.1rem 1.5rem;
+    line-height: 1.2rem;
+}
+
+/* Features */
+.features {
+    margin-bottom: 10rem;
+}
+.feature {
+    margin-bottom: 5rem;
+}
+
+.feature-icon {
+    width: 50px;
+    margin: 0 auto;
+}
+
+/* Productive */
+.productive {
+    text-align: left;
+    margin-bottom: 10rem;
+}
+.productive-img {
+    margin-bottom: 2rem;
+}
+.productive-title {
+    font-size: 18px;
+}
+.productive-btn {
+    color: var(--a-cyan);
+    font-size: 14px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--a-cyan);
+}
+.productive-btn span {
+    font-size: 12px;
+}
+.productive-btn i {
+    margin-left: 0.5rem;
 }
