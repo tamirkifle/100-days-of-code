@@ -934,21 +934,33 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Fylo dark theme landing page](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd): 🍒
+
 Progress :-
+
+-   Did more styling. Finished until the productive div.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Fylo dark theme landing page](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd): 🍒🍒
 
 ## Day 47
 
 Project :-
 
+-   [Fylo dark theme landing page](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd): 🍒
+
 Progress :-
+
+-   Finished the mobile design.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   [Fylo dark theme landing page](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd): 🍒
 
 ## Day 48
 
