@@ -12,7 +12,8 @@
 }
 
 body {
-    margin: 2rem 1.7rem;
+    margin: 0;
+    margin-top: 2rem;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     text-align: center;
@@ -42,7 +43,8 @@ img {
     width: 100%;
 }
 
-.intro-btn {
+.intro-btn,
+.access-btn {
     display: block;
     background: linear-gradient(to right, var(--a-cyan), var(--a-blue));
     padding: 1rem;
@@ -55,7 +57,7 @@ img {
 /* Header */
 .main-header {
     font-size: 0;
-    margin-bottom: 2rem;
+    margin: 0 1.7rem 2rem;
 }
 .top-nav,
 .main-header .logo {
@@ -88,7 +90,7 @@ img {
 
 /* Intro */
 .intro {
-    margin: 0 0 10rem;
+    margin: 0 1.7rem 10rem;
 }
 
 .intro-img {
@@ -107,7 +109,7 @@ img {
 
 /* Features */
 .features {
-    margin-bottom: 10rem;
+    margin: 0 1.7rem 10rem;
 }
 .feature {
     margin-bottom: 5rem;
@@ -121,7 +123,7 @@ img {
 /* Productive */
 .productive {
     text-align: left;
-    margin-bottom: 10rem;
+    margin: 0 1.7rem 10rem;
 }
 .productive-img {
     margin-bottom: 2rem;
@@ -140,4 +142,144 @@ img {
 }
 .productive-btn i {
     margin-left: 0.5rem;
+}
+
+/* Quotes */
+
+.quotes {
+    position: relative;
+    text-align: left;
+    padding: 0 0.5rem 20rem;
+    margin: 0 1.7rem;
+}
+.quotes::before {
+    display: block;
+    content: "“";
+    font-size: 5rem;
+    line-height: 1.6rem;
+    font-family: sans-serif;
+    color: var(--a-cyan);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.quote {
+    padding: 1rem;
+    background-color: var(--p-dark-blue-4);
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+.quote-text {
+    margin-bottom: 1.5rem;
+}
+.quote-author::after {
+    clear: both;
+}
+.quote-author-name {
+    margin-bottom: 3px;
+}
+.quote-author-icon {
+    float: left;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.quote-author-icon img {
+    border-radius: 50%;
+}
+
+.quote-author-desc {
+    font-size: 8px;
+}
+
+/* Access */
+main {
+    position: relative;
+}
+.access {
+    position: absolute;
+    /* display: none; */
+    bottom: -175px;
+    margin: 0 1.7rem;
+    padding: 2rem 1.2em;
+    background-color: var(--p-dark-blue-1);
+    border-radius: 8px;
+}
+.access-desc {
+    margin-bottom: 2rem;
+}
+.access-input {
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    margin-bottom: 1.4rem;
+}
+
+.access-btn {
+    width: 100%;
+    border: none;
+}
+
+/* footer */
+
+.main-footer {
+    background-color: var(--p-dark-blue-3);
+    padding: 240px 1.7rem 2rem;
+}
+
+.main-footer .logo {
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.info {
+    margin-bottom: 6rem;
+}
+.info-item {
+    margin-bottom: 1rem;
+}
+.info-icon,
+.info-desc {
+    display: inline-block;
+}
+.info-icon {
+    margin-top: 0.6rem;
+    width: 12px;
+    vertical-align: top;
+    margin-right: 1rem;
+}
+.info-desc {
+    width: 90%;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.bottom-nav {
+    text-align: left;
+    font-size: 18px;
+}
+
+.bottom-nav .nav-item {
+    margin-bottom: 1rem;
+}
+
+.bottom-nav .group1 {
+    margin-bottom: 3rem;
+}
+
+.social {
+    box-sizing: content-box;
+    display: inline-block;
+    margin-right: 0.7rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    line-height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
 }
