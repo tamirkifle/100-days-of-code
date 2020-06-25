@@ -966,11 +966,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   [Fylo dark theme landing page](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd): 🍒
+
 Progress :-
+
+-   Finished the desktop design but some details need some ironing out.
 
 Notes :-
 
+-   [ ] font-switching is a hassle in media-queries. Use CSS Variables to maek it easy
+
 Tasks for tomorrow :-
+
+-   [Fylo dark theme landing page](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd): 🍒
 
 ## Day 49
 
