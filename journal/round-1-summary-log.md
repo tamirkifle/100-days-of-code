@@ -1000,21 +1000,33 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Project Euler: 🍒
+
 Progress :-
+
+-   Finished problems 2-5
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Project Euler: 🍒
 
 ## Day 51
 
 Project :-
 
+-   Project Euler: 🍒
+
 Progress :-
+
+-   Finished problems 6 - 8
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Project Euler: 🍒
 
 ## Day 52
 
