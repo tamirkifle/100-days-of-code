@@ -189,6 +189,35 @@ for (let index = 1; index <= 100; index++) {
 }
 answer = sqOfSum - sumOfSq;
 
+function isPrime(num) {
+    if (num < 2) return false;
+    if (num < 4) return true;
+    if (num === 5) return true;
+    if (num % 2 === 0) return false;
+
+    let end = Array.from(String(num)).splice(-1)[0];
+    let isPrime = true;
+    let checkLimit = Math.floor(num / 2);
+    if (end === "1" || end === "3" || end === "7" || end === "9") {
+        for (let i = 3; i < checkLimit; i += 2) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+
+        }
+    }
+    else {
+        return false;
+    }
+    return isPrime;
+}
+
+// function primeNumbersUntil(num){
+//     if(num<2) return [];
+//     if(num===2) return [2];
+
+// }
 
 function primeNumbers(amt) {
     let primes = [2], isPrime, count = 1;
@@ -278,17 +307,98 @@ let string = "731671765313306249192251196744265747423553491949349698352031277450
 
 
 
-// c>500 means a and b are less than 500
-(function () {
-    let sum = 0;
-    for (let i = 1000; sum !== 1000; i++) {
+// c<500 means a and b are less than 500
+// a + b is greater than 500
+// b-max = 498, a will be 3-497
+answer = (function () {
+    for (let b = 498; b >= 251; b--) {
+        for (let a = 501 - b; a <= b - 1; a++) {
+            if ((a * a) + (b * b) === (1000 - a - b) * (1000 - a - b)) {
+                return [a, b, (1000 - a - b)];
+            }
 
-
+        }
     }
 
+});
+
+// Problem 10
+
+// Summation of primes
+// The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+// Find the sum of all the primes below two million.
+
+
+
+answer = (function () {
+    let sum = 17, limit, isPrime = true;
+    for (let i = 11; i < 2000000; i += 10) {
+        isPrime = true;
+        limit = Math.floor(i / 2);
+        for (let j = 3; j < Math.floor(i / 2); j += 2) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+
+
+        }
+        if (isPrime) {
+            sum += i;
+        }
+
+    }
+    for (let i = 13; i < 2000000; i += 10) {
+        isPrime = true;
+        limit = Math.floor(i / 2);
+        for (let j = 3; j < Math.floor(i / 2); j += 2) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+
+
+        }
+        if (isPrime) {
+            sum += i;
+        }
+
+    }
+    for (let i = 17; i < 2000000; i += 10) {
+        isPrime = true;
+        limit = Math.floor(i / 2);
+        for (let j = 3; j < Math.floor(i / 2); j += 2) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+
+
+        }
+        if (isPrime) {
+            sum += i;
+        }
+
+    }
+    for (let i = 19; i < 2000000; i += 10) {
+        isPrime = true;
+        limit = Math.floor(i / 2);
+        for (let j = 3; j < Math.floor(i / 2); j += 2) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+
+
+        }
+        if (isPrime) {
+            sum += i;
+        }
+
+    }
+    return sum;
 })();
-
-
 
 
 
