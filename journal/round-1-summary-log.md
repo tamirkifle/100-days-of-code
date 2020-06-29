@@ -1032,11 +1032,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Project Euler: 🍒🍅
+
 Progress :-
+
+-   Finished problems 9 and 10
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Project Euler: 🍒🍅
 
 ## Day 53
 

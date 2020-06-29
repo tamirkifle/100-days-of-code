@@ -2,7 +2,7 @@
 
 🍅 25 minute session
 
-# Day 51
+# Day 52
 
 ## Plan
 
@@ -20,10 +20,10 @@
 
 ### Progress
 
--   Project Euler: 🍒
-    -   Finished problems 6 - 8
+-   Project Euler: 🍒🍅
+    -   Finished problems 9 and 10
 
 ### Other Tracker Data
 
--   CodeTime Coding Time: 1.4 hrs
--   Pomodoro/timetrack.io Coding Time: 1hr
+-   CodeTime Coding Time: 1.8 hrs
+-   Pomodoro/timetrack.io Coding Time: 1.25 hrs
