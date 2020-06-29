@@ -1042,7 +1042,7 @@ Notes :-
 
 Tasks for tomorrow :-
 
--   Project Euler: 🍒🍅
+-   Javascript30: 🍒🍒
 
 ## Day 53
 
