@@ -1048,11 +1048,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   To-do list Web App: 🍒
+
 Progress :-
+
+-   Finished the basic look of the website.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   To-do list Web App: 🍒
 
 ## Day 54
 
