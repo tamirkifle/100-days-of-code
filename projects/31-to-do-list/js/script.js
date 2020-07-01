@@ -1,4 +1,5 @@
 document.getElementsByClassName("add-item-btn")[0].addEventListener("click", addItemToList);
+let list = document.getElementsByClassName("to-dos")[0];
 
 
 function addItemToList(e) {
@@ -24,6 +25,8 @@ function addItemToList(e) {
         toDo.appendChild(toDoRemove);
         document.getElementsByClassName("to-dos")[0].appendChild(toDo);
         addItemInput.value = "";
+        orderList();
+
     }
 }
 
@@ -47,4 +50,15 @@ function checkedToDo(e) {
     else {
         e.target.parentElement.getElementsByClassName("to-do-desc")[0].style.textDecoration = "none";
     }
+    orderList();
+}
+
+function orderList() {
+    Array.from(list.children).forEach(e => {
+        let checkbox = e.getElementsByTagName("input")[0];
+        if (checkbox)
+            if (checkbox.checked) {
+                checkbox.parentElement.parentElement.appendChild(checkbox.parentElement);
+            }
+    });
 }
