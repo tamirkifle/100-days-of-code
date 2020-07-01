@@ -1064,11 +1064,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   To-do list Web App: 🍒
+
 Progress :-
+
+-   Finished adding, removing, crossing off items.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   To-do list Web App: 🍒
 
 ## Day 55
 
