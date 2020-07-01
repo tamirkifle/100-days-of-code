@@ -83,6 +83,7 @@ header {
 
 .to-dos {
     text-align: center;
+    margin: 1rem 2rem 3rem;
     padding: 2rem;
     background-color: floralwhite;
 }
