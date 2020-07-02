@@ -1080,11 +1080,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   To-do list Web App: 🍒
+
 Progress :-
+
+-   Put to-dos in an array. Added a desktop look
 
 Notes :-
 
+-   [ ] How to do a partial word search a list and filter.
+
 Tasks for tomorrow :-
+
+-   To-do list Web App: 🍒
 
 ## Day 56
 
