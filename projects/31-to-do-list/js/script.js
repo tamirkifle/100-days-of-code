@@ -4,8 +4,10 @@ document.getElementsByClassName("search-input")[0].addEventListener("keyup", fil
 
 let todos = [];
 
-let saved = ["Journal", "Code", "Exercise", "Meditate", "Read a Book"];
+// let saved = ["Journal", "Code", "Exercise", "Meditate", "Read a Book"];
+let saved = JSON.parse(localStorage.getItem("tasks"));
 saved.forEach(item => addToDo(item));
+
 
 function addToDo(item) {
     todos.push(item);
@@ -24,7 +26,7 @@ function addToDo(item) {
     toDoRemove = document.createElement("span");
     toDoRemove.classList.add("remove");
     toDoRemove.innerText = "−";
-    toDoRemove.addEventListener("click", removeParent);
+    toDoRemove.addEventListener("click", removeTaskItem);
     toDoStatus.addEventListener("change", checkedToDo);
     toDo.appendChild(toDoRemove);
     document.getElementsByClassName("to-dos")[0].appendChild(toDo);
@@ -34,6 +36,7 @@ function processToDoInput(e) {
     let addItemInput = document.getElementsByClassName("add-item-input")[0];
     if (addItemInput.value) {
         addToDo(addItemInput.value);
+        storeInLocalStorage(addItemInput.value);
         addItemInput.value = "";
         orderList();
 
@@ -42,10 +45,11 @@ function processToDoInput(e) {
 
 
 
-Array.from(document.getElementsByClassName("remove")).forEach(element => element.addEventListener("click", removeParent));
+Array.from(document.getElementsByClassName("remove")).forEach(element => element.addEventListener("click", removeTaskItem));
 
 
-function removeParent(e) {
+function removeTaskItem(e) {
+    removeFromLocalStorage(e.target.parentElement.querySelector(".to-do-desc").innerText);
     e.target.parentElement.remove();
 
 
@@ -90,5 +94,29 @@ function filterItems(e) {
                 task.style.display = "none";
             }
         }
-    )
+    );
+}
+
+
+function storeInLocalStorage(item) {
+    let tasks;
+    if (localStorage.getItem("tasks") == null) {
+        tasks = [];
+    }
+    else {
+        tasks = JSON.parse(localStorage.getItem("tasks"));
+    }
+    tasks.push(item);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+
+function removeFromLocalStorage(item) {
+    let tasks = JSON.parse(localStorage.getItem("tasks"));
+    let index = tasks.indexOf(item);
+    if (index != -1) {
+        tasks.splice(index, 1);
+    }
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
