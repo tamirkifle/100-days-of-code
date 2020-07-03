@@ -63,13 +63,13 @@ header {
     /* margin-right: 1.5rem; */
     border: 1px solid black;
     padding: 1rem;
-    border-right: none;
+    /* border-right: none; */
 }
-.search-btn {
+/* .search-btn {
     border: 1px solid black;
 
     border-left: none;
-}
+} */
 
 /* Add-Item Div */
 .add-item {

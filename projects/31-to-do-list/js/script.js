@@ -1,5 +1,6 @@
 document.getElementsByClassName("add-item-btn")[0].addEventListener("click", processToDoInput);
 let list = document.getElementsByClassName("to-dos")[0];
+document.getElementsByClassName("search-input")[0].addEventListener("keyup", filterItems);
 
 let todos = [];
 
@@ -24,7 +25,7 @@ function addToDo(item) {
     toDoRemove.classList.add("remove");
     toDoRemove.innerText = "−";
     toDoRemove.addEventListener("click", removeParent);
-    toDoStatus.addEventListener("change", checkedToDo)
+    toDoStatus.addEventListener("change", checkedToDo);
     toDo.appendChild(toDoRemove);
     document.getElementsByClassName("to-dos")[0].appendChild(toDo);
 }
@@ -73,4 +74,21 @@ function orderList() {
                 checkbox.parentElement.parentElement.appendChild(checkbox.parentElement);
             }
     });
+}
+
+
+
+function filterItems(e) {
+    let text = e.target.value.toLowerCase();
+    document.querySelectorAll(".to-do").forEach(
+        function (task) {
+            console.log(task.querySelector(".to-do-desc").innerText.toLowerCase());
+
+            if (task.querySelector(".to-do-desc").innerText.toLowerCase().indexOf(text) != -1)
+                task.style.display = "block";
+            else {
+                task.style.display = "none";
+            }
+        }
+    )
 }
