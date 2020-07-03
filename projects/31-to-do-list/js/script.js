@@ -1,6 +1,8 @@
 document.getElementsByClassName("add-item-btn")[0].addEventListener("click", processToDoInput);
 let list = document.getElementsByClassName("to-dos")[0];
 document.getElementsByClassName("search-input")[0].addEventListener("keyup", filterItems);
+document.getElementsByClassName("add-item-input")[0].addEventListener("keyup", enterToAdd);
+
 
 let todos = [];
 
@@ -119,4 +121,10 @@ function removeFromLocalStorage(item) {
     }
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function enterToAdd(e) {
+    if (e.keyCode === 13) {
+        processToDoInput(e);
+    };
 }
