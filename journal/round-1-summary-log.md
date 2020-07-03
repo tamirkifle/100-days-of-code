@@ -1098,11 +1098,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   To-do list Web App: 🍒
+
 Progress :-
+
+-   Added the search/filter funcitonality, added localStorage support for persistent data.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Modern JS From the Beginning - Book List Project: 🍒
 
 ## Day 57
 
