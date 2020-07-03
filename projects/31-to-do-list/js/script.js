@@ -2,16 +2,27 @@ document.getElementsByClassName("add-item-btn")[0].addEventListener("click", pro
 let list = document.getElementsByClassName("to-dos")[0];
 document.getElementsByClassName("search-input")[0].addEventListener("keyup", filterItems);
 document.getElementsByClassName("add-item-input")[0].addEventListener("keyup", enterToAdd);
+Array.from(document.getElementsByClassName("to-do-status")).forEach(element => element.addEventListener("change", checkedToDo));
 
 
 let todos = [];
 
 // let saved = ["Journal", "Code", "Exercise", "Meditate", "Read a Book"];
-let saved = JSON.parse(localStorage.getItem("tasks"));
-saved.forEach(item => addToDo(item));
+document.addEventListener("DOMContentLoaded", loadStored);
 
 
-function addToDo(item) {
+function loadStored() {
+    let saved = JSON.parse(localStorage.getItem("tasks"));
+    saved.forEach(obj => {
+        addToDo(obj.item, obj.checked);
+    });
+    orderList();
+
+}
+
+
+
+function addToDo(item, checked) {
     todos.push(item);
     let toDo = document.createElement("div");
     toDo.classList.add("to-do");
@@ -20,10 +31,20 @@ function addToDo(item) {
     toDoStatus.id = "tag-1";
     toDoStatus.name = "tag-1";
     toDoStatus.type = "checkbox";
-    toDo.appendChild(toDoStatus);
     let toDoText = document.createElement("span");
     toDoText.classList.add("to-do-desc");
     toDoText.innerText = item;
+    console.log(toDoStatus.checked, checked);
+    if (checked) {
+        toDoStatus.checked = true;
+        toDo.style.backgroundColor = "rgb(239, 255, 234)";
+        toDoText.style.textDecoration = "line-through";
+    }
+    else {
+        toDo.style.backgroundColor = "floralwhite";
+    }
+    toDo.appendChild(toDoStatus);
+
     toDo.appendChild(toDoText);
     toDoRemove = document.createElement("span");
     toDoRemove.classList.add("remove");
@@ -57,14 +78,18 @@ function removeTaskItem(e) {
 
 }
 
-Array.from(document.getElementsByClassName("to-do-status")).forEach(element => element.addEventListener("change", checkedToDo));
 
 function checkedToDo(e) {
+    let task = e.target.parentElement.querySelector(".to-do-desc").innerText;
+    console.log(task);
+    removeFromLocalStorage(task);
     if (e.target.checked) {
+        storeInLocalStorage(task, true);
         e.target.parentElement.getElementsByClassName("to-do-desc")[0].style.textDecoration = "line-through";
         e.target.parentElement.style.backgroundColor = "rgb(239, 255, 234)";
     }
     else {
+        storeInLocalStorage(task, false);
         e.target.parentElement.getElementsByClassName("to-do-desc")[0].style.textDecoration = "none";
         e.target.parentElement.style.backgroundColor = "floralwhite";
 
@@ -100,7 +125,7 @@ function filterItems(e) {
 }
 
 
-function storeInLocalStorage(item) {
+function storeInLocalStorage(item, checked = false) {
     let tasks;
     if (localStorage.getItem("tasks") == null) {
         tasks = [];
@@ -108,17 +133,20 @@ function storeInLocalStorage(item) {
     else {
         tasks = JSON.parse(localStorage.getItem("tasks"));
     }
-    tasks.push(item);
+    tasks.push({ item, checked });
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 
-function removeFromLocalStorage(item) {
+function removeFromLocalStorage(text) {
     let tasks = JSON.parse(localStorage.getItem("tasks"));
-    let index = tasks.indexOf(item);
-    if (index != -1) {
-        tasks.splice(index, 1);
-    }
+    tasks = tasks.filter((element) => element.item != text);
+
+
+    // let index = tasks.indexOf(item);
+    // if (index != -1) {
+    //     tasks.splice(index, 1);
+    // }
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
