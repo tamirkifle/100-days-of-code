@@ -1114,11 +1114,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   My Course Catalog: 🍒
+
 Progress :-
+
+-   Finished basic look, implemented adding courses, implemented storing and loading from localStorage
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
 
 ## Day 58
 
