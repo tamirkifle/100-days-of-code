@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.add-course-form label {
+    display: block;
+    padding: 1rem;
+}
+.add-course-btn {
+    margin-left: 1rem;
+    padding: 0.4rem;
+}
+
+.course-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.course,
+.course-header {
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-around; */
+}
+
+.course span,
+.course-header span {
+    /* flex-basis: 23%; */
+    border: 1px solid black;
+    border-right: none;
+
+    padding: 1rem;
+    min-width: 300px;
+}
+.course span:last-of-type,
+.course-header span:last-of-type {
+    border-right: 1px solid black;
+}
