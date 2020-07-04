@@ -7,7 +7,7 @@ class Course {
     }
 
 }
-
+loadStored();
 document.querySelector(".add-course-btn").addEventListener("click", addCourse);
 
 function addCourse(e) {
@@ -15,9 +15,14 @@ function addCourse(e) {
     console.log(course);
     document.querySelectorAll(".add-course-form input").forEach(element => element.value = "");
     displayCourse(course);
+    storeCourse(course);
 }
 
-
+function loadStored() {
+    if (localStorage.getItem("courses") != null) {
+        JSON.parse(localStorage.getItem("courses")).forEach(course => displayCourse(course));
+    }
+}
 function displayCourse(course) {
     let courseItem = document.createElement("li");
     courseItem.classList.add("course");
@@ -38,3 +43,15 @@ function displayCourse(course) {
 
 }
 
+function storeCourse(course) {
+    let courses;
+    if (localStorage.getItem("courses") == null) {
+        courses = [];
+    }
+    else {
+        courses = JSON.parse(localStorage.getItem("courses"));
+    }
+    courses.push(course);
+    localStorage.setItem("courses", JSON.stringify(courses));
+    console.log(courses);
+}
