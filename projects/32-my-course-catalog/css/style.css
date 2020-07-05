@@ -10,7 +10,8 @@ body {
     display: block;
     padding: 1rem;
 }
-.add-course-btn {
+.add-course-btn,
+.clear-btn {
     margin-left: 1rem;
     padding: 0.4rem;
 }
@@ -36,7 +37,31 @@ body {
     padding: 1rem;
     min-width: 300px;
 }
+.course span:first-of-type,
+.course-header span:first-of-type {
+    min-width: 100px;
+}
+
 .course span:last-of-type,
 .course-header span:last-of-type {
     border-right: 1px solid black;
+}
+.course span:last-of-type {
+    min-width: 50px;
+}
+.course-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.course span {
+    border-top: none;
+}
+
+.course span.remove-btn {
+    cursor: pointer;
+    border-top: 1px solid black;
+    /* border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px 0 0 15px; */
 }
