@@ -7,6 +7,10 @@ class Course {
         this.category = category;
     }
 }
+let courseWindow = document.querySelector(".course-window");
+let overlay = document.querySelector(".overlay");
+
+
 
 let idCounter = 0;
 loadStored();
@@ -28,12 +32,12 @@ function loadStored() {
     }
 }
 function displayCourse(course) {
-    let courseItem = document.createElement("li");
+    let courseItem = document.createElement("div");
     courseItem.classList.add("course");
+    // courseItem.style.cursor = "pointer";
     courseIDSpan = document.createElement("span");
     courseIDSpan.innerText = course.id;
     courseIDSpan.classList.add("course-id");
-
     idCounter = course.id;
     courseNameSpan = document.createElement("span");
     courseNameSpan.innerText = course.name;
@@ -89,3 +93,52 @@ function removeCourse(e) {
 }
 
 
+
+document.querySelectorAll(".course span").forEach(courseSpan => {
+    courseSpan.addEventListener("click", popupCourseInfo);
+    courseSpan.style.cursor = "pointer";
+});
+document.querySelectorAll(".remove-btn").forEach(btn => btn.removeEventListener("click", popupCourseInfo));
+
+
+function getCourse(idno) {
+    let courses = JSON.parse(localStorage.getItem("courses"));
+    let returnV;
+
+    courses.some((course, index) => {
+        if (idno == course.id) {
+            returnV = courses.splice(index, 1)[0];
+            return true;
+        }
+
+    });
+    return returnV;
+}
+
+function popupCourseInfo(e) {
+    console.log(getCourse(2));
+    let course = getCourse(e.target.parentElement.querySelector(".course-id").innerText);
+    console.log(e.target.parentElement.querySelector(".course-id").innerText);
+    let courseInfo = document.createElement("div");
+    courseInfo.classList.add("course-info");
+    courseInfo.innerText = `Course ID: ${course.id}\nCourse Name: ${course.name}\nCourse Author: ${course.author}\nCourse Type: ${course.type}\nCourse Category: ${course.category}\n`;
+    courseInfo.style.color = "white";
+    courseInfo.style.fontSize = "2rem";
+
+    courseWindow.appendChild(courseInfo);
+    courseWindow.parentElement.setAttribute("style", "left: 0");
+    overlay.setAttribute("style", "left: 0");
+
+}
+
+
+document.querySelectorAll(".overlay, .close-btn").forEach(element => element.addEventListener("click", closePopUp));
+
+function closePopUp() {
+    courseWindow.querySelector(".course-info").remove();
+
+    courseWindow.parentElement.setAttribute("style", "left: -9999px");
+    overlay.setAttribute("style", "left: -9999px");
+
+
+}

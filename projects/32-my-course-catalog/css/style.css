@@ -65,3 +65,42 @@ body {
     height: 50px;
     padding: 10px 0 0 15px; */
 }
+#popup {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+.course-window {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    width: 50vw;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    padding: 3rem;
+}
+.overlay {
+    content: "";
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: -9999px;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 2;
+}
+.close-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 3rem;
+    line-height: 28px;
+    cursor: pointer;
+    z-index: 1000;
+    text-decoration: none;
+}
