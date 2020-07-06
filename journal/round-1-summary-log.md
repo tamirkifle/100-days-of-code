@@ -1146,11 +1146,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   My Course Catalog: 🍒🍅
+
 Progress :-
+
+-   Implemented a pop up that gives more course info.
 
 Notes :-
 
+-   Found out that ::before and ::After elements can not be placed on top or bottom relative to their own container with z-indexes.
+
 Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
 
 ## Day 60
 
