@@ -1164,8 +1164,14 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   My Course Catalog: 🍒
+
 Progress :-
+
+-   Added search feature, started sort feature
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
