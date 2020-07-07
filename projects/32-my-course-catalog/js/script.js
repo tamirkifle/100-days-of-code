@@ -142,3 +142,71 @@ function closePopUp() {
 
 
 }
+
+
+document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", sortBasedOn));
+
+
+function sortBasedOn(e) {
+    let courses;
+    if (courses = JSON.parse(localStorage.getItem("courses"))) {
+        console.log(courses);
+
+        if (e.target.innerText == "ID") {
+
+        }
+        else if (e.target.innerText == "Course") {
+
+        }
+        else if (e.target.innerText == "Author") {
+
+        }
+        else if (e.target.innerText == "Type") {
+
+        }
+        else if (e.target.innerText == "Category") {
+
+        }
+    }
+}
+
+
+document.querySelector("#search-input").addEventListener("keyup", filterCourses);
+
+function filterCourses(e) {
+    let searchText = e.target.value.toLowerCase();
+    let visible = false;
+    if (courses = JSON.parse(localStorage.getItem("courses"))) {
+        courses.forEach(course => {
+            visible = false;
+            for (let field in course) {
+                if (String(course[field]).toLowerCase().indexOf(searchText) != -1) {
+                    visible = true;
+                    break;
+                }
+
+            }
+            console.log(course, visible);
+            if (!visible) {
+                document.querySelectorAll(".course").forEach(item => {
+                    if (item.querySelector(".course-id").innerText == course.id) {
+                        item.style.display = "none";
+                    }
+
+
+                });
+
+            }
+            else if (visible) {
+                document.querySelectorAll(".course").forEach(item => {
+                    if (item.querySelector(".course-id").innerText == course.id) {
+                        item.style.display = "flex";
+                    }
+
+
+                });
+
+            }
+        });
+    }
+}
