@@ -1175,3 +1175,111 @@ Notes :-
 Tasks for tomorrow :-
 
 -   My Course Catalog: 🍒
+
+## Day 61
+
+Project :-
+
+-   My Course Catalog: 🍒
+
+Progress :-
+
+-   Implemented the sorting feature using header items switching from ascending to descending.
+
+Notes :-
+
+-   Used the sort method to implement sorting of objects
+
+Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
+
+## Day 62
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 63
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 64
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 65
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 66
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 67
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 68
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 69
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 70
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
