@@ -152,9 +152,7 @@ function closePopUp() {
 
 document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", sortBasedOn));
 
-let idChanged;
 let multiplier = -1;
-
 function sortBasedOn(e) {
     let courses;
     if (courses = JSON.parse(localStorage.getItem("courses"))) {
@@ -163,24 +161,33 @@ function sortBasedOn(e) {
             courses.sort((a, b) => {
                 return multiplier * (a.id - b.id);
             }).forEach(course => displayCourse(course));
-            if (multiplier === -1)
-                multiplier = 1;
-            else
-                multiplier = -1;
 
         }
         else if (e.target.innerText == "Course") {
-
+            courses.sort((a, b) => {
+                return multiplier * (a.name > b.name ? -1 : 1);
+            }).forEach(course => displayCourse(course));
         }
         else if (e.target.innerText == "Author") {
-
+            courses.sort((a, b) => {
+                return multiplier * (a.author > b.author ? -1 : 1);
+            }).forEach(course => displayCourse(course));
         }
         else if (e.target.innerText == "Type") {
-
+            courses.sort((a, b) => {
+                return multiplier * (a.type > b.type ? -1 : 1);
+            }).forEach(course => displayCourse(course));
         }
         else if (e.target.innerText == "Category") {
-
+            courses.sort((a, b) => {
+                return multiplier * (a.category > b.category ? -1 : 1);
+            }).forEach(course => displayCourse(course));
         }
+
+        if (multiplier === -1)
+            multiplier = 1;
+        else
+            multiplier = -1;
     }
 }
 
