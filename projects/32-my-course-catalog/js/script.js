@@ -31,7 +31,9 @@ function loadStored() {
         JSON.parse(localStorage.getItem("courses")).forEach(course => displayCourse(course));
     }
 }
-function displayCourse(course) {
+
+
+function createCourseDiv(course) {
     let courseItem = document.createElement("div");
     courseItem.classList.add("course");
     // courseItem.style.cursor = "pointer";
@@ -59,7 +61,11 @@ function displayCourse(course) {
     courseItem.appendChild(courseCategorySpan);
     courseItem.appendChild(courseRemoveSpan);
 
-    document.querySelector(".course-list").appendChild(courseItem);
+    return courseItem;
+}
+
+function displayCourse(course) {
+    document.querySelector(".course-list").appendChild(createCourseDiv(course));
 
 }
 
@@ -146,13 +152,21 @@ function closePopUp() {
 
 document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", sortBasedOn));
 
+let idChanged;
+let multiplier = -1;
 
 function sortBasedOn(e) {
     let courses;
     if (courses = JSON.parse(localStorage.getItem("courses"))) {
-        console.log(courses);
-
+        document.querySelectorAll(".course").forEach(course => course.remove());
         if (e.target.innerText == "ID") {
+            courses.sort((a, b) => {
+                return multiplier * (a.id - b.id);
+            }).forEach(course => displayCourse(course));
+            if (multiplier === -1)
+                multiplier = 1;
+            else
+                multiplier = -1;
 
         }
         else if (e.target.innerText == "Course") {
