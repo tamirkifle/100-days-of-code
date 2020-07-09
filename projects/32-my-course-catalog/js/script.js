@@ -43,15 +43,27 @@ function createCourseDiv(course) {
     idCounter = course.id;
     courseNameSpan = document.createElement("span");
     courseNameSpan.innerText = course.name;
+    courseNameSpan.classList.add("course-name");
     courseAuthorSpan = document.createElement("span");
     courseAuthorSpan.innerText = course.author;
+    courseAuthorSpan.classList.add("course-author");
     courseTypeSpan = document.createElement("span");
     courseTypeSpan.innerText = course.type;
+    courseTypeSpan.classList.add("course-type");
     courseCategorySpan = document.createElement("span");
     courseCategorySpan.innerText = course.category;
+    courseCategorySpan.classList.add("course-category");
     courseRemoveSpan = document.createElement("span");
     courseRemoveSpan.innerText = "❌";
     courseRemoveSpan.classList.add("remove-btn");
+
+    courseRemoveSpan.addEventListener("click", removeCourse);
+
+    courseEditSpan = document.createElement("span");
+    courseEditSpan.innerText = "✎";
+    courseEditSpan.classList.add("edit-btn");
+    courseEditSpan.addEventListener("click", activateEdit);
+
 
 
     courseItem.appendChild(courseIDSpan);
@@ -60,6 +72,7 @@ function createCourseDiv(course) {
     courseItem.appendChild(courseTypeSpan);
     courseItem.appendChild(courseCategorySpan);
     courseItem.appendChild(courseRemoveSpan);
+    courseItem.appendChild(courseEditSpan);
 
     return courseItem;
 }
@@ -78,33 +91,41 @@ function storeCourse(course) {
         courses = JSON.parse(localStorage.getItem("courses"));
     }
     courses.push(course);
+
+    if (courses[courses.length - 1].id < courses[courses.length - 2].id) {
+        courses.sort((a, b) => {
+            return a.id - b.id;
+        });
+    }
     localStorage.setItem("courses", JSON.stringify(courses));
+
 }
 
 
-document.querySelectorAll(".remove-btn").forEach(btn => btn.addEventListener("click", removeCourse));
 function removeCourse(e) {
     if (confirm("Are you sure?")) {
         e.target.parentElement.remove();
-        let courses = JSON.parse(localStorage.getItem("courses"));
-        courses.forEach((course, index) => {
-            if (e.target.parentElement.querySelector(".course-id").innerText == course.id) {
-                courses.splice(index, 1);
-                localStorage.setItem("courses", JSON.stringify(courses));
-                return true;
-            }
-        }
-        );
+        removeFromLocalStorage(e.target.parentElement.querySelector(".course-id").innerText);
     }
+}
+function removeFromLocalStorage(idno) {
+    let removedCourse;
+    let courses = JSON.parse(localStorage.getItem("courses"));
+    courses.forEach((course, index) => {
+        if (idno == course.id) {
+            removedCourse = courses.splice(index, 1);
+            localStorage.setItem("courses", JSON.stringify(courses));
+            return true;
+        }
+    });
+    return removedCourse;
 }
 
 
-
-document.querySelectorAll(".course span").forEach(courseSpan => {
+document.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach(courseSpan => {
     courseSpan.addEventListener("click", popupCourseInfo);
     courseSpan.style.cursor = "pointer";
 });
-document.querySelectorAll(".remove-btn").forEach(btn => btn.removeEventListener("click", popupCourseInfo));
 
 
 function getCourse(idno) {
@@ -150,35 +171,35 @@ function closePopUp() {
 }
 
 
-document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", sortBasedOn));
+document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", (e) => sortBasedOn(e.target.innerText)));
 
 let multiplier = -1;
-function sortBasedOn(e) {
+function sortBasedOn(headerText) {
     let courses;
     if (courses = JSON.parse(localStorage.getItem("courses"))) {
         document.querySelectorAll(".course").forEach(course => course.remove());
-        if (e.target.innerText == "ID") {
+        if (headerText == "ID") {
             courses.sort((a, b) => {
                 return multiplier * (a.id - b.id);
             }).forEach(course => displayCourse(course));
 
         }
-        else if (e.target.innerText == "Course") {
+        else if (headerText == "Course") {
             courses.sort((a, b) => {
                 return multiplier * (a.name > b.name ? -1 : 1);
             }).forEach(course => displayCourse(course));
         }
-        else if (e.target.innerText == "Author") {
+        else if (headerText == "Author") {
             courses.sort((a, b) => {
                 return multiplier * (a.author > b.author ? -1 : 1);
             }).forEach(course => displayCourse(course));
         }
-        else if (e.target.innerText == "Type") {
+        else if (headerText == "Type") {
             courses.sort((a, b) => {
                 return multiplier * (a.type > b.type ? -1 : 1);
             }).forEach(course => displayCourse(course));
         }
-        else if (e.target.innerText == "Category") {
+        else if (headerText == "Category") {
             courses.sort((a, b) => {
                 return multiplier * (a.category > b.category ? -1 : 1);
             }).forEach(course => displayCourse(course));
@@ -230,4 +251,65 @@ function filterCourses(e) {
             }
         });
     }
+}
+
+
+
+
+
+function activateEdit(e) {
+    let currentCourse = e.target.parentElement;
+
+    function createElement(elementType, fieldText) {
+        let element = document.createElement(elementType);
+        element.style.type = "text";
+        element.value = fieldText;
+        return element;
+    }
+
+    currentCourse.querySelectorAll(".course-name, .course-author, .course-type, .course-category").forEach(field => {
+        let input = createElement("input", field.innerText);
+        field.innerText = "";
+        field.appendChild(input);
+    }
+    );
+
+    currentCourse.querySelector(".edit-btn").remove();
+    courseSaveSpan = document.createElement("span");
+    courseSaveSpan.innerText = "✎";
+    courseSaveSpan.classList.add("save-btn");
+    courseSaveSpan.innerText = "💾";
+    courseSaveSpan.addEventListener("click", saveEditedCourse);
+
+    currentCourse.appendChild(courseSaveSpan);
+
+    currentCourse.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach(courseSpan => {
+        courseSpan.removeEventListener("click", popupCourseInfo);
+        courseSpan.style.cursor = "default";
+    });
+
+    function saveEditedCourse(e) {
+        let course = new Course(Number(currentCourse.querySelector(".course-id").innerText), currentCourse.querySelector(".course-name input").value, currentCourse.querySelector(".course-author input").value, currentCourse.querySelector(".course-type input").value, currentCourse.querySelector(".course-category input").value);
+        if (confirm(`Are you sure you want to overwrite course #${course.id} as follows?\nCourse Name: ${course.name}\nCourse Author: ${course.author}\nCourse Type: ${course.type}\nCourse Category: ${course.category}\n`)) {
+            removeFromLocalStorage(course.id);
+            storeCourse(course);
+            currentCourse.querySelectorAll("input").forEach(field => {
+                field.parentElement.innerText = field.value;
+                field.remove();
+            }
+            );
+            currentCourse.querySelector(".save-btn").remove();
+            courseEditSpan = document.createElement("span");
+            courseEditSpan.innerText = "✎";
+            courseEditSpan.classList.add("edit-btn");
+            courseEditSpan.addEventListener("click", activateEdit);
+            currentCourse.appendChild(courseEditSpan);
+            currentCourse.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach(courseSpan => {
+                courseSpan.addEventListener("click", popupCourseInfo);
+                courseSpan.style.cursor = "pointer";
+            });
+        }
+    }
+
+
 }
