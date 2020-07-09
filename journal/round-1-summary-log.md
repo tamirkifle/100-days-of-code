@@ -1198,11 +1198,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   My Course Catalog: 🍒🍅
+
 Progress :-
+
+-   Implemented the edit feature, edits courses in place and overwrites entry in localStorage.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
 
 ## Day 63
 
