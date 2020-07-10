@@ -29,7 +29,7 @@ body {
 }
 
 .course span,
-.course-header span {
+.header-item {
     /* flex-basis: 23%; */
     border: 1px solid black;
     border-right: none;
@@ -38,12 +38,12 @@ body {
     min-width: 300px;
 }
 .course span:first-of-type,
-.course-header span:first-of-type {
+.header-id {
     min-width: 100px;
 }
 
 .course span:last-of-type,
-.course-header span:last-of-type {
+.header-category {
     border-right: 1px solid black;
 }
 

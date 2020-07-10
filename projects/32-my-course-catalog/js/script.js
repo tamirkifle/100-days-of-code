@@ -74,6 +74,10 @@ function createCourseDiv(course) {
     courseItem.appendChild(courseRemoveSpan);
     courseItem.appendChild(courseEditSpan);
 
+    [courseIDSpan, courseNameSpan, courseAuthorSpan, courseTypeSpan, courseCategorySpan].forEach(courseSpan => {
+        courseSpan.addEventListener("click", popupCourseInfo);
+        courseSpan.style.cursor = "pointer";
+    });
     return courseItem;
 }
 
@@ -122,10 +126,7 @@ function removeFromLocalStorage(idno) {
 }
 
 
-document.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach(courseSpan => {
-    courseSpan.addEventListener("click", popupCourseInfo);
-    courseSpan.style.cursor = "pointer";
-});
+
 
 
 function getCourse(idno) {
@@ -171,10 +172,20 @@ function closePopUp() {
 }
 
 
-document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", (e) => sortBasedOn(e.target.innerText)));
+document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", (e) => {
+    if (!/[A-Za-z]/.test(e.target.textContent)) {
+        sortBasedOn(e.target.parentElement.textContent);
+    }
+    else {
+        sortBasedOn(e.target.textContent);
+    }
+}));
 
 let multiplier = -1;
 function sortBasedOn(headerText) {
+    if (!/[A-Za-z]/.test(Array.from(headerText).splice(-1)[0])) {
+        headerText = headerText.split(Array.from(headerText).splice(-1)[0])[0];
+    }
     let courses;
     if (courses = JSON.parse(localStorage.getItem("courses"))) {
         document.querySelectorAll(".course").forEach(course => course.remove());
@@ -205,11 +216,47 @@ function sortBasedOn(headerText) {
             }).forEach(course => displayCourse(course));
         }
 
-        if (multiplier === -1)
+
+        if (multiplier === -1) {
             multiplier = 1;
-        else
+            if (headerText == "ID")
+                addArrow("descending", headerText);
+            else
+                addArrow("ascending", headerText);
+
+        }
+        else {
             multiplier = -1;
+            if (headerText == "ID")
+                addArrow("ascending", headerText);
+            else
+                addArrow("descending", headerText);
+
+        }
     }
+
+    function addArrow(direction, headerText) {
+
+        let arrow = document.createElement("span");
+        arrow.classList.add("sort-arrow");
+        if (direction == "descending") {
+            arrow.innerText = "🔺";
+        }
+        else if (direction == "ascending") {
+            arrow.innerText = "🔻";
+        }
+        document.querySelectorAll(".header-item").forEach(header => {
+            if (header.querySelector(".sort-arrow")) {
+                header.querySelector(".sort-arrow").remove();
+            }
+        });
+
+        document.querySelector(`.header-${headerText.toLowerCase()}`).appendChild(arrow);
+
+    }
+
+
+
 }
 
 
