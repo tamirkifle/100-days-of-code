@@ -1214,11 +1214,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   My Course Catalog: 🍒
+
 Progress :-
+
+-   Added an arrow to show sorting order
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
 
 ## Day 64
 
