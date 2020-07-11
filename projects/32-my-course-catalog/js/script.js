@@ -197,22 +197,22 @@ function sortBasedOn(headerText) {
         }
         else if (headerText == "Course") {
             courses.sort((a, b) => {
-                return multiplier * (a.name > b.name ? -1 : 1);
+                return multiplier * (a.name.toLowerCase() > b.name.toLowerCase() ? -1 : 1);
             }).forEach(course => displayCourse(course));
         }
         else if (headerText == "Author") {
             courses.sort((a, b) => {
-                return multiplier * (a.author > b.author ? -1 : 1);
+                return multiplier * (a.author.toLowerCase() > b.author.toLowerCase() ? -1 : 1);
             }).forEach(course => displayCourse(course));
         }
         else if (headerText == "Type") {
             courses.sort((a, b) => {
-                return multiplier * (a.type > b.type ? -1 : 1);
+                return multiplier * (a.type.toLowerCase() > b.type.toLowerCase() ? -1 : 1);
             }).forEach(course => displayCourse(course));
         }
         else if (headerText == "Category") {
             courses.sort((a, b) => {
-                return multiplier * (a.category > b.category ? -1 : 1);
+                return multiplier * (a.category.toLowerCase() > b.category.toLowerCase() ? -1 : 1);
             }).forEach(course => displayCourse(course));
         }
 
@@ -357,6 +357,6 @@ function activateEdit(e) {
             });
         }
     }
-
-
 }
+
+
