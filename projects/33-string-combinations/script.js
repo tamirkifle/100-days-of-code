@@ -25,8 +25,8 @@ function combo(str) {
 }
 
 
-
 function displayResults(word) {
+    word = strip(word);
     let array = combo(word);
     document.querySelectorAll(".intro, .container").forEach(item => item.remove());
     let intro = document.createElement("p");
@@ -42,7 +42,6 @@ function displayResults(word) {
         let element = document.createElement("span");
         element.innerText = combination;
         element.style.margin = "1rem";
-
         element.style.padding = "1rem";
         element.style.fontSize = "5rem";
         element.style.border = "1px solid black";
@@ -55,3 +54,10 @@ function displayResults(word) {
 
 
 document.querySelector(".word-input-btn").addEventListener("click", (e) => { displayResults(e.target.parentElement.querySelector("input").value); e.target.parentElement.querySelector("input").value = ""; });
+
+
+
+
+function strip(str) {
+    return str.split("").filter(item => /[\w\d-.]/.test(item)).join("");
+}
