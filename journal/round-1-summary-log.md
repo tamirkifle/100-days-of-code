@@ -1230,11 +1230,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   String Combinations: 🍒
+
 Progress :-
+
+-   Finished functionality with an HTML control view.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
 
 ## Day 65
 
