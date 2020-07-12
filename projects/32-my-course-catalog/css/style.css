@@ -50,9 +50,13 @@ body {
 .course .save-btn {
     font-size: 0.5rem;
 }
+.course .edit-more-btn {
+    text-align: center;
+}
 .course .remove-btn,
 .course .edit-btn,
-.course .save-btn {
+.course .save-btn,
+.course .edit-more-btn {
     cursor: pointer;
     border-top: 1px solid black;
     min-width: 50px;
