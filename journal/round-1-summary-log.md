@@ -1246,11 +1246,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   My Course Catalog: 🍒
+
 Progress :-
 
-Notes :-
+-   Changed filtering(search) to use courses shown on page rather than straight from storage
+-   Started and progressed on the pop up editor, needs some ironing out
+    Notes :-
 
 Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
 
 ## Day 66
 
