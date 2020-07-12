@@ -81,6 +81,10 @@ function createCourseDiv(course) {
     return courseItem;
 }
 
+function courseFromCourseDiv(courseDiv) {
+    return new Course(courseDiv.querySelector(".course-id").innerText, courseDiv.querySelector(".course-name").innerText, courseDiv.querySelector(".course-author").innerText, courseDiv.querySelector(".course-type").innerText, courseDiv.querySelector(".course-category").innerText);
+}
+
 function displayCourse(course) {
     document.querySelector(".course-list").appendChild(createCourseDiv(course));
 
@@ -107,7 +111,7 @@ function storeCourse(course) {
 
 
 function removeCourse(e) {
-    if (confirm("Are you sure?")) {
+    if (confirm("Are you sure you want to delete this course?")) {
         e.target.parentElement.remove();
         removeFromLocalStorage(e.target.parentElement.querySelector(".course-id").innerText);
     }
@@ -265,7 +269,14 @@ document.querySelector("#search-input").addEventListener("keyup", filterCourses)
 function filterCourses(e) {
     let searchText = e.target.value.toLowerCase();
     let visible = false;
-    if (courses = JSON.parse(localStorage.getItem("courses"))) {
+    let courses;
+    document.querySelectorAll(".course").forEach(course => {
+        if (courses == undefined) {
+            courses = [];
+        }
+        courses.push(courseFromCourseDiv(course));
+    });
+    if (courses) {
         courses.forEach(course => {
             visible = false;
             for (let field in course) {
@@ -275,7 +286,6 @@ function filterCourses(e) {
                 }
 
             }
-            console.log(course, visible);
             if (!visible) {
                 document.querySelectorAll(".course").forEach(item => {
                     if (item.querySelector(".course-id").innerText == course.id) {
