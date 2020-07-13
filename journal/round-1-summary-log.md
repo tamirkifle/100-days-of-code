@@ -1262,11 +1262,21 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   My Course Catalog: 🍒
+
 Progress :-
+
+-   My Course Catalog: 🍒
+    -   Implemented the click outside the editing area to exit editing.
+    -   Implemented the edit pop-up menu and enabled it to save to disk.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   My Course Catalog: 🍒
+    -   Make it more resuable by removing functions within functions that can be applied elsewhere.
+    -   Make cancelEditing overlay only on the course spans and not the course element.
 
 ## Day 67
 
