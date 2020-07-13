@@ -347,8 +347,10 @@ function activateEdit(e) {
     }
     );
 
-    currentCourse.querySelector(".edit-btn").remove();
-    currentCourse.querySelector(".remove-btn").remove();
+    let editBtn = currentCourse.querySelector(".edit-btn");
+    editBtn.remove();
+    removeBtn = currentCourse.querySelector(".remove-btn")
+    removeBtn.remove();
     editMoreSpan = document.createElement("span");
     editMoreSpan.classList.add("edit-more-btn");
     editMoreSpan.innerText = " ⃛";
@@ -368,7 +370,52 @@ function activateEdit(e) {
         courseSpan.style.cursor = "default";
     });
 
+    let cancelEditOverlay = document.createElement("div");
+    cancelEditOverlay.classList.add("cancel-edit-overlay");
+    cancelEditOverlay.style.position = "fixed";
+    cancelEditOverlay.style.top = 0;
+    cancelEditOverlay.style.width = "100vw";
+    cancelEditOverlay.style.height = "100vh";
+    cancelEditOverlay.style.zIndex = "1002";
+    cancelEditOverlay.addEventListener("click", cancelEditing);
+    document.body.appendChild(cancelEditOverlay);
+    currentCourse.style.position = "relative";
+    currentCourse.style.zIndex = "1003";
+
+    function cancelEditing() {
+        cancelEditOverlay.remove();
+        currentCourse.style.position = "static";
+        currentCourse.querySelectorAll("input").forEach(input => input.remove());
+        currentCourse.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach((courseSpan, index) => {
+            courseSpan.addEventListener("click", popupCourseInfo);
+            courseSpan.style.cursor = "pointer";
+            switch (index) {
+                case 1: {
+                    courseSpan.innerText = course.name;
+                    break;
+                }
+                case 2: {
+                    courseSpan.innerText = course.author;
+                    break;
+                }
+                case 3: {
+                    courseSpan.innerText = course.type;
+                    break;
+                }
+                case 4: {
+                    courseSpan.innerText = course.category;
+                    break;
+                }
+            }
+        });
+        editMoreSpan.remove();
+        courseSaveSpan.remove();
+        currentCourse.appendChild(removeBtn);
+        currentCourse.appendChild(editBtn);
+    }
+
     function popUpEditMore(e) {
+        cancelEditing();
         let courseEditor = document.createElement("div");
         courseEditor.classList.add("course-info");
         for (let field in course) {
@@ -432,16 +479,12 @@ function activateEdit(e) {
                 field.remove();
             }
             );
-            currentCourse.querySelector(".save-btn").remove();
-            courseEditSpan = document.createElement("span");
-            courseEditSpan.innerText = "✎";
-            courseEditSpan.classList.add("edit-btn");
-            courseEditSpan.addEventListener("click", activateEdit);
-            currentCourse.appendChild(courseEditSpan);
-            currentCourse.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach(courseSpan => {
-                courseSpan.addEventListener("click", popupCourseInfo);
-                courseSpan.style.cursor = "pointer";
-            });
+            editMoreSpan.remove();
+            courseSaveSpan.remove();
+            currentCourse.appendChild(removeBtn);
+            currentCourse.appendChild(editBtn);
+
+
         }
     }
 }
