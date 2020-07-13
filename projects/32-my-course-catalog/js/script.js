@@ -10,7 +10,7 @@ class Course {
 }
 let courseWindow = document.querySelector(".course-window");
 let overlay = document.querySelector(".overlay");
-
+let headerDict = { id: "ID", name: "Name", author: "Author", type: "Type", category: "Category", moreInfo: "More Info" };
 
 
 let idCounter = 0;
@@ -100,11 +100,12 @@ function storeCourse(course) {
         courses = JSON.parse(localStorage.getItem("courses"));
     }
     courses.push(course);
-
-    if (courses[courses.length - 1].id < courses[courses.length - 2].id) {
-        courses.sort((a, b) => {
-            return a.id - b.id;
-        });
+    if (courses[courses.length - 1] && courses[courses.length - 2]) {
+        if (courses[courses.length - 1].id < courses[courses.length - 2].id) {
+            courses.sort((a, b) => {
+                return a.id - b.id;
+            });
+        }
     }
     localStorage.setItem("courses", JSON.stringify(courses));
 
@@ -152,7 +153,22 @@ function popupCourseInfo(e) {
     let course = getCourse(e.target.parentElement.querySelector(".course-id").innerText);
     let courseInfo = document.createElement("div");
     courseInfo.classList.add("course-info");
-    courseInfo.innerText = `Course ID: ${course.id}\nCourse Name: ${course.name}\nCourse Author: ${course.author}\nCourse Type: ${course.type}\nCourse Category: ${course.category}\n`;
+    for (let field in course) {
+        if (field == "moreInfo") {
+            if (!course[field]) {
+                continue;
+            }
+        }
+        let line = document.createElement("div");
+        let label = document.createElement("label");
+        let content = document.createElement("span");
+        label.innerText = `Course ${headerDict[field]}: `;
+        content.innerText = course[field];
+        line.appendChild(label);
+        line.appendChild(content);
+        line.style.margin = "1rem 0";
+        courseInfo.appendChild(line);
+    }
     courseInfo.style.color = "white";
     courseInfo.style.fontSize = "2rem";
 
@@ -355,15 +371,13 @@ function activateEdit(e) {
     function popUpEditMore(e) {
         let courseEditor = document.createElement("div");
         courseEditor.classList.add("course-info");
-        let fieldTexts = ["ID", "Name", "Author", "Type", "Category", "More Info"];
         for (let field in course) {
             let line = document.createElement("div");
             let label = document.createElement("label");
-            label.innerText = `Course ${fieldTexts.shift()}: `;
+            label.innerText = `Course ${headerDict[field]}: `;
             let input;
             if (field == "moreInfo") {
                 input = document.createElement("textarea");
-
             }
             else {
                 input = document.createElement("input");
