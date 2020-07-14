@@ -16,8 +16,19 @@ let headerDict = { id: "ID", name: "Name", author: "Author", type: "Type", categ
 let idCounter = 0;
 loadStored();
 document.querySelector(".clear-btn").addEventListener("click", () => document.querySelectorAll(".add-course-form input").forEach(element => element.value = ""));
-
 document.querySelector(".add-course-btn").addEventListener("click", addCourse);
+document.querySelector("#search-input").addEventListener("keyup", filterCourses);
+document.querySelectorAll(".overlay, .close-btn").forEach(element => element.addEventListener("click", closePopUp));
+document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", (e) => {
+    if (!/[A-Za-z]/.test(e.target.textContent)) {
+        sortBasedOn(e.target.parentElement.textContent);
+    }
+    else {
+        sortBasedOn(e.target.textContent);
+    }
+}));
+
+
 function addCourse(e) {
     if (confirm(`Are you sure you want to save this course?\nCourse Name: ${document.querySelector("#course-name").value}\nCourse Author: ${document.querySelector("#course-author").value}\nCourse Type: ${document.querySelector("#course-type").value}\nCourse Category: ${document.querySelector("#course-category").value}\n`)) {
         let course = new Course(++idCounter, document.querySelector("#course-name").value, document.querySelector("#course-author").value, document.querySelector("#course-type").value, document.querySelector("#course-category").value);
@@ -174,20 +185,20 @@ function popupCourseInfo(e) {
 
     courseWindow.appendChild(courseInfo);
 
-    // let editBtn = document.createElement("button");
-    // editBtn.innerText = "Edit Course";
-    // editBtn.style.padding = "0.5rem";
-    // editBtn.style.marginRight = "1rem";
-    // editBtn.addEventListener("click", popUpEditMore);
+    let editBtn = document.createElement("button");
+    editBtn.innerText = "Edit Course";
+    editBtn.style.padding = "0.5rem";
+    editBtn.style.margin = "2rem 1rem 0 0";
+    editBtn.addEventListener("click", popUpEditMore);
 
-    // courseWindow.appendChild(editBtn);
+    courseWindow.appendChild(editBtn);
+    courseWindow.style.height = "600px";
     courseWindow.parentElement.setAttribute("style", "left: 0");
     overlay.setAttribute("style", "left: 0");
 
 }
 
 
-document.querySelectorAll(".overlay, .close-btn").forEach(element => element.addEventListener("click", closePopUp));
 
 function closePopUp() {
     courseWindow.querySelector(".course-info").remove();
@@ -198,14 +209,7 @@ function closePopUp() {
 }
 
 
-document.querySelectorAll(".header-item").forEach(item => item.addEventListener("click", (e) => {
-    if (!/[A-Za-z]/.test(e.target.textContent)) {
-        sortBasedOn(e.target.parentElement.textContent);
-    }
-    else {
-        sortBasedOn(e.target.textContent);
-    }
-}));
+
 
 let multiplier = -1;
 function sortBasedOn(headerText) {
@@ -261,32 +265,29 @@ function sortBasedOn(headerText) {
         }
     }
 
-    function addArrow(direction, headerText) {
+}
 
-        let arrow = document.createElement("span");
-        arrow.classList.add("sort-arrow");
-        if (direction == "descending") {
-            arrow.innerText = "🔺";
-        }
-        else if (direction == "ascending") {
-            arrow.innerText = "🔻";
-        }
-        document.querySelectorAll(".header-item").forEach(header => {
-            if (header.querySelector(".sort-arrow")) {
-                header.querySelector(".sort-arrow").remove();
-            }
-        });
+function addArrow(direction, headerText) {
 
-        document.querySelector(`.header-${headerText.toLowerCase()}`).appendChild(arrow);
-
+    let arrow = document.createElement("span");
+    arrow.classList.add("sort-arrow");
+    if (direction == "descending") {
+        arrow.innerText = "🔺";
     }
+    else if (direction == "ascending") {
+        arrow.innerText = "🔻";
+    }
+    document.querySelectorAll(".header-item").forEach(header => {
+        if (header.querySelector(".sort-arrow")) {
+            header.querySelector(".sort-arrow").remove();
+        }
+    });
 
-
+    document.querySelector(`.header-${headerText.toLowerCase()}`).appendChild(arrow);
 
 }
 
 
-document.querySelector("#search-input").addEventListener("keyup", filterCourses);
 
 function filterCourses(e) {
     let searchText = e.target.value.toLowerCase();
@@ -362,7 +363,7 @@ function activateEdit(e) {
     editMoreSpan = document.createElement("span");
     editMoreSpan.classList.add("edit-more-btn");
     editMoreSpan.innerText = " ⃛";
-    editMoreSpan.addEventListener("click", popUpEditMore);
+    editMoreSpan.addEventListener("click", (event) => { popUpEditMore(event); cancelEditing(); });
 
 
     courseSaveSpan = document.createElement("span");
@@ -422,72 +423,7 @@ function activateEdit(e) {
         currentCourse.appendChild(editBtn);
     }
 
-    function popUpEditMore(e) {
-        cancelEditing();
-        let courseEditor = document.createElement("div");
-        courseEditor.classList.add("course-info");
-        for (let field in course) {
-            let line = document.createElement("div");
-            let label = document.createElement("label");
-            label.innerText = `Course ${headerDict[field]}: `;
-            let input;
-            if (field == "moreInfo") {
-                input = document.createElement("textarea");
-            }
-            else {
-                input = document.createElement("input");
-            }
-            input.classList.add(`${field}-input`);
-            input.value = course[field];
-            if (field == "id") {
-                input.disabled = true;
-            }
-            input.style.fontSize = "1.5rem";
-            line.appendChild(label);
-            line.appendChild(input);
-            line.style.margin = "1rem 0";
-            courseEditor.appendChild(line);
-        }
-        let saveBtn = document.createElement("button");
-        saveBtn.innerText = "Save Course";
-        saveBtn.style.padding = "0.5rem";
-        saveBtn.style.marginRight = "1rem";
-        saveBtn.addEventListener("click", savePopUpEdit);
 
-        courseEditor.appendChild(saveBtn);
-
-        let cancelBtn = document.createElement("button");
-        cancelBtn.innerText = "Cancel";
-        cancelBtn.style.padding = "0.5rem";
-        cancelBtn.addEventListener("click", closePopUp);
-
-        courseEditor.appendChild(cancelBtn);
-
-        courseEditor.style.color = "white";
-        courseEditor.style.fontSize = "2rem";
-        courseEditor.style.textAlign = "center";
-
-        courseWindow.appendChild(courseEditor);
-        courseWindow.parentElement.setAttribute("style", "left: 0");
-        courseWindow.style.height = "600px";
-        overlay.setAttribute("style", "left: 0");
-
-
-        function savePopUpEdit() {
-            let arguments = Array.from(courseEditor.querySelectorAll("input")).map(element => element.value);
-            if (courseEditor.querySelector("textarea")) {
-                arguments.push(courseEditor.querySelector("textarea").value);
-            }
-            let course = new Course(...arguments);
-            if (confirm(`Are you sure you want to overwrite course #${course.id} as follows?\nCourse Name: ${course.name}\nCourse Author: ${course.author}\nCourse Type: ${course.type}\nCourse Category: ${course.category}\nCourse More Info: ${course.moreInfo}`)) {
-                removeFromLocalStorage(course.id);
-                storeCourse(course);
-                closePopUp();
-                popupCourseInfo({ target: currentCourse.querySelector(".course-id") });
-            }
-        }
-
-    }
     function saveEditedCourse(e) {
         if (confirm(`Are you sure you want to overwrite course #${course.id} as follows?\nCourse Name: ${course.name}\nCourse Author: ${course.author}\nCourse Type: ${course.type}\nCourse Category: ${course.category}\n`)) {
             removeFromLocalStorage(course.id);
@@ -505,6 +441,74 @@ function activateEdit(e) {
 
         }
     }
+}
+
+function popUpEditMore(e) {
+    let currentCourse = e.target.parentElement;
+    let course = getCourse(currentCourse.querySelector(".course-id").innerText);
+    let courseEditor = document.createElement("div");
+    courseEditor.classList.add("course-info");
+    for (let field in course) {
+        let line = document.createElement("div");
+        let label = document.createElement("label");
+        label.innerText = `Course ${headerDict[field]}: `;
+        let input;
+        if (field == "moreInfo") {
+            input = document.createElement("textarea");
+        }
+        else {
+            input = document.createElement("input");
+        }
+        input.classList.add(`${field}-input`);
+        input.value = course[field];
+        if (field == "id") {
+            input.disabled = true;
+        }
+        input.style.fontSize = "1.5rem";
+        line.appendChild(label);
+        line.appendChild(input);
+        line.style.margin = "1rem 0";
+        courseEditor.appendChild(line);
+    }
+    let saveBtn = document.createElement("button");
+    saveBtn.innerText = "Save Course";
+    saveBtn.style.padding = "0.5rem";
+    saveBtn.style.marginRight = "1rem";
+    saveBtn.addEventListener("click", savePopUpEdit);
+
+    courseEditor.appendChild(saveBtn);
+
+    let cancelBtn = document.createElement("button");
+    cancelBtn.innerText = "Cancel";
+    cancelBtn.style.padding = "0.5rem";
+    cancelBtn.addEventListener("click", closePopUp);
+
+    courseEditor.appendChild(cancelBtn);
+
+    courseEditor.style.color = "white";
+    courseEditor.style.fontSize = "2rem";
+    courseEditor.style.textAlign = "center";
+
+    courseWindow.appendChild(courseEditor);
+    courseWindow.parentElement.setAttribute("style", "left: 0");
+    courseWindow.style.height = "600px";
+    overlay.setAttribute("style", "left: 0");
+
+
+    function savePopUpEdit() {
+        let arguments = Array.from(courseEditor.querySelectorAll("input")).map(element => element.value);
+        if (courseEditor.querySelector("textarea")) {
+            arguments.push(courseEditor.querySelector("textarea").value);
+        }
+        let course = new Course(...arguments);
+        if (confirm(`Are you sure you want to overwrite course #${course.id} as follows?\nCourse Name: ${course.name}\nCourse Author: ${course.author}\nCourse Type: ${course.type}\nCourse Category: ${course.category}\nCourse More Info: ${course.moreInfo}`)) {
+            removeFromLocalStorage(course.id);
+            storeCourse(course);
+            closePopUp();
+            popupCourseInfo({ target: currentCourse.querySelector(".course-id") });
+        }
+    }
+
 }
 
 
