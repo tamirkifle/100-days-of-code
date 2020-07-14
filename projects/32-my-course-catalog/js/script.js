@@ -402,12 +402,13 @@ function activateEdit(e) {
     cancelEditOverlay.style.zIndex = "1002";
     cancelEditOverlay.addEventListener("click", cancelEditing);
     document.body.appendChild(cancelEditOverlay);
-    currentCourse.style.position = "relative";
-    currentCourse.style.zIndex = "1003";
+    currentCourse.querySelectorAll("*").forEach(span => { span.style.position = "relative"; span.style.zIndex = "1003"; })
+    // currentCourse.style.position = "relative";
+    // currentCourse.style.zIndex = "1003";
 
     function cancelEditing() {
         cancelEditOverlay.remove();
-        currentCourse.style.position = "static";
+        currentCourse.querySelectorAll("*").forEach(span => span.style.position = "static")
         currentCourse.querySelectorAll("input").forEach(input => input.remove());
         currentCourse.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach((courseSpan, index) => {
             courseSpan.addEventListener("click", popUp);
