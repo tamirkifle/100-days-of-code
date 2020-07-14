@@ -1282,9 +1282,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   My Course Catalog: 🍒
+
 Progress :-
 
+-   Made it more resuable by removing functions within functions that can be applied elsewhere.
+-   Made cancelEditing overlay only on the course spans and not the course element.
+-   Added a common popUp event listener function and other pop up functions now take the ID No as a parameter.
+
 Notes :-
+
+-   [ ] How do I remove anonymous event listeners?
 
 Tasks for tomorrow :-
 
