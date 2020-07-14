@@ -482,8 +482,8 @@ function activateEdit(e) {
             if (confirm(`Are you sure you want to overwrite course #${course.id} as follows?\nCourse Name: ${course.name}\nCourse Author: ${course.author}\nCourse Type: ${course.type}\nCourse Category: ${course.category}\nCourse More Info: ${course.moreInfo}`)) {
                 removeFromLocalStorage(course.id);
                 storeCourse(course);
-                cancelPopUpEdit();
-                popupCourseInfo({ target: currentCourse });
+                closePopUp();
+                popupCourseInfo({ target: currentCourse.querySelector(".course-id") });
             }
         }
 
