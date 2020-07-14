@@ -87,12 +87,25 @@ function createCourseDiv(course) {
     courseItem.appendChild(courseEditSpan);
 
     [courseIDSpan, courseNameSpan, courseAuthorSpan, courseTypeSpan, courseCategorySpan].forEach(courseSpan => {
-        courseSpan.addEventListener("click", popupCourseInfo);
+        courseSpan.addEventListener("click", popUp);
         courseSpan.style.cursor = "pointer";
     });
     return courseItem;
 }
 
+function popUp(e) {
+    if (e.target.innerText == "⃛") {
+        return popUpEditMore(e.target.parentElement.querySelector(".course-id").innerText);
+    }
+    else if (e.target.innerText == "Edit Course") {
+        let idno = e.target.parentElement.querySelector(".course-id-pop-up span").innerText;
+        e.target.parentElement.remove();
+        return popUpEditMore(idno);
+    }
+    else {
+        return popupCourseInfo(e.target.parentElement.querySelector(".course-id").innerText);
+    }
+}
 function courseFromCourseDiv(courseDiv) {
     return new Course(courseDiv.querySelector(".course-id").innerText, courseDiv.querySelector(".course-name").innerText, courseDiv.querySelector(".course-author").innerText, courseDiv.querySelector(".course-type").innerText, courseDiv.querySelector(".course-category").innerText);
 }
@@ -160,8 +173,8 @@ function getCourse(idno) {
     return returnV;
 }
 
-function popupCourseInfo(e) {
-    let course = getCourse(e.target.parentElement.querySelector(".course-id").innerText);
+function popupCourseInfo(idno) {
+    let course = getCourse(idno);
     let courseInfo = document.createElement("div");
     courseInfo.classList.add("course-info");
     for (let field in course) {
@@ -173,6 +186,7 @@ function popupCourseInfo(e) {
         let line = document.createElement("div");
         let label = document.createElement("label");
         let content = document.createElement("span");
+        line.classList.add(`course-${field}-pop-up`);
         label.innerText = `Course ${headerDict[field]}: `;
         content.innerText = course[field];
         line.appendChild(label);
@@ -182,16 +196,16 @@ function popupCourseInfo(e) {
     }
     courseInfo.style.color = "white";
     courseInfo.style.fontSize = "2rem";
-
-    courseWindow.appendChild(courseInfo);
-
     let editBtn = document.createElement("button");
     editBtn.innerText = "Edit Course";
     editBtn.style.padding = "0.5rem";
     editBtn.style.margin = "2rem 1rem 0 0";
-    editBtn.addEventListener("click", popUpEditMore);
+    editBtn.addEventListener("click", popUp);
+    courseWindow.appendChild(courseInfo);
 
-    courseWindow.appendChild(editBtn);
+
+
+    courseInfo.appendChild(editBtn);
     courseWindow.style.height = "600px";
     courseWindow.parentElement.setAttribute("style", "left: 0");
     overlay.setAttribute("style", "left: 0");
@@ -363,7 +377,7 @@ function activateEdit(e) {
     editMoreSpan = document.createElement("span");
     editMoreSpan.classList.add("edit-more-btn");
     editMoreSpan.innerText = " ⃛";
-    editMoreSpan.addEventListener("click", (event) => { popUpEditMore(event); cancelEditing(); });
+    editMoreSpan.addEventListener("click", (event) => { popUp(event); cancelEditing(); });
 
 
     courseSaveSpan = document.createElement("span");
@@ -375,7 +389,7 @@ function activateEdit(e) {
     currentCourse.appendChild(courseSaveSpan);
 
     currentCourse.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach(courseSpan => {
-        courseSpan.removeEventListener("click", popupCourseInfo);
+        courseSpan.removeEventListener("click", popUp);
         courseSpan.style.cursor = "default";
     });
 
@@ -396,7 +410,7 @@ function activateEdit(e) {
         currentCourse.style.position = "static";
         currentCourse.querySelectorAll("input").forEach(input => input.remove());
         currentCourse.querySelectorAll(".course-id, .course-name, .course-author, .course-type, .course-category").forEach((courseSpan, index) => {
-            courseSpan.addEventListener("click", popupCourseInfo);
+            courseSpan.addEventListener("click", popUp);
             courseSpan.style.cursor = "pointer";
             switch (index) {
                 case 1: {
@@ -443,9 +457,8 @@ function activateEdit(e) {
     }
 }
 
-function popUpEditMore(e) {
-    let currentCourse = e.target.parentElement;
-    let course = getCourse(currentCourse.querySelector(".course-id").innerText);
+function popUpEditMore(idno) {
+    let course = getCourse(idno);
     let courseEditor = document.createElement("div");
     courseEditor.classList.add("course-info");
     for (let field in course) {
@@ -505,7 +518,7 @@ function popUpEditMore(e) {
             removeFromLocalStorage(course.id);
             storeCourse(course);
             closePopUp();
-            popupCourseInfo({ target: currentCourse.querySelector(".course-id") });
+            popupCourseInfo(course.id);
         }
     }
 
