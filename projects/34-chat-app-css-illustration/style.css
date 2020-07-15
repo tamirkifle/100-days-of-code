@@ -1,0 +1,46 @@
+:root {
+    /* ### Primary */
+
+    /* #### Text  */
+    /* - Pale Violet (sub-heading at the top of the app UI)  */
+    --p-pale-violet: hsl(276, 100%, 81%);
+    /* - Moderate Violet (chat on the left) */
+    --p-moderate-violet: hsl(276, 55%, 52%);
+    /* - Desaturated Dark Violet (chat on the right) */
+    --p-desaturated-dark-violet: hsl(271, 15%, 43%);
+    /* - Grayish Blue (placeholder text) */
+    --p-grayish-blue: hsl(206, 6%, 79%);
+    /* - Very Dark Desaturated Violet (main heading)  */
+    --p-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    /* - Dark Grayish Violet (paragraph) */
+    --p-dark-grayish-violet: hsl(270, 7%, 64%);
+
+    /* #### Gradients */
+
+    /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+    /* - Light Magenta */
+    --p-light-magenta: hsl(293, 100%, 63%);
+    /* - Light Violet */
+    --p-light-violet: hsl(264, 100%, 61%);
+
+    /* ### Secondary */
+
+    /* - White: hsl(0, 0%, 100%) */
+    /* - Light Grayish Violet (app background) */
+    --s-light-greyish-violet: hsl(270, 20%, 96%);
+    /* - Very Dark Desaturated Violet (submit button background) */
+    --s-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    /* - Very Light Magenta (radio button outline) */
+    --s-very-light-magenta: hsl(289, 100%, 72%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+}
