@@ -1300,11 +1300,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Chat App Illustration: 🍒
+
 Progress :-
+
+-   Finished markup, almost finished styling the header of the app section of the page.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Chat App Illustration: 🍒
 
 ## Day 69
 
