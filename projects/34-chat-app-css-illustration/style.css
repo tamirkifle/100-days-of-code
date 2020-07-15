@@ -43,4 +43,69 @@ body {
     margin: 0;
     font-family: "Rubik", sans-serif;
     font-size: 1rem;
+    background-color: grey;
+}
+
+img {
+    width: 100%;
+}
+
+.mobile-preview {
+    width: 375px;
+    height: 812px;
+    background-color: var(--s-light-greyish-violet);
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+
+.chat-header {
+    background: linear-gradient(
+        to right,
+        var(--p-light-violet),
+        var(--p-light-magenta)
+    );
+    height: 6rem;
+    padding: 2.4rem 1rem 1rem;
+    color: var(--s-light-greyish-violet);
+    border-top-left-radius: 1.6rem;
+    border-top-right-radius: 1.6rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.profile-img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 7px;
+    vertical-align: sub;
+}
+.profile-img img {
+    border-radius: 50%;
+    border: 1px solid #f4f4f4;
+}
+
+.profile,
+.back-btn {
+    display: inline-block;
+}
+
+.back-btn {
+    vertical-align: 0.6rem;
+    font-size: 1.2rem;
+    color: white;
+    margin-right: 7px;
+}
+
+.profile-name {
+    font-weight: 700;
+    color: rgb(228, 228, 228);
+    margin-bottom: 0.2rem;
+}
+
+.profile-status {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(236, 236, 236);
 }
