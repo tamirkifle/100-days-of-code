@@ -53,9 +53,9 @@ img {
 .mobile-preview {
     width: 375px;
     height: 812px;
-    background-color: var(--s-light-greyish-violet);
+    background-color: white;
     margin: 2rem auto;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 2rem;
 }
 
@@ -89,7 +89,8 @@ img {
 
 .profile,
 .back-btn,
-.more-btn {
+.more-btn,
+.select-radio-btn {
     display: inline-block;
 }
 
@@ -101,15 +102,15 @@ img {
 }
 
 .profile-name {
-    font-weight: 700;
-    color: rgb(228, 228, 228);
+    font-weight: 500;
+    color: hsl(289, 90%, 92%);
     margin-bottom: 0.2rem;
 }
 
 .profile-status {
     font-size: 12px;
     font-weight: 400;
-    color: rgb(236, 236, 236);
+    color: var(--p-pale-violet);
 }
 
 .chat-header::before {
@@ -118,17 +119,138 @@ img {
     width: 180px;
     height: 1.7rem;
     position: absolute;
-    background-color: var(--s-light-greyish-violet);
+    background-color: white;
     top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
 }
 
 .more-btn {
     font-size: 1.4rem;
     float: right;
     margin-top: 5px;
+}
+.screen {
+    background-color: var(--s-light-greyish-violet);
+    border-bottom-left-radius: 1.6rem;
+    border-bottom-right-radius: 1.6rem;
+}
+.chat-window {
+    height: 684px;
+    padding: 0.8rem;
+    position: relative;
+}
+
+.chat-text,
+.chat-price {
+    display: inline-block;
+    border-radius: 1rem;
+    background-color: white;
+    margin-bottom: 0.7rem;
+    padding: 0.8rem;
+    max-width: 68%;
+    font-size: 14px;
+    line-height: 1rem;
+    text-align: left;
+}
+
+.chat-text-received,
+.chat-price {
+    margin-right: auto;
+    color: var(--p-moderate-violet);
+    background-color: hsl(270, 20%, 90%);
+    border-bottom-left-radius: 0.3rem;
+}
+.sent {
+    text-align: right;
+}
+.chat-text-sent {
+    color: var(--p-desaturated-dark-violet);
+    border-bottom-right-radius: 0.3rem;
+}
+
+.chat-price {
+    color: white;
+    background: linear-gradient(
+        to left,
+        var(--p-light-violet),
+        var(--p-light-magenta)
+    );
+    padding: 1.2rem 1rem;
+    width: 80%;
+    height: 3.5rem;
+}
+
+.chat-price .price {
+    float: right;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.quote-desc {
+    color: hsl(289, 90%, 92%);
+    vertical-align: top;
+    font-size: 12px;
+    font-weight: 500;
+}
+.select-radio-btn {
+    background-color: rgba(0, 0, 0, 0%);
+    border: 1px solid hsl(289, 94%, 79%);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.image-message {
+    display: inline-block;
+    max-width: 70%;
+    margin-bottom: 0.7rem;
+}
+.image-message-sent {
+    margin-left: auto;
+    text-align: right;
+}
+.chat-image {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+.chat-image img {
+    border-radius: 1rem;
+}
+
+.message-bar {
+    position: absolute;
+    bottom: 0.8rem;
+    width: 317px;
+}
+input#message-to-send {
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    padding: 0.5rem 45px 0.5rem 25px;
+    border-radius: 2rem;
+}
+
+input#message-to-send::placeholder {
+    color: var(--p-grayish-blue);
+    font-family: inherit;
+    font-size: 14px;
+}
+.send-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--s-very-dark-desaturated-violet);
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
 }

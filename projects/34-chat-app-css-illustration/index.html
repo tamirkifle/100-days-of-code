@@ -28,7 +28,7 @@
 <body>
 
   <div class="mobile-preview">
-    <div class="convo-app">
+    <div class="screen">
       <header class="chat-header">
         <div class="back-btn">⟨</div>
         <div class="profile-img"><img src="./images/avatar.jpg" alt="Samuel Green"></div>
@@ -41,26 +41,35 @@
 
       </header>
       <div class="chat-window">
-        <div class="chat-text chat-text-received">That sounds great. I’d be happy with that.</div>
+        <div class="chat-text chat-text-received">That sounds great. I’d be happy to discuss more.</div>
         <div class="chat-text chat-text-received"> Could you send over some pictures of your dog, please?
         </div>
-        <div class="chat-image chat-image-sent"></div>
-        <div class="chat-image chat-image-sent"></div>
-        <div class="chat-image chat-image-sent"></div>
-        <div class="chat-text chat-text-sent"> Here are a few pictures. She’s a happy girl!
+        <div class="sent">
+          <div class="image-message image-message-sent">
+            <div class="chat-image"><img src="./images/dog-image-1.jpg" alt="Dog 1"></div>
+            <div class="chat-image"><img src="./images/dog-image-2.jpg" alt="Dog 2"></div>
+            <div class="chat-image"><img src="./images/dog-image-3.jpg" alt="Dog 3"></div>
+          </div>
         </div>
-        <div class="chat-text chat-text-sent"> Can you make it?
+        <div class="sent">
+          <div class="chat-text chat-text-sent"> Here are a few pictures. She's a happy girl!</div>
+        </div>
+        <div class="sent">
+          <div class="chat-text chat-text-sent"> Can you make it?
+          </div>
         </div>
         <div class="chat-text chat-text-received"> She looks so happy! The time we discussed works. How long shall I
           take her out for?
         </div>
         <div class="chat-price chat-price-received">
-          <input type="radio" name="select-price" id="select-price">
+          <!-- <input type="radio" name="select-price" id="select-price"> -->
+          <div class="select-radio-btn"></div>
           <span class=quote-desc>30 minute walk</span>
           <span class="price">$29</span>
         </div>
         <div class="chat-price chat-price-received">
-          <input type="radio" name="select-price" id="select-price">
+          <!-- <input type="radio" name="select-price" id="select-price"> -->
+          <div class="select-radio-btn"></div>
           <span class=quote-desc>1 hour walk</span>
           <span class="price">$49</span>
         </div>
