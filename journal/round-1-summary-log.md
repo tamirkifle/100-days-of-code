@@ -1316,11 +1316,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Chat App Illustration: 🍒
+
 Progress :-
+
+-   Finished the phone mockup, almost done with this project.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Chat App Illustration: 🍒
 
 ## Day 70
 
