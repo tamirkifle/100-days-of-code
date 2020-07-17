@@ -1332,6 +1332,112 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Chat App Illustration: 🍒
+
+Progress :-
+
+-   Phone Mockup: added scale to units. Styled promo text
+
+Notes :-
+
+Tasks for tomorrow :-
+
+-   Chat App Illustration: 🍒
+
+## Day 71
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 72
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 73
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 74
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 75
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 76
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 77
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 78
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 79
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 80
+
+Project :-
+
 Progress :-
 
 Notes :-
