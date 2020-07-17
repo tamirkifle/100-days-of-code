@@ -51,12 +51,16 @@ img {
 }
 
 .mobile-preview {
-    width: 375px;
-    height: 812px;
+    --scale: 0.65;
+    --width: calc(375px * var(--scale));
+    --height: calc(812px * var(--scale));
+    --border-radius-main: calc(1.6rem * var(--scale));
+    width: var(--width);
+    height: var(--height);
     background-color: white;
     margin: 2rem auto;
-    padding: 1rem;
-    border-radius: 2rem;
+    padding: calc(var(--height) / 50.75);
+    border-radius: calc(var(--scale) * 2rem);
 }
 
 .chat-header {
@@ -65,21 +69,22 @@ img {
         var(--p-light-violet),
         var(--p-light-magenta)
     );
-    height: 6rem;
-    padding: 2.4rem 1rem 1rem;
+    height: calc(6rem * var(--scale));
+    padding: calc(2.4rem * var(--scale)) calc(1rem * var(--scale))
+        calc(1rem * var(--scale));
     color: var(--s-light-greyish-violet);
-    border-top-left-radius: 1.6rem;
-    border-top-right-radius: 1.6rem;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-top-left-radius: var(--border-radius-main);
+    border-top-right-radius: var(--border-radius-main);
+    border-bottom-left-radius: calc(0.5rem * var(--scale));
+    border-bottom-right-radius: calc(0.5rem * var(--scale));
     position: relative;
 }
 
 .profile-img {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 7px;
+    width: calc(40px * var(--scale));
+    height: calc(40px * var(--scale));
+    margin-right: calc(7px * var(--scale));
     vertical-align: sub;
 }
 .profile-img img {
@@ -95,20 +100,21 @@ img {
 }
 
 .back-btn {
-    vertical-align: 0.6rem;
-    font-size: 1.2rem;
+    vertical-align: calc(0.6rem * var(--scale));
+    font-size: calc(1.2rem * var(--scale));
     color: white;
-    margin-right: 7px;
+    margin-right: calc(7px * var(--scale));
 }
 
 .profile-name {
+    font-size: calc(1rem * var(--scale));
     font-weight: 500;
     color: hsl(289, 90%, 92%);
-    margin-bottom: 0.2rem;
+    margin-bottom: calc(0.2rem * var(--scale));
 }
 
 .profile-status {
-    font-size: 12px;
+    font-size: calc(12px * var(--scale));
     font-weight: 400;
     color: var(--p-pale-violet);
 }
@@ -116,44 +122,43 @@ img {
 .chat-header::before {
     display: block;
     content: "";
-    width: 180px;
-    height: 1.7rem;
+    width: calc(11.25rem * var(--scale));
+    height: calc(1.7rem * var(--scale));
     position: absolute;
     background-color: white;
     top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
-    border-bottom-left-radius: 1.4rem;
-    border-bottom-right-radius: 1.4rem;
+    border-bottom-left-radius: calc(1.4rem * var(--scale));
+    border-bottom-right-radius: calc(1.4rem * var(--scale));
 }
 
 .more-btn {
-    font-size: 1.4rem;
+    font-size: calc(1.4rem * var(--scale));
     float: right;
-    margin-top: 5px;
+    margin-top: calc(5px * var(--scale));
 }
 .screen {
     background-color: var(--s-light-greyish-violet);
-    border-bottom-left-radius: 1.6rem;
-    border-bottom-right-radius: 1.6rem;
+    border-radius: var(--border-radius-main);
 }
 .chat-window {
-    height: 684px;
-    padding: 0.8rem;
+    height: calc(684px * var(--scale));
+    padding: calc(0.8rem * var(--scale));
     position: relative;
 }
 
 .chat-text,
 .chat-price {
     display: inline-block;
-    border-radius: 1rem;
+    border-radius: calc(1rem * var(--scale));
     background-color: white;
-    margin-bottom: 0.7rem;
-    padding: 0.8rem;
+    margin-bottom: calc(0.7rem * var(--scale));
+    padding: calc(0.8rem * var(--scale));
     max-width: 68%;
-    font-size: 14px;
-    line-height: 1rem;
+    font-size: calc(14px * var(--scale));
+    line-height: calc(1rem * var(--scale));
     text-align: left;
 }
 
@@ -162,14 +167,14 @@ img {
     margin-right: auto;
     color: var(--p-moderate-violet);
     background-color: hsl(270, 20%, 90%);
-    border-bottom-left-radius: 0.3rem;
+    border-bottom-left-radius: calc(0.3rem * var(--scale));
 }
 .sent {
     text-align: right;
 }
 .chat-text-sent {
     color: var(--p-desaturated-dark-violet);
-    border-bottom-right-radius: 0.3rem;
+    border-bottom-right-radius: calc(0.3rem * var(--scale));
 }
 
 .chat-price {
@@ -179,36 +184,36 @@ img {
         var(--p-light-violet),
         var(--p-light-magenta)
     );
-    padding: 1.2rem 1rem;
+    padding: calc(1.2rem * var(--scale)) calc(1rem * var(--scale));
     width: 80%;
-    height: 3.5rem;
+    height: calc(3.5rem * var(--scale));
 }
 
 .chat-price .price {
     float: right;
-    font-size: 18px;
+    font-size: calc(18px * var(--scale));
     font-weight: 700;
 }
 
 .quote-desc {
     color: hsl(289, 90%, 92%);
     vertical-align: top;
-    font-size: 12px;
+    font-size: calc(12px * var(--scale));
     font-weight: 500;
 }
 .select-radio-btn {
     background-color: rgba(0, 0, 0, 0%);
     border: 1px solid hsl(289, 94%, 79%);
     border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
+    width: calc(1rem * var(--scale));
+    height: calc(1rem * var(--scale));
+    margin-right: calc(5px * var(--scale));
 }
 
 .image-message {
     display: inline-block;
     max-width: 70%;
-    margin-bottom: 0.7rem;
+    margin-bottom: calc(0.7rem * var(--scale));
 }
 .image-message-sent {
     margin-left: auto;
@@ -216,41 +221,43 @@ img {
 }
 .chat-image {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: calc(60px * var(--scale));
+    height: calc(60px * var(--scale));
 }
 .chat-image img {
-    border-radius: 1rem;
+    border-radius: calc(1rem * var(--scale));
 }
 
 .message-bar {
     position: absolute;
-    bottom: 0.8rem;
-    width: 317px;
+    bottom: calc(0.8rem * var(--scale));
+    width: calc(317px * var(--scale));
 }
 input#message-to-send {
     width: 100%;
-    height: 3.5rem;
+    height: calc(3.5rem * var(--scale));
     border: none;
-    padding: 0.5rem 45px 0.5rem 25px;
-    border-radius: 2rem;
+    padding: calc(0.5rem * var(--scale)) calc(45px * var(--scale))
+        calc(0.5rem * var(--scale)) calc(25px * var(--scale));
+    border-radius: calc(2rem * var(--scale));
 }
 
 input#message-to-send::placeholder {
     color: var(--p-grayish-blue);
     font-family: inherit;
-    font-size: 14px;
+    font-size: calc(14px * var(--scale));
+    vertical-align: middle;
 }
 .send-btn {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    width: 40px;
-    height: 40px;
+    top: calc(0.5rem * var(--scale));
+    right: calc(0.5rem * var(--scale));
+    width: calc(40px * var(--scale));
+    height: calc(40px * var(--scale));
     border-radius: 50%;
     border: none;
     background-color: var(--s-very-dark-desaturated-violet);
     color: white;
-    font-size: 1rem;
+    font-size: calc(1rem * var(--scale));
     font-weight: bolder;
 }
