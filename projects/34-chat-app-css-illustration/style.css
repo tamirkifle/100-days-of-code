@@ -43,23 +43,29 @@ body {
     margin: 0;
     font-family: "Rubik", sans-serif;
     font-size: 1rem;
-    background-color: grey;
+    background-color: hsl(270, 20%, 96%);
 }
 
 img {
     width: 100%;
 }
 
+/* Phone Mockup */
 .mobile-preview {
     --scale: 0.65;
     --width: calc(375px * var(--scale));
-    --height: calc(812px * var(--scale));
+    --height: calc(761px * var(--scale));
+    --chat-header-height: calc(var(--height) / 8.458);
     --border-radius-main: calc(1.6rem * var(--scale));
     width: var(--width);
     height: var(--height);
     background-color: white;
     margin: 2rem auto;
-    padding: calc(var(--height) / 50.75);
+    --main-padding: calc(var(--height) / 50.75);
+    padding: var(--main-padding);
+    --chat-window-height: calc(
+        var(--height) - (2 * var(--main-padding) + var(--chat-header-height))
+    );
     border-radius: calc(var(--scale) * 2rem);
 }
 
@@ -69,7 +75,7 @@ img {
         var(--p-light-violet),
         var(--p-light-magenta)
     );
-    height: calc(6rem * var(--scale));
+    height: var(--chat-header-height);
     padding: calc(2.4rem * var(--scale)) calc(1rem * var(--scale))
         calc(1rem * var(--scale));
     color: var(--s-light-greyish-violet);
@@ -144,7 +150,7 @@ img {
     border-radius: var(--border-radius-main);
 }
 .chat-window {
-    height: calc(684px * var(--scale));
+    height: var(--chat-window-height);
     padding: calc(0.8rem * var(--scale));
     position: relative;
 }
@@ -260,4 +266,25 @@ input#message-to-send::placeholder {
     color: white;
     font-size: calc(1rem * var(--scale));
     font-weight: bolder;
+}
+
+/* Promo Text section */
+
+.promo {
+    width: 80%;
+    /* max-width: 275px; */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+}
+.promo-title {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: var(--p-very-dark-desaturated-violet);
+    margin-bottom: 1rem;
+}
+
+.promo-desc {
+    color: var(--p-dark-grayish-violet);
+    line-height: 1.5rem;
 }
