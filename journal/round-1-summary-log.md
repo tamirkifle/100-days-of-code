@@ -1348,11 +1348,20 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Chat App Illustration: 🍒
+
 Progress :-
+
+-   Made background shapes
+-   Built Desktop Version (Media Query)
 
 Notes :-
 
+-   The HTML and body stay in place when you scroll the page down past the viewport height.
+
 Tasks for tomorrow :-
+
+-
 
 ## Day 72
 
