@@ -323,3 +323,47 @@ input#message-to-send::placeholder {
     opacity: 4%;
     position: fixed;
 }
+
+@media (min-width: 800px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .back-illust {
+        max-width: 400px;
+        left: -10%;
+        top: -10vh;
+    }
+
+    .back-illust-bottom {
+        top: auto;
+        left: auto;
+        height: 90vh;
+        bottom: 0;
+        right: -15%;
+    }
+
+    .promo {
+        text-align: left;
+        flex-basis: 32%;
+        margin: 10% 10% 0 8%;
+    }
+    .promo-title {
+        margin-bottom: 2rem;
+    }
+
+    .mobile-preview {
+        flex-basis: auto;
+        margin: 10% 0 0 23%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .back-illust {
+        max-width: 600px;
+    }
+    .back-illust-bottom {
+        right: -25%;
+    }
+}
