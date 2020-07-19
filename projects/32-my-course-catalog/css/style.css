@@ -4,8 +4,17 @@
 
 body {
     margin: 0;
+    padding: 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(90, 114, 122);
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Open Sans", sans-serif;
+}
 .add-course-form label {
     display: block;
     padding: 1rem;
@@ -35,7 +44,7 @@ body {
     border-right: none;
 
     padding: 1rem;
-    min-width: 300px;
+    min-width: 180px;
 }
 .course span:first-of-type,
 .header-id {
@@ -62,7 +71,7 @@ body {
     min-width: 50px;
 }
 .course-header {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 .course span {
@@ -116,3 +125,105 @@ body {
 /* .header-item:target {
     background-color: rgb(192, 190, 190);
 } */
+
+/* CHANGE THE LOOK */
+
+.add-course-title,
+.my-courses-title {
+    /* text-transform: uppercase; */
+
+    margin: 0;
+    background-color: rgb(59, 179, 248);
+    padding: 1rem 0 1rem 3rem;
+    color: #ffffff;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+hr {
+    margin: 0.5rem 0;
+}
+
+.add-course-form {
+    background-color: grey;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.course-text,
+.search-text {
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    margin-right: 2rem;
+}
+
+.course-input,
+#search-input {
+    border: none;
+    font-size: 20px;
+    vertical-align: 2px;
+    background-color: grey;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+}
+
+.add-course-btn {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+.clear-btn {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+}
+.add-course-btn,
+.clear-btn,
+.popup-save-btn,
+.popup-cancel-btn,
+.popup-edit-btn {
+    font-size: 20px;
+    background-color: rgb(90, 114, 122);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.my-courses hr {
+    margin-bottom: 2rem;
+}
+
+.search-text {
+    font-size: 20px;
+    margin-left: 3rem;
+}
+
+#search-input {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1rem;
+}
+
+.course-list {
+    margin-left: 3rem;
+}
+
+.course .edit-btn,
+.course .save-btn,
+.course .edit-more-btn,
+.course .remove-btn,
+.header-item {
+    background-color: rgb(90, 114, 122);
+    color: white;
+    border-color: white;
+}
+
+.header-item {
+    height: 60px;
+    border-color: white;
+}

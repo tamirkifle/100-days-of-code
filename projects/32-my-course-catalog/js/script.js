@@ -195,12 +195,13 @@ function popupCourseInfo(idno) {
         courseInfo.appendChild(line);
     }
     courseInfo.style.color = "white";
-    courseInfo.style.fontSize = "2rem";
+    courseInfo.style.fontSize = "1.5rem";
     let editBtn = document.createElement("button");
     editBtn.innerText = "Edit Course";
     editBtn.style.padding = "0.5rem";
     editBtn.style.margin = "2rem 1rem 0 0";
     editBtn.addEventListener("click", popUp);
+    editBtn.classList.add("popup-edit-btn");
     courseWindow.appendChild(courseInfo);
 
 
@@ -365,6 +366,7 @@ function activateEdit(e) {
 
     currentCourse.querySelectorAll(".course-name, .course-author, .course-type, .course-category").forEach(field => {
         let input = createElement("input", field.innerText);
+        input.style.width = "145px";
         field.innerText = "";
         field.appendChild(input);
     }
@@ -488,6 +490,8 @@ function popUpEditMore(idno) {
     saveBtn.innerText = "Save Course";
     saveBtn.style.padding = "0.5rem";
     saveBtn.style.marginRight = "1rem";
+    saveBtn.classList.add("popup-save-btn");
+
     saveBtn.addEventListener("click", savePopUpEdit);
 
     courseEditor.appendChild(saveBtn);
@@ -495,12 +499,14 @@ function popUpEditMore(idno) {
     let cancelBtn = document.createElement("button");
     cancelBtn.innerText = "Cancel";
     cancelBtn.style.padding = "0.5rem";
+    cancelBtn.classList.add("popup-cancel-btn");
+
     cancelBtn.addEventListener("click", closePopUp);
 
     courseEditor.appendChild(cancelBtn);
 
     courseEditor.style.color = "white";
-    courseEditor.style.fontSize = "2rem";
+    courseEditor.style.fontSize = "1.5rem";
     courseEditor.style.textAlign = "center";
 
     courseWindow.appendChild(courseEditor);
