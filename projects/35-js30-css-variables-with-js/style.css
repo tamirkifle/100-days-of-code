@@ -1,5 +1,7 @@
 :root {
     --painted-color: #e4be17;
+    --spacing: 10px;
+    --blur: 2px;
 }
 * {
     margin: 0;
@@ -38,9 +40,10 @@ body {
     background-color: var(--painted-color);
     margin-top: 3rem;
     font-size: 0;
-    padding: 10px;
+    padding: var(--spacing);
 }
 
 .showcase-img {
     width: 100%;
+    filter: blur(var(--blur));
 }
