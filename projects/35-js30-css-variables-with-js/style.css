@@ -1,0 +1,46 @@
+:root {
+    --painted-color: #e4be17;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial Narrow Light", sans-serif;
+    font-weight: 100;
+    padding: 1rem;
+    background-color: #112c46;
+    color: white;
+}
+
+.main-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+.painted {
+    color: var(--painted-color);
+}
+
+.control {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.control-label {
+    font-size: 1.5rem;
+}
+
+.content {
+    max-width: 700px;
+    background-color: var(--painted-color);
+    margin-top: 3rem;
+    font-size: 0;
+    padding: 10px;
+}
+
+.showcase-img {
+    width: 100%;
+}
