@@ -1383,11 +1383,21 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished CSS Variables with JS
+-   Started Array Cardio, got 3 problems remaining
 
 Notes :-
 
+-   Got clear on Array.prototype.reduce( callback, initialValue), saw that first argument of the callback is always the accumulator and is set to the first element of the array when the intitalValue is not included, and set to initialValue if it is.
+-   Got clear on Array.prototype.sort(callback), callback return value will decide place, -ve means second parameter is higher than the first.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 74
 
