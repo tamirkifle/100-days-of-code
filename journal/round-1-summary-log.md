@@ -1403,11 +1403,20 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Array Cardio 1: Did the 2 remaining questions.
+-   Flex Panels Gallery: Finished basic markup and styling, starting the interactive part.
 
 Notes :-
 
+-   Text shadow is something I probably have never used in the past, but is a way to add some flare to text.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 75
 
