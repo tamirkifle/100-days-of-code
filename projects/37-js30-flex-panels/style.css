@@ -1,19 +1,53 @@
+body {
+    margin: 0;
+    font-family: "Amatic SC", cursive;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
 .panel1 {
-    background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500);
+    background-image: url(./img/image1.jpeg);
 }
 .panel2 {
-    background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500);
+    background-image: url(./img/image2.jpg);
 }
 .panel3 {
-    background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+    background-image: url(./img/image3.jpeg);
 }
 .panel4 {
-    background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500);
+    background-image: url(./img/image4.jpeg);
 }
 .panel5 {
-    background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500);
+    background-image: url(./img/image5.jpeg);
 }
 
 .panel {
     background-position: center;
+}
+
+.panels {
+    display: flex;
+    height: 100vh;
+}
+
+.panel {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    flex-basis: 20%;
+}
+
+.textbox {
+    width: 100%;
+    text-shadow: 2px 2px 4px black;
+    /* visibility: hidden;
+    display: none; */
+}
+
+.second {
+    /* display: block;
+    visibility: visible; */
+    font-size: 5rem;
+    cursor: pointer;
 }
