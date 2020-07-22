@@ -18,27 +18,54 @@
         </div>
         <div class="panel panel2">
             <div class="textbox">Give</div>
-            <div class="textbox second">Take</div>
+            <div class="textbox">Take</div>
             <div class="textbox">Receive</div>
         </div>
         <div class="panel panel3">
             <div class="textbox">Experience</div>
-            <div class="textbox second">It</div>
+            <div class="textbox">It</div>
             <div class="textbox">Today</div>
         </div>
         <div class="panel panel4">
             <div class="textbox">Give</div>
-            <div class="textbox second">All</div>
+            <div class="textbox">All</div>
             <div class="textbox">You can</div>
         </div>
         <div class="panel panel5">
             <div class="textbox">Life</div>
-            <div class="textbox second">In</div>
+            <div class="textbox">In</div>
             <div class="textbox">Motion</div>
         </div>
     </div>
+    <div class="overlay"></div>
     <script>
+        document.querySelectorAll(".panel div:nth-child(2)").forEach(e => e.addEventListener("click", expandImg));
+        document.querySelectorAll(".overlay").forEach(e => e.addEventListener("click", resetPanels));
+        document.querySelectorAll(".panel").forEach(e => e.addEventListener("transitionend", translateText));
 
+        function expandImg(e) {
+            if (!e.target.parentElement.classList.contains("open") || !e.target.parentElement.classList.contains("opened"))
+                resetPanels();
+            let panel = e.target.parentElement;
+            panel.classList.toggle("open");
+        }
+        function resetPanels() {
+            let open = document.querySelector(".open");
+            let opened = document.querySelector(".opened");
+            if (open) {
+                open.classList.remove("open");
+            }
+            if (opened) {
+                opened.classList.remove(".opened");
+            }
+        }
+
+        function translateText(e) {
+            console.log(e.propertyName);
+            if (e.propertyName.includes("flex")) {
+                e.target.classList.toggle("opened");
+            }
+        }
     </script>
 </body>
 
