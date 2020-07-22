@@ -1422,11 +1422,20 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished the flex panels project.
 
 Notes :-
 
+-   Learned classList.toggle that add and also removes a class interchangeably
+-   [ ] Learned about flex shrink and flex grow, needs more practice.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 76
 
