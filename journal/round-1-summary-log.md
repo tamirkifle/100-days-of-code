@@ -1441,11 +1441,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished Ajax Type Ahead.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 77
 
