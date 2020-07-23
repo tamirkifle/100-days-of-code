@@ -17,8 +17,39 @@
         </ul>
     </form>
     <script>
+        const ul = document.querySelector(".suggestions");
+        const cityList = [];
         const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+        fetch(endpoint).then((result, error) => result.json()).then(data => cityList.push(...data));
 
+
+        function filteredCities(keyword) {
+            if (keyword)
+                return cityList.filter(item => {
+                    if (item.city.indexOf(keyword) != -1 || item.state.indexOf(keyword) != -1 || item.population.indexOf(keyword) != -1) {
+                        return true;
+                    }
+                    else
+                        ul.innerHTML = "";
+                });
+        }
+
+        function addListItem(obj) {
+            let listItem = document.createElement("li");
+            listItem.innerText = obj.city + ", " + obj.state + ", " + obj.population;
+            ul.appendChild(listItem);
+        }
+
+        console.log(cityList);
+        document.querySelector(".search").addEventListener("keyup", displayFiltered);
+
+
+
+        function displayFiltered(e) {
+            ul.innerHTML = "";
+            let keyword = e.target.value;
+            filteredCities(keyword).forEach(obj => addListItem(obj));
+        }
     </script>
 </body>
 
