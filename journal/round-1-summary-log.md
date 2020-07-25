@@ -1262,13 +1262,12 @@ Tasks for tomorrow :-
 
 Project :-
 
--   My Course Catalog: 🍒
+-   My Course Catalog: 🍒🍒
 
 Progress :-
 
--   My Course Catalog: 🍒
-    -   Implemented the click outside the editing area to exit editing.
-    -   Implemented the edit pop-up menu and enabled it to save to disk.
+-   Implemented the click outside the editing area to exit editing.
+-   Implemented the edit pop-up menu and enabled it to save to disk.
 
 Notes :-
 
@@ -1282,7 +1281,7 @@ Tasks for tomorrow :-
 
 Project :-
 
--   My Course Catalog: 🍒
+-   My Course Catalog: 🍒🍅
 
 Progress :-
 
@@ -1422,7 +1421,7 @@ Tasks for tomorrow :-
 
 Project :-
 
--   Javacript30: 🍒
+-   Javacript30: 🍒🍅
 
 Progress :-
 
@@ -1441,7 +1440,7 @@ Tasks for tomorrow :-
 
 Project :-
 
--   Javacript30: 🍒
+-   Javacript30: 🍒🍅
 
 Progress :-
 
@@ -1473,7 +1472,7 @@ Tasks for tomorrow :-
 
 Project :-
 
--   Javacript30: 🍒
+-   Javacript30: 🍒🍅
 
 Progress :-
 
