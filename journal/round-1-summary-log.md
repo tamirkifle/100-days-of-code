@@ -1473,11 +1473,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished the custom video player.
 
 Notes :-
 
+-   Learned a lot about the html5 video element, attributes and methods on it and how to manipulate the video controls
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 79
 
