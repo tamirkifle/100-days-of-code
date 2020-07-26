@@ -1490,11 +1490,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished the slide in on scroll project.
 
 Notes :-
 
+-   Learned how to calculate when an element is in view on a page by combining the getBoundingClientRect() method and the viewport height (window's innerHeight attribute).
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 80
 
