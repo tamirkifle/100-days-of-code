@@ -41,7 +41,7 @@
         document.addEventListener("mousemove", shadowOnMove);
 
         function shadowOnMove(e) {
-            let shadowAmt = 10;
+            let shadowAmt = 500;
             let mouseOnLeft = e.clientX < (window.innerWidth / 2);
             let mouseOnTop = e.clientY < (window.innerHeight / 2);
             // let mouseOnRight = e.clientX > (window.innerWidth / 2);
@@ -53,8 +53,17 @@
             if (mouseOnTop) {
                 shadowY = -1 * (shadowAmt - shadowY);
             }
-            h1.style.textShadow = `${shadowX}px ${shadowY}px 0 rgba(0, 0, 0, 1)`
+            h1.style.textShadow = `${shadowX}px ${shadowY}px 0 rgba(0, 0, 0, 1)`;
 
+            h1.style.textShadow += `, ${-1 * shadowX}px ${-1 * shadowY}px 0 rgba(0, 0, 255, 1)`;
+            h1.style.textShadow += `, ${-1 * shadowX}px ${shadowY}px 0 rgba(0, 255, 255, 1)`;
+            h1.style.textShadow += `, ${shadowX}px ${-1 * shadowY}px 0 rgba(255, 0, 255, 1)`;
+
+            h1.style.textShadow += `, ${shadowX}px 0px 0 rgba(255, 0, 0, 1)`;
+            h1.style.textShadow += `, ${-1 * shadowX}px 0px 0 rgba(0, 255, 0, 1)`;
+
+            // h1.style.textShadow += `, 0px ${-1 * shadowY}px 0 rgba(255, 255, 0, 1)`;
+            // h1.style.textShadow += `, 0px ${shadowY}px 0 rgba(100, 100, 100, 1)`;
         }
 
     </script>
