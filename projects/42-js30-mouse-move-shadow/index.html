@@ -38,29 +38,21 @@
 
     <script>
         const h1 = document.querySelector("h1");
-        console.log("top: " + h1.offsetTop, "left:" + h1.offsetLeft, "height: " + h1.offsetHeight, "width: " + h1.offsetWidth);
-        document.addEventListener("mousemove", moved);
+        document.addEventListener("mousemove", shadowOnMove);
 
-        function moved(e) {
+        function shadowOnMove(e) {
             let shadowAmt = 10;
             let mouseOnLeft = e.clientX < (window.innerWidth / 2);
-            let mouseOnRight = e.clientX > (window.innerWidth / 2);
             let mouseOnTop = e.clientY < (window.innerHeight / 2);
-            let mouseOnBottom = e.clientY > (window.innerHeight / 2);
-            let shadowX = 0, shadowY = 0;
+            // let mouseOnRight = e.clientX > (window.innerWidth / 2);
+            // let mouseOnBottom = e.clientY > (window.innerHeight / 2);
+            let shadowX = (e.clientX % (window.innerWidth / 2)) / (window.innerWidth / 2) * shadowAmt;
+            let shadowY = (e.clientY % (window.innerHeight / 2)) / (window.innerHeight / 2) * shadowAmt;
             if (mouseOnLeft)
-                shadowX = -1 * ((window.innerWidth / 2) - e.clientX) / (window.innerWidth / 2) * shadowAmt;
-            else if (mouseOnRight) {
-                shadowX = (e.clientX - (window.innerWidth / 2)) / (window.innerWidth / 2) * shadowAmt;
-            }
+                shadowX = -1 * (shadowAmt - shadowX);
             if (mouseOnTop) {
-                shadowY = -1 * ((window.innerHeight / 2) - e.clientY) / (window.innerWidth / 2) * shadowAmt;
+                shadowY = -1 * (shadowAmt - shadowY);
             }
-            else if (mouseOnBottom) {
-                shadowY = (e.clientY - (window.innerHeight / 2)) / (window.innerHeight / 2) * shadowAmt;
-            }
-
-
             h1.style.textShadow = `${shadowX}px ${shadowY}px 0 rgba(0, 0, 0, 1)`
 
         }
