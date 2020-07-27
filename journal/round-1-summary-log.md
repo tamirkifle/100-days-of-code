@@ -1508,6 +1508,114 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
+Progress :-
+
+-   Finished the mouse move shadow project.
+
+Notes :-
+
+-   Learned about the mousemove event, and its properties such as clientX and clientY which show the position of the mouse on screen.
+
+Tasks for tomorrow :-
+
+-   Javacript30: 🍒
+
+## Day 81
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 82
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 83
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 84
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 85
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 86
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 87
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 88
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 89
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 90
+
+Project :-
+
 Progress :-
 
 Notes :-
