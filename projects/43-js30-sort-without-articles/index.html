@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Without Articles</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #bands {
+            list-style: inside square;
+            font-size: 20px;
+            background: white;
+            width: 500px;
+            margin: 10rem auto;
+            padding: 0;
+            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        #bands li {
+            border-bottom: 1px solid #efefef;
+            padding: 20px;
+        }
+
+        #bands li:last-child {
+            border-bottom: 0;
+        }
+
+        a {
+            color: #ffc600;
+            text-decoration: none;
+        }
+    </style>
+
+    <ul id="bands"></ul>
+
+    <script>
+        const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'Norma', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+        const ul = document.querySelector("#bands");
+
+        const articles = ["A", "An", "The"];
+
+
+        function sortWithoutArticles(bands) {
+            return bands.sort((a, b) => {
+                a = trimArticles(a.toLowerCase());
+                b = trimArticles(b.toLowerCase());
+                let index = a.split("").findIndex((c, i) => {
+                    if (i < b.length)
+                        return a[i].charCodeAt(0) - b[i].charCodeAt(0) != 0;
+                });
+                if (index == -1) {
+                    if (a.length > b.length)
+                        return 1;
+                    else if (b.length > a.length)
+                        return -1;
+                    else
+                        return 0;
+                }
+                return a.charCodeAt(index) - b.charCodeAt(index);
+            });
+        }
+        function trimArticles(str) {
+            articles.forEach(article => {
+                if (str.indexOf(article.toLowerCase() + " ") == 0) {
+                    str = str.slice(article.length + 1);
+                }
+            });
+            return str;
+        }
+
+        function populateBands(bands) {
+            ul.innerHTML = "";
+            bands.forEach(band => {
+                ul.innerHTML += `<li>${band}</li>\n`;
+            })
+        }
+        populateBands(sortWithoutArticles(bands));
+
+
+
+    </script>
+
+</body>
+
+</html>
