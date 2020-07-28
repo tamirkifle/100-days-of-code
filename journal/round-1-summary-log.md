@@ -1526,11 +1526,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished the Sort Without Articles Project.
 
 Notes :-
 
+-   Learned more about the Array sort function and implemented how string comparisons work behind the scenes.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 82
 
