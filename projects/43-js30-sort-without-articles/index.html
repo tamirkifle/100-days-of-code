@@ -54,27 +54,11 @@
 
 
         function sortWithoutArticles(bands) {
-            return bands.sort((a, b) => {
-                a = trimArticles(a.toLowerCase());
-                b = trimArticles(b.toLowerCase());
-                let index = a.split("").findIndex((c, i) => {
-                    if (i < b.length)
-                        return a[i].charCodeAt(0) - b[i].charCodeAt(0) != 0;
-                });
-                if (index == -1) {
-                    if (a.length > b.length)
-                        return 1;
-                    else if (b.length > a.length)
-                        return -1;
-                    else
-                        return 0;
-                }
-                return a.charCodeAt(index) - b.charCodeAt(index);
-            });
+            return bands.map(band => trimArticles(band)).sort();
         }
         function trimArticles(str) {
             articles.forEach(article => {
-                if (str.indexOf(article.toLowerCase() + " ") == 0) {
+                if (str.toLowerCase().indexOf(article.toLowerCase() + " ") == 0) {
                     str = str.slice(article.length + 1);
                 }
             });
