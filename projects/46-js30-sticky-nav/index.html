@@ -182,18 +182,15 @@
         const logo = document.querySelector(".logo");
         document.addEventListener("scroll", stickNav);
 
-        const navPlaceholder = document.createElement("div");
-        navPlaceholder.style.height = mainNav.offsetHeight + "px";
         function stickNav() {
 
-            if (window.scrollY > header.offsetTop + header.offsetHeight) {
+            if (window.scrollY > header.offsetHeight) {
+                document.body.style.paddingTop = mainNav.offsetHeight + "px";
                 mainNav.style.position = "fixed";
                 logo.style.maxWidth = "100%";
-                header.after(navPlaceholder);
-
             }
             else {
-                navPlaceholder.remove();
+                document.body.style.paddingTop = "0";
                 mainNav.style.position = "relative";
                 logo.style.maxWidth = "0";
 
