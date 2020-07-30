@@ -33,20 +33,24 @@
     </div>
     <script>
         // 👀👀👀👀👀👀👀👀👀👀👀👀👀👀👀
-        document.querySelectorAll("a").forEach(a => a.addEventListener('mouseover', callHighlighter));
+        document.querySelectorAll("a").forEach(a => a.addEventListener('mouseover', (e) => styleAs(e.target, highlighter)));
         const highlighter = document.createElement("div");
         highlighter.classList.add("highlight");
-
+        const homeLink = document.querySelector(".menu a");
+        styleAs(homeLink, highlighter);
         document.body.appendChild(highlighter);
-        function callHighlighter(e) {
-            const link = e.target;
-            highlighter.style.cssText = document.defaultView.getComputedStyle(link, "").cssText;
-            highlighter.innerText = link.innerText;
-            highlighter.style.position = "absolute";
-            highlighter.style.top = link.getBoundingClientRect().top + "px";
-            highlighter.style.left = link.getBoundingClientRect().left + "px";
-            highlighter.style.backgroundColor = "white";
+
+        function styleAs(from, to) {
+            to.style.width = from.offsetWidth + "px";
+            to.style.height = from.offsetHeight + "px";
+            to.style.top = from.getBoundingClientRect().top + window.scrollY + "px";
+            to.style.left = from.getBoundingClientRect().left + window.scrollX + "px";
+            to.style.borderRadius = "20px";
+            // const fromStyles = document.defaultView.getComputedStyle(from, "");
+            // to.style.borderRadius = fromStyles.borderRadius;
         }
+
+
     </script>
 </body>
 
