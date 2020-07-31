@@ -1544,21 +1544,39 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished the adding times with reduce project and started working on the follow along link highlighter.
 
 Notes :-
 
+-   Flexed my reduce muscles by adding up all time strings on a webpage. Understanding reduce more intimately.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 83
 
 Project :-
 
+-   Javacript30: 🍒🍅
+
 Progress :-
+
+-   Finished the follow along link highlighter project.
+-   Finished the sticky nav project.
 
 Notes :-
 
+-   Learned about ChildNode.after() to insert elements after other elements.
+-   Worked more with the scroll event, got more familiarized with its behaviors and properties.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 84
 
