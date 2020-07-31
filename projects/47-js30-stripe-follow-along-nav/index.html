@@ -230,9 +230,41 @@
         .button[href*=courses] {
             background: #ffc600;
         }
+
+        .dropdown.open {
+            opacity: 1;
+            display: block;
+        }
     </style>
 
     <script>
+        document.querySelectorAll(".cool > li").forEach(li => li.addEventListener("mouseover", showDropdown));
+        document.body.addEventListener("mouseover", hideDropdown);
+        const dropdownBackground = document.querySelector(".dropdownBackground");
+        dropdownBackground.style.top = 0;
+        function showDropdown(e) {
+            document.querySelectorAll(".dropdown.open").forEach(open => open.classList.remove("open"));
+            const listItem = e.currentTarget;
+            e.stopPropagation();
+            dropdownBackground.classList.add("open");
+            const dropdown = listItem.querySelector(".dropdown");
+            dropdown.classList.add("open");
+
+            dropdownBackground.style.width = dropdown.offsetWidth + "px";
+            dropdownBackground.style.height = dropdown.offsetHeight + "px";
+            dropdownBackground.style.top = dropdown.getBoundingClientRect().top - dropdownBackground.offsetParent.getBoundingClientRect().top + "px";
+            dropdownBackground.style.left = dropdown.getBoundingClientRect().left + "px";
+            // console.log(dropdownBackground.getBoundingClientRect().top, dropdown.getBoundingClientRect().top);
+
+        }
+        function hideDropdown(e) {
+            document.querySelectorAll(".dropdown.open").forEach(open => open.classList.remove("open"));
+            dropdownBackground.classList.remove("open");
+        }
+        function moveElement(el, destEl, offsetLeft = 0, offsetRight = 0) {
+            el.style.top = destEl.offsetTop + "px";
+            el.style.left = destEl.offsetLeft + "px";
+        }
     </script>
 
 </body>
