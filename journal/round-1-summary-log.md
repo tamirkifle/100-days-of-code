@@ -1582,11 +1582,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished the follow along nav project
 
 Notes :-
 
+-   Worked more with getBoundingClientRect(), offsetParent, offsetLeft etc...
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 85
 
