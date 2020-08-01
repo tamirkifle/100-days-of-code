@@ -1600,11 +1600,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒🍅
+
 Progress :-
+
+-   Finished the Click and Drag Project
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 86
 
