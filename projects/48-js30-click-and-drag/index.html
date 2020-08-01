@@ -39,21 +39,24 @@
     <script>
         const items = document.querySelector(".items");
         items.addEventListener("mousedown", moveToDragged);
+        let xStart;
 
         function moveToDragged(e) {
             // console.log("start: " + e.screenX);
-            let xStart = e.screenX;
+            xStart = e.screenX;
             document.addEventListener("mousemove", scrollItems);
-
-            function scrollItems(e) {
-                // console.log("end: " + e.screenX);
-                items.scrollBy(xStart - e.screenX, 0);
-                xStart = e.screenX;
-
-            }
-            document.querySelector(".items").addEventListener("mouseup", () => document.removeEventListener("mousemove", scrollItems));
-
         }
+
+        function scrollItems(e) {
+            // console.log("end: " + e.screenX);
+            items.scrollBy(xStart - e.screenX, 0);
+            xStart = e.screenX;
+        }
+
+        window.addEventListener("mouseup", (e) => {
+            document.removeEventListener("mousemove", scrollItems);
+        });
+
 
 
     </script>
