@@ -45,15 +45,18 @@
             // console.log("start: " + e.screenX);
             xStart = e.screenX;
             document.addEventListener("mousemove", scrollItems);
+            items.classList.add("active");
         }
 
         function scrollItems(e) {
+            e.preventDefault();
             // console.log("end: " + e.screenX);
             items.scrollBy(xStart - e.screenX, 0);
             xStart = e.screenX;
         }
 
         window.addEventListener("mouseup", (e) => {
+            items.classList.remove("active");
             document.removeEventListener("mousemove", scrollItems);
         });
 
