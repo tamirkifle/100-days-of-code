@@ -1616,11 +1616,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒🍒🍅
+
 Progress :-
+
+-   Finished the Video Playback Scrubber project.
 
 Notes :-
 
+-   Understood that offsetHeight contains the padding and it can be hard to measure height of these elements in this case for visual references.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 87
 
