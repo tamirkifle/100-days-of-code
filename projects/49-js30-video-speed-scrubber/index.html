@@ -21,32 +21,68 @@
         const video = document.querySelector(".flex");
         const scrubber = document.querySelector(".speed");
         const speedBar = document.querySelector(".speed-bar");
-        let outOfScrubber = false;
+        let vPadSpeedBar = 4;            //vPadSpeedBar is the padding top and bootom sum of the speedBar element
+        let firstY;
         scrubber.addEventListener("mousedown", startTracking);
-        scrubber.addEventListener("mouseleave", () => { outOfScrubber = true; });
-        scrubber.addEventListener("mouseup", () => { outOfScrubber = true; });
+        // scrubber.addEventListener("mouseleave", () => { outOfScrubber = true; });
 
-        function startTracking(e) {
-            outOfScrubber = false;
-            // First move scrubber to clicked position
-            speedBar.style.height = e.layerY / e.currentTarget.offsetHeight * 100 + "%";
-
-            // Track Move while mouse is down, and update scrubber with the difference
-            scrubber.addEventListener("mousemove", updateScrubber);
-
-            function updateScrubber(e) {
-                speedBar.style.height = e.layerY / e.currentTarget.offsetHeight * 100 + "%";
-
-                //Remove Tracking Mouse Movement if mouse is out of the scrubber
-                if (outOfScrubber) {
-                    scrubber.removeEventListener("mousemove", updateScrubber);
-                }
+        function speedFromHeight(barHeight) {
+            //1x = 16.3%
+            //0x = 0%
+            //2x = 100%
+            const maxSpeed = 5;
+            const height1x = Math.round(16.3 / 100 * scrubber.offsetHeight);
+            if (barHeight > scrubber.offsetHeight) {
+                return maxSpeed;
+            }
+            if (barHeight <= 0) {
+                return 0.1;
             }
 
-
+            if (barHeight <= height1x) {
+                let speed = parseFloat((barHeight / height1x).toFixed(2));
+                if (speed > 0.95) {//snap to 1
+                    speedBar.style.height = "16.3%";
+                    return 1;
+                }
+                return speed;
+            }
+            else {
+                let speed = parseFloat((((barHeight - height1x) / (scrubber.offsetHeight - height1x)) * (maxSpeed - 1) + 1).toFixed(2));
+                if (speed < 1.05) {//snap to 1
+                    speedBar.style.height = "16.3%";
+                    return 1;
+                }
+                return speed;
+            }
         }
 
+        function startTracking(e) {
+            e.preventDefault();
+            console.log("mousedown");
+            // First move scrubber to clicked position
+            speedBar.style.height = (e.layerY - vPadSpeedBar) / scrubber.offsetHeight * 100 + "%";
+            video.playbackRate = speedFromHeight(speedBar.offsetHeight - vPadSpeedBar);
+            speedBar.innerText = `${video.playbackRate}×`;
+            // Track Move while mouse is down, and update scrubber with the difference
+            firstY = e.pageY;
+            window.addEventListener("mousemove", updateScrubber);
+        }
 
+        function updateScrubber(e) {
+            let change = e.pageY - firstY;
+            if (change) {
+                speedBar.style.height = (speedBar.offsetHeight - vPadSpeedBar + change) / scrubber.offsetHeight * 100 + "%";
+                video.playbackRate = speedFromHeight(speedBar.offsetHeight - vPadSpeedBar);
+                speedBar.innerText = `${video.playbackRate}×`;
+
+                firstY = e.pageY;
+            }
+        }
+        window.addEventListener("mouseup", () => {
+            window.removeEventListener("mousemove", updateScrubber);
+
+        });
 
     </script>
 </body>
