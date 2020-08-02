@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Video Speed Scrubber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <video class="flex" width="765" height="430" src="../40-js30-custom-video-player/652333414.mp4" loop
+            controls></video>
+        <div class="speed">
+            <div class="speed-bar">1×</div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.querySelector(".flex");
+        const scrubber = document.querySelector(".speed");
+        const speedBar = document.querySelector(".speed-bar");
+        let outOfScrubber = false;
+        scrubber.addEventListener("mousedown", startTracking);
+        scrubber.addEventListener("mouseleave", () => { outOfScrubber = true; });
+        scrubber.addEventListener("mouseup", () => { outOfScrubber = true; });
+
+        function startTracking(e) {
+            outOfScrubber = false;
+            // First move scrubber to clicked position
+            speedBar.style.height = e.layerY / e.currentTarget.offsetHeight * 100 + "%";
+
+            // Track Move while mouse is down, and update scrubber with the difference
+            scrubber.addEventListener("mousemove", updateScrubber);
+
+            function updateScrubber(e) {
+                speedBar.style.height = e.layerY / e.currentTarget.offsetHeight * 100 + "%";
+
+                //Remove Tracking Mouse Movement if mouse is out of the scrubber
+                if (outOfScrubber) {
+                    scrubber.removeEventListener("mousemove", updateScrubber);
+                }
+            }
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
