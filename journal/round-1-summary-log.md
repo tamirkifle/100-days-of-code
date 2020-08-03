@@ -1634,11 +1634,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒🍒
+
 Progress :-
+
+-   Finished the countdown timer project.
 
 Notes :-
 
+-   Understood a lot about using the Date object and calculating and displaying time in the browser. Learned how to stop timers with clearTimeout.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 88
 
