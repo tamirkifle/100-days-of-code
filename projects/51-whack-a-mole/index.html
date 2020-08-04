@@ -63,10 +63,9 @@
     moles.forEach(mole => mole.addEventListener("click", addScore));
 
     function addScore(e) {
-      scoreBoard.innerText = ++score;
-      hideMole(e.currentTarget);
-      window.clearTimeout(timerID);
-      showRandomMole();
+      if (gameIsRunning) {
+        scoreBoard.innerText = ++score;
+      }
     }
 
     //choose a random hole
@@ -74,12 +73,19 @@
     //choose another random hole
     //mole comes up for a random time 200ms - 2000ms
     //repeat
-    let startTime, endTime;
-    let timerID;
+    let countTimer, showTimer, gameTimer;
     let gameIsRunning = true;
     let currentMole = null, previousMole;
 
     function showRandomMole() {
+      if (!gameIsRunning) {
+        if (currentMole !== null) {
+          hideMole(moles[currentMole]);
+        }
+        currentMole = null;
+        window.clearTimeout(showTimer);
+        return;
+      }
       if (currentMole !== null) {
         hideMole(moles[currentMole]);
       }
@@ -90,24 +96,9 @@
       do {
         currentMole = randGenerate(0, 5);
       } while (currentMole == previousMole);
+
       showMole(moles[currentMole]);
-      if (!gameIsRunning && timerID) {
-        hideMole(moles[currentMole]);
-        currentMole = null;
-        window.clearTimeout(timerID);
-        displayFinalScore(score);
-        displayGameOver();
-        return;
-      }
-      timerID = setTimeout(showRandomMole, randGenerate(minSpeed, maxSpeed));
-    }
-
-    function displayGameOver() {
-      timeLeftView.innerText = `Game Over`;
-    }
-
-    function displayFinalScore(score) {
-      finalScoreView.innerText = `Final Score: ${score}`;
+      showTimer = setTimeout(showRandomMole, randGenerate(minSpeed, maxSpeed));
     }
 
     function secToDisplayTime(seconds) {
@@ -134,31 +125,27 @@
       return `${hours}:${minutes}:${seconds}`;
     }
 
-    function showTimeLeft() {
-      if (timeLeft == 0) {
-        return;
-      }
-      timeLeftView.innerText = `${secToDisplayTime(timeLeft)}`;
-      setTimeout(() => {
-        timeLeftView.innerText = `${secToDisplayTime(--timeLeft)}`;
-        showTimeLeft();
-      }, 1000);
-
-    }
-
     function resetValues() {
-      gameIsRunning = true;
       finalScoreView.innerText = "";
       timeLeft = gameTimeSeconds;
       score = scoreBoard.innerText = 0;
-
+      clearInterval(countTimer);
+      window.clearTimeout(gameTimer);
     }
+
     function startGame() {
       resetValues();
-      setTimeout(() => {
-        gameIsRunning = false;
-      }, gameTimeSeconds * 1000);
-      showTimeLeft();
+      gameIsRunning = true;
+      timeLeftView.innerText = `${secToDisplayTime(timeLeft)}`;
+      let countTimer = setInterval(() => {
+        timeLeftView.innerText = `${secToDisplayTime(--timeLeft)}`;
+        if (timeLeft == 0) {
+          clearInterval(countTimer);
+          gameIsRunning = false;
+          timeLeftView.innerText = `Game Over`;
+          finalScoreView.innerText = `Final Score: ${score}`;
+        }
+      }, 1000);
       showRandomMole();
     }
 
