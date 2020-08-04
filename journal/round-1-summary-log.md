@@ -1652,11 +1652,20 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒🍒🍅
+
 Progress :-
+
+-   Finished the Whack-A-Mole Game
 
 Notes :-
 
+-   Got a refresher on setTimeout and setInterval.
+-   Took some time to see how to approach the problem before starting to code.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 89
 
