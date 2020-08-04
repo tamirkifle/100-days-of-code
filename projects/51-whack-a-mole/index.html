@@ -65,6 +65,8 @@
     function addScore(e) {
       scoreBoard.innerText = ++score;
       hideMole(e.currentTarget);
+      window.clearTimeout(timerID);
+      showRandomMole();
     }
 
     //choose a random hole
