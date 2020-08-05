@@ -1671,11 +1671,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Learned the basics of the HTML5 canvas element.
 
 Notes :-
 
+-   Finished the fun with HTML5 canvas project.
+
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 90
 
