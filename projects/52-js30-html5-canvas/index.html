@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Canvas</title>
+</head>
+
+<body>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script>
+        let customHue = 0, reverse = false;
+        let canvas = document.querySelector("#draw");
+        let ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.lineJoin = "round";
+        ctx.lineCap = "round";
+        ctx.lineWidth = 1;
+        ctx.globalCompositeOperation = "multiply";
+        let startX, startY;
+        canvas.addEventListener("mousedown", startDrawing);
+        canvas.addEventListener("mouseout", stopDrawing);
+        window.addEventListener("mouseup", stopDrawing);
+
+        function stopDrawing(e) {
+            canvas.removeEventListener("mousemove", draw);
+        }
+
+        function startDrawing(e) {
+            [startX, startY] = [e.offsetX, e.offsetY];
+            canvas.addEventListener("mousemove", draw);
+        }
+
+        function draw(e) {
+            ctx.strokeStyle = `hsl(${customHue %= 360}, 100%, 50%)`;
+            customHue++;
+            if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+                reverse = !reverse;
+            }
+
+            reverse ? ctx.lineWidth-- : ctx.lineWidth++;
+
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+            [startX, startY] = [e.offsetX, e.offsetY];
+
+        }
+    </script>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+    </style>
+
+</body>
+
+</html>
