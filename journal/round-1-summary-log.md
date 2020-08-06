@@ -1689,6 +1689,116 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒
+
+Progress :-
+
+-   Had some fun with the photo booth project. Halfway done.
+
+Notes :-
+
+-   Learned more about the video and canvas elements.
+-   Learned how to hook up your webcam video feed to a canvas element on a page.
+-   Had a liitle practice with promises(getting webcam access and feed).
+
+Tasks for tomorrow :-
+
+-   Javacript30: 🍒
+
+## Day 91
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 92
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 93
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 94
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 95
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 96
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 97
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 98
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 99
+
+Project :-
+
+Progress :-
+
+Notes :-
+
+Tasks for tomorrow :-
+
+## Day 100
+
+Project :-
+
 Progress :-
 
 Notes :-
