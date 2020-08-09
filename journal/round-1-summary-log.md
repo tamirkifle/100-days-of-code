@@ -1709,31 +1709,49 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Ng-Book: 🍒
+
 Progress :-
+
+-   Finished the angular reddit app from the first chapter.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 92
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished the Webcam Fun Project.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 93
 
 Project :-
 
+-   Javacript30: 🍒
+
 Progress :-
+
+-   Finished the Speech Detection Project.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 94
 
