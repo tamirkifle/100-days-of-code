@@ -1757,11 +1757,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   Javacript30: 🍒🍅
+
 Progress :-
+
+-   Finished the Speech Synthesis Project
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   Javacript30: 🍒
 
 ## Day 95
 
