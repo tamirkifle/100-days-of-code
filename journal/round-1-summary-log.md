@@ -1773,11 +1773,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   FEM Static Job Listing Challenge: 🍒🍅
+
 Progress :-
+
+-   Finished the markup, started styling, finished header and styled cards
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   FEM Static Job Listing Challenge: 🍒
 
 ## Day 96
 
