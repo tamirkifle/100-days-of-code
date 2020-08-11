@@ -1,0 +1,25 @@
+:root {
+    /* 
+    ### Primary
+
+    - Desaturated Dark Cyan: hsl(180, 29%, 50%)
+
+    ### Neutral
+
+    - Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+    - Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+    - Dark Grayish Cyan: hsl(180, 8%, 52%)
+    - Very Dark Grayish Cyan: hsl(180, 14%, 20%) */
+
+    --p-desaturated-dark-cyan: hsl(180, 29%, 50%);
+    --n-bg-light-grayish-cyan: hsl(180, 52%, 96%);
+    --n-filter-light-grayish-cyan: hsl(180, 31%, 95%);
+    --n-dark-grayish-cyan: hsl(180, 8%, 52%);
+    --n-very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+body {
+    margin: 0;
+    font-family: "Spartan", sans-serif;
+    font-size: 15px;
+}
