@@ -1789,11 +1789,19 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   FEM Static Job Listing Challenge: 🍒
+
 Progress :-
+
+-   Finished the desktop look
 
 Notes :-
 
+-   Found out that you can use class selectors with pseudo-class selectors like :last-child and :nth-child, it still uses and counts the tags not the classed elements, but applies the styles only if the selected tags have that class.
+
 Tasks for tomorrow :-
+
+-   FEM Static Job Listing Challenge: 🍒
 
 ## Day 97
 
