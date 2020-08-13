@@ -140,7 +140,7 @@ ul {
     padding: 8px;
     margin-right: 1rem;
     background-color: var(--n-filter-light-grayish-cyan);
-functionality    border-radius: 4px;
+    border-radius: 4px;
 }
 .job-tag:last-child {
     margin-right: 0;
@@ -172,8 +172,8 @@ functionality    border-radius: 4px;
     box-shadow: 0px 8px 14px -4px gray;
 }
 
-.filters-tablets {
-}
+/* .filters-tablets {
+} */
 @media (max-width: 900px) {
     .job-card {
         min-height: 250px;
