@@ -1807,11 +1807,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   FEM Static Job Listing Challenge: 🍒🍅
+
 Progress :-
+
+-   Finished the mobile look, did the active states, and started coding functionality.
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   FEM Static Job Listing Challenge: 🍒
 
 ## Day 98
 
