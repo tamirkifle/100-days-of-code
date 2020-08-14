@@ -34,7 +34,6 @@ function filterResults(array) {
 }
 function addFilter(e) {
     if (!isFilterActive(e.target.innerText)) {
-        console.log("Add Filter " + e.target.innerText);
         filtersContainer.appendChild(createFilterItem(e.target.innerText));
         filtersArray.push(e.target.innerText);
         filterResults(filtersArray);
