@@ -1823,11 +1823,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   FEM Static Job Listing Challenge: 🍒
+
 Progress :-
+
+-   Finished the filter functionality, project's done
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   FEM New Project: 🍒
 
 ## Day 99
 
