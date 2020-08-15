@@ -1839,11 +1839,17 @@ Tasks for tomorrow :-
 
 Project :-
 
+-   FEM Bookmark Landing Page Project: 🍒
+
 Progress :-
+
+-   Finished the markup
 
 Notes :-
 
 Tasks for tomorrow :-
+
+-   FEM Bookmark Landing Page Project: 🍒
 
 ## Day 100
 
