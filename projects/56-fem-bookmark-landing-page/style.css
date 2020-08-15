@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --p-soft-blue: hsl(231, 69%, 60%);
+    --p-soft-red: hsl(0, 94%, 66%);
+    --n-grayish-blue: hsl(229, 8%, 60%);
+    --n-very-dark-blue: hsl(229, 31%, 21%);
+    
+}
+
+body{
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
