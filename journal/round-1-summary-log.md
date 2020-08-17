@@ -1854,9 +1854,13 @@ Tasks for tomorrow :-
 ## Day 100
 
 Project :-
+-   FEM Bookmark Landing Page Project: 🍒
 
 Progress :-
+-   FEM Bookmark Landing Page Project: 🍒
+    -   Worked a bit on the styling, got stuck with the landing illustration svg
 
 Notes :-
 
 Tasks for tomorrow :-
+-   FEM Bookmark Landing Page Project: 🍒
