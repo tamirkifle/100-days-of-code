@@ -27,44 +27,44 @@
 
 <body>
 
+  <div class="container">
   <header class="main_header">
     <div class="main_header_logo_container">
       <img class="main_header_logo_img" src="./images/logo-bookmark.svg" alt="Bookmark Logo">
     </div>
     <nav class="top_nav">
-      <div class="hamburger"></div>
+      <div class="hamburger"><img src="./images/icon-hamburger.svg" alt="Menu Toggle"></div>
       <ul class="top_nav_items">
-        <li class="top_nav_items_item">Features</li>
-        <li class="top_nav_items_item">Pricing</li>
-        <li class="top_nav_items_item">Contact</li>
-        <li class="top_nav_items_item top_nav_items_item_red">Login</li>
+        <li class="top_nav_items_item"><a href="#" class="top_nav_link">Features</a></li>
+        <li class="top_nav_items_item"><a href="#" class="top_nav_link">Pricing</a></li>
+        <li class="top_nav_items_item"><a href="#" class="top_nav_link">Contact</a></li>
+        <li class="top_nav_items_item top_nav_items_item_red"><a href="#" class="top_nav_link">Login</a></li>
       </ul>
     </nav>
   </header>
-  <div class="container">
     <div class="landing">
       <div class="illustration landing_illustration">
-        <img src="./images/illustration-hero.svg" class="illustration_img" alt="App Illutsration">
-        <div class="illustration-back"></div>
+        <img src="./images/illustration-hero.svg" class="landing_illustration_img" alt="App Illutsration">
+        <div class="landing_illustration_back illustration_back"></div>
       </div>
       <div class="landing_info">
         <h1 class="landing_info_title">A Simple Bookmark Manager</h1>
-        <p class="landing_info_desc">A clean and simple interface to organize your favourite websites. Open a new
+        <p class="landing_info_desc desc">A clean and simple interface to organize your favourite websites. Open a new
           browser tab and see your sites load instantly. Try it for free.</p>
         <div class="landing_info_btns">
-          <button class="landing_info_btn">Get it on Chrome</button>
-          <button class="landing_info_btn">Get it on Firefox</button>
+          <button class="landing_info_btn main-btn">Get it on Chrome</button>
+          <button class="landing_info_btn secondary-btn">Get it on Firefox</button>
         </div>
       </div>
     </div>
     <div class="features">
       <div class="features_info">
         <h2 class="features_info_title">Features</h2>
-        <p class="features_info_desc">Our aim is to make it quick and easy for you to access your favourite websites.
+        <p class="features_info_desc desc">Our aim is to make it quick and easy for you to access your favourite websites.
           Your bookmarks sync between your devices so you can access them on the go.</p>
       </div>
       <div class="features_menu">
-        <button class="features_menu_item"> Bookmarking</button>
+        <button class="features_menu_item selected">Simple Bookmarking</button>
         <button class="features_menu_item">Speedy Searching</button>
         <button class="features_menu_item">Easy Sharing</button>
       </div>
@@ -72,69 +72,69 @@
         <div class="illustration">
           <img src="./images/illustration-features-tab-1.svg" class="illustration_img"
             alt="Simple Bookmarking Illutsration">
-          <div class="illustration_back"></div>
+          <div class="feature_illustration_back illustration_back"></div>
         </div>
         <h3 class="features_item_title">Bookmark in one click</h3>
-        <p class="features_item_desc">Organize your bookmarks however you like. Our simple drag-and-drop interface
+        <p class="features_item_desc desc">Organize your bookmarks however you like. Our simple drag-and-drop interface
           gives you complete control over how you manage your favourite sites.</p>
-        <button class="features_item_btn">More Info</button>
+        <button class="features_item_btn main-btn">More Info</button>
       </div>
       <div class="features_item features_item_searching">
         <div class="illustration">
           <img src="./images/illustration-features-tab-2.svg" class="illustration_img"
             alt="Speedy Searching Illutsration">
-          <div class="illustration_back"></div>
+          <div class="feature_illustration_back illustration_back"></div>
         </div>
         <h3 class="features_item_title">Intelligent search</h3>
-        <p class="features_item_desc">Our powerful search feature will help you find saved sites in no time at all.
+        <p class="features_item_desc desc">Our powerful search feature will help you find saved sites in no time at all.
           No need to trawl through all of your bookmarks.</p>
-        <button class="features_item_btn">More Info</button>
+        <button class="features_item_btn main-btn">More Info</button>
       </div>
       <div class="features_item features_item_sharing">
         <div class="illustration">
           <img src="./images/illustration-features-tab-3.svg" class="illustration_img" alt="Easy Sharing Illutsration">
-          <div class="illustration_back"></div>
+          <div class="feature_illustration_back illustration_back"></div>
         </div>
         <h3 class="features_item_title">Share your bookmarks</h3>
-        <p class="features_item_desc">Easily share your bookmarks and collections with others. Create a shareable
+        <p class="features_item_desc desc">Easily share your bookmarks and collections with others. Create a shareable
           link that you can send at the click of a button.</p>
-        <button class="features_item_btn">More Info</button>
+        <button class="features_item_btn main-btn">More Info</button>
       </div>
     </div>
     <div class="download">
       <div class="download_info">
         <h2 class="download_info_title">Download the extension</h2>
-        <p class="download_info_desc">We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        <p class="download_info_desc desc">We’ve got more browsers in the pipeline. Please do let us know if you’ve
           got a favourite you’d like us to prioritize.</p>
       </div>
       <div class="download_cards">
         <div class="download_cards_item">
           <img src="./images/logo-chrome.svg" alt="Chrome Logo" class="download_cards_item_img">
           <h3 class="download_cards_item_title">Add to Chrome</h3>
-          <p class="download_cards_item_desc">Minimum version 62</p>
+          <p class="download_cards_item_desc desc">Minimum version 62</p>
           <hr class="dots">
-          <button class="download_cards_item_btn">Add & Install Extension</button>
+          <button class="download_cards_item_btn main-btn">Add & Install Extension</button>
         </div>
         <div class="download_cards_item">
           <img src="./images/logo-firefox.svg" alt="Firefox Logo" class="download_cards_item_img">
           <h3 class="download_cards_item_title">Add to Firefox</h3>
-          <p class="download_cards_item_desc">Minimum version 55</p>
+          <p class="download_cards_item_desc desc">Minimum version 55</p>
           <hr class="dots">
-          <button class="download_cards_item_btn">Add & Install Extension</button>
+          <button class="download_cards_item_btn main-btn">Add & Install Extension</button>
         </div>
         <div class="download_cards_item">
           <img src="./images/logo-opera.svg" alt="Opera Logo" class="download_cards_item_img">
           <h3 class="download_cards_item_title">Add to Opera</h3>
-          <p class="download_cards_item_desc">Minimum version 46</p>
+          <p class="download_cards_item_desc desc">Minimum version 46</p>
           <hr class="dots">
-          <button class="download_cards_item_btn">Add & Install Extension</button>
+          <button class="download_cards_item_btn main-btn">Add & Install Extension</button>
         </div>
       </div>
     </div>
     <div class="faq">
       <div class="faq_info">
         <h2 class="faq_info_title">Frequently Asked Questions</h2>
-        <p class="faq_info_desc">Here are some of our FAQs. If you have any other questions you’d like
+        <p class="faq_info_desc desc">Here are some of our FAQs. If you have any other questions you’d like
           answered please feel free to email us.</p>
       </div>
       <div class="faq_qns">
@@ -165,7 +165,7 @@
             vitae neque eget nisl gravida pellentesque non ut velit.</p>
         </div>
       </div>
-      <button class="faq_btn">More Info</button>
+      <button class="faq_btn main-btn">More Info</button>
     </div>
     <div class="contact">
       <div class="contact_ad">35,000+ already joined</div>
@@ -183,9 +183,9 @@
       </header>
       <nav class="bottom_nav">
         <ul class="bottom_nav_items">
-          <li class="bottom_nav_items_item">Features</li>
-          <li class="bottom_nav_items_item">Pricing</li>
-          <li class="bottom_nav_items_item">Contact</li>
+          <li class="bottom_nav_items_item"><a href="#" class="bottom_nav_link">Features</a></li>
+          <li class="bottom_nav_items_item"><a href="#" class="bottom_nav_link">Pricing</a></li>
+          <li class="bottom_nav_items_item"><a href="#" class="bottom_nav_link">Contact</a></li>
         </ul>
       </nav>
       <div class="social">
