@@ -15,6 +15,8 @@ body {
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     text-align: center;
+    background: white;
+    color: var(--n-very-dark-blue);
 }
 
 ul {
@@ -31,7 +33,7 @@ img {
     width: 100%;
 }
 
-button{
+button {
     border: none;
     padding: 1rem 9px;
     font-size: 16px;
@@ -39,23 +41,23 @@ button{
     font-weight: bold;
 }
 
-h2{
+h2 {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 2.5rem;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
 }
-.main-btn{
+.main-btn {
     background-color: var(--p-soft-blue);
-    color :white;
+    color: white;
 }
 
-.secondary-btn{
+.secondary-btn {
     background-color: hsl(229, 8%, 96%);
-    color :var(--n-very-dark-blue);
+    color: var(--n-very-dark-blue);
 }
 .container {
-    padding: 2rem 2rem;
+    padding: 2rem;
 }
 
 /* Header */
@@ -71,14 +73,14 @@ h2{
 }
 
 /* Landing */
-.landing{
+.landing {
     margin-bottom: 6rem;
 }
-.illustration{
+.illustration {
     /* overflow: hidden; */
     position: relative;
     font-size: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
     margin-bottom: 3rem;
 }
 .landing_illustration_img {
@@ -88,31 +90,31 @@ h2{
     position: relative;
     left: -1.5rem; */
 }
-.illustration_back{
+.illustration_back {
     position: absolute;
     bottom: 0;
-    left:0;
+    left: 0;
     right: 0;
     z-index: -1;
     height: 180px;
     width: 80%;
     background-color: var(--p-soft-blue);
 }
-.landing_illustration_back{
+.landing_illustration_back {
     margin-left: auto;
-    right:-2rem;
+    right: -2rem;
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
 }
 
-.landing_info_title{
+.landing_info_title {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.desc{
+.desc {
     margin-bottom: 2rem;
     color: var(--n-grayish-blue);
     line-height: 1.7rem;
@@ -120,20 +122,18 @@ h2{
     padding: 0 5px;
 }
 
-.landing_info_btns{
+.landing_info_btns {
     display: flex;
     justify-content: space-between;
 }
-.landing_info_btns button{
+.landing_info_btns button {
     flex-basis: 48%;
 }
 
-
-
-.features_menu{
+.features_menu {
     margin-bottom: 5rem;
 }
-.features_menu_item{
+.features_menu_item {
     outline: none;
     padding: 1.2rem 0;
     font-weight: 400;
@@ -147,15 +147,15 @@ h2{
     border-top: 1px solid hsl(229, 8%, 80%);
 }
 
-.features_menu_item:last-child{
+.features_menu_item:last-child {
     border-bottom: 1px solid var(--n-grayish-blue);
 }
 
-.features_menu_item.selected{
+.features_menu_item.selected {
     color: var(--n-very-dark-blue);
     position: relative;
 }
-.features_menu_item.selected::after{
+.features_menu_item.selected::after {
     content: "";
     display: inline-block;
     height: 5px;
@@ -168,20 +168,80 @@ h2{
     margin: auto;
 }
 
-
-.feature_illustration_back{
+.feature_illustration_back {
     margin-right: auto;
-    left:-2rem;
+    left: -2rem;
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
 }
 
-
-.features_item{
-display: none;
-margin-bottom :5rem;
+.features_item {
+    display: none;
+    margin-bottom: 5rem;
 }
 
-.features_item_bookmark{
+.features_item_bookmark {
     display: block;
+}
+.download{
+    margin-bottom: 9rem;
+}
+.download_cards_item {
+    background: white;
+    border-radius: 0.8rem;
+    padding: 5rem 0 2rem;
+    margin: 0 1rem 3rem;
+    box-shadow: 0px 12px 13px -5px rgba(175, 175, 175, 0.75);
+}
+
+.download_cards_item_img {
+    width: 100px;
+}
+.desc {
+    margin-top: 0;
+}
+.download_cards_item_title {
+    margin-bottom: 0.5rem;
+}
+
+.dots {
+    border-style: solid;
+    border-width: 4px 0 0 0;
+    border-image: url(./images/bg-dots.svg) 4 0 0 0 repeat;
+    margin-bottom: 2rem;
+}
+
+.download_cards_item_btn {
+    width: 220px;
+}
+.faq{
+    margin-bottom: 5rem;
+}
+.faq_qns{
+    margin-bottom: 3rem;
+}
+.faq_qns_item{
+    border-bottom: 1px solid hsl(229, 8%, 80%);
+    text-align: left;
+}
+.faq_qns_item_qn{
+    font-weight: 400;
+}
+.faq_qns_item_answer{
+    height: 0;
+    visibility: hidden;
+    margin: 0;
+    line-height: 2rem;
+    color: hsl(229, 8%, 40%);
+}
+
+.faq_btn{
+    width: 120px;
+}
+
+
+.contact{
+    background-color: var(--p-soft-blue);
+    padding: 4rem 1rem;
+    color: white;
 }
