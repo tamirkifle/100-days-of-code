@@ -22,6 +22,7 @@ body {
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 a {
@@ -183,7 +184,7 @@ h2 {
 .features_item_bookmark {
     display: block;
 }
-.download{
+.download {
     margin-bottom: 9rem;
 }
 .download_cards_item {
@@ -207,27 +208,27 @@ h2 {
 .dots {
     border-style: solid;
     border-width: 4px 0 0 0;
-    border-image: url(./images/bg-dots.svg) 4 0 0 0 repeat;
+    border-image: url(../images/bg-dots.svg) 4 0 0 0 repeat;
     margin-bottom: 2rem;
 }
 
 .download_cards_item_btn {
     width: 220px;
 }
-.faq{
+.faq {
     margin-bottom: 5rem;
 }
-.faq_qns{
+.faq_qns {
     margin-bottom: 3rem;
 }
-.faq_qns_item{
+.faq_qns_item {
     border-bottom: 1px solid hsl(229, 8%, 80%);
     text-align: left;
 }
-.faq_qns_item_qn{
+.faq_qns_item_qn {
     font-weight: 400;
 }
-.faq_qns_item_answer{
+.faq_qns_item_answer {
     height: 0;
     visibility: hidden;
     margin: 0;
@@ -235,13 +236,75 @@ h2 {
     color: hsl(229, 8%, 40%);
 }
 
-.faq_btn{
+.faq_btn {
     width: 120px;
 }
 
-
-.contact{
+.contact {
     background-color: var(--p-soft-blue);
     padding: 4rem 1rem;
     color: white;
+}
+.contact_ad {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+}
+.contact_title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.contact_form_input,
+.contact_form_btn {
+    display: block;
+    font-size: 15px;
+    width: 88%;
+    max-width: 350px;
+    border-radius: 5px;
+}
+.contact_form_input {
+    margin: 0 auto 1rem;
+    padding: 1rem 1.2rem;
+    border: none;
+}
+
+.contact_form_input::placeholder {
+    font-size: 15px;
+    color: hsl(229, 8%, 80%);
+}
+.contact_form_btn {
+    display: block;
+    margin: auto;
+    width: 88%;
+    background-color: var(--p-soft-red);
+    color: hsl(229, 8%, 80%);
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+.main_footer {
+    background-color: var(--n-very-dark-blue);
+    color: hsl(229, 8%, 80%);
+    padding: 1rem 0;
+}
+
+.main_footer_logo_img {
+    margin: 2rem 0;
+}
+
+.bottom_nav_items_item {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding-bottom: 1.8rem;
+}
+
+.social_icon {
+    font-size: 2rem;
+    color: white;
+    margin: 1rem 0 2rem;
+}
+.fa-facebook-official {
+    margin-right: 2rem;
 }
