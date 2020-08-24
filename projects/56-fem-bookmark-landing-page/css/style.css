@@ -40,6 +40,7 @@ button {
     font-size: 16px;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 h2 {
@@ -167,6 +168,7 @@ h2 {
     border-radius: 0;
     border: none;
     border-top: 1px solid hsl(229, 8%, 80%);
+    cursor: pointer;
 }
 
 .features_menu_item:last-child {
@@ -203,7 +205,7 @@ h2 {
     margin-bottom: 5rem;
 }
 
-.features_item_bookmark {
+.features_item.selected{
     display: block;
 }
 .download {
@@ -213,7 +215,7 @@ h2 {
 .download_cards_item {
     background: white;
     border-radius: 0.8rem;
-    padding: 5rem 2rem 2rem;
+    padding: 5rem 0 2rem;
     margin: 0 1rem 3rem;
     box-shadow: 0px 12px 13px -5px rgba(175, 175, 175, 0.75);
 }
@@ -227,7 +229,9 @@ h2 {
 .download_cards_item_title {
     margin-bottom: 0.5rem;
 }
-
+.download_cards_item_btn{
+    margin: 0 2rem;
+}
 .dots {
     border-style: solid;
     border-width: 4px 0 0 0;
@@ -248,6 +252,7 @@ h2 {
 .faq_qns_item {
     border-bottom: 1px solid hsl(229, 8%, 80%);
     text-align: left;
+    cursor: pointer;
 }
 .faq_qns_item_qn {
     font-weight: 400;
@@ -258,9 +263,13 @@ h2 {
     float: right;
     clear: both;
 }
-.faq_qns_item_answer {
-    height: 0;
+/* .faq_qns_item_answer{
+    height: 120px;
+    transition: height 0.5s ease 0s;
+} */
+.closed .faq_qns_item_answer {
     visibility: hidden;
+    height: 0;
     margin: 0;
     line-height: 2rem;
     color: hsl(229, 8%, 40%);
