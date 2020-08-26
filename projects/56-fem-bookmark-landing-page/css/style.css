@@ -260,11 +260,23 @@ h2 {
 .faq_qns_item_qn {
     font-weight: 400;
     font-size: 15px;
+    margin: 0;
+    padding: 1.33rem 0;
 }
 .faq_arrow {
-    width: 20px;
+    /* transform: scale(1.2); */
     float: right;
-    clear: both;
+    transform: rotateX(180deg);
+}
+.faq_arrow path{
+    stroke: #df525c;
+
+}
+.faq_qns_item.closed .faq_arrow{
+    transform: rotateX(0);
+}
+.faq_qns_item.closed .faq_arrow path{
+    stroke: #5267DF;
 }
 /* .faq_qns_item_answer{
     height: 120px;
