@@ -2,7 +2,7 @@
 
 **Start date**: May 08, 2020
 
-**End date**:
+**End date**: Aug 17, 2020
 
 ## Goals
 
