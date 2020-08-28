@@ -6,9 +6,14 @@
 
 * Code a minimum of one hour each day for the next 100 days.
 
+## Rounds
+
+* Round 1: May 08, 2020 - Aug 17, 2020
+
 ## Projects
 
-A few projects that I have completed during the challenge:
+### Round 1
+A few projects that I have completed during the round:
 
 * [A Fully Responsive Bookmark Landing Page](https://github.com/tamirkifle/100-days-of-code/tree/master/projects/56-fem-bookmark-landing-page)
 * [Simple Sticky Nav Component](https://github.com/tamirkifle/100-days-of-code/tree/master/projects/46-js30-sticky-nav)
